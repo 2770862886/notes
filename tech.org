@@ -1,0 +1,6 @@
+* terms
+** pvr
+** 
+
+** broadcom setting
+   + "ifconfig eth0 -auto;boot -z -elf 172.22.7.182:vmlinuz-7231b0 'root=/dev/nfs nfsroot=172.22.7.182:/nfs/romfs ip=dhcp rw bmem=172M@84M bmem=256M@512M'"
