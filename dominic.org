@@ -1,125 +1,137 @@
-| No |      |                       | Objects                   |
-|----+------+-----------------------+---------------------------|
-|  0 |      |                       | egg                       |
-|  1 |      |                       | pen                       |
-|  2 |      |                       | Swan                      |
-|  3 |      |                       | Handcuff                  |
-|  4 |      |                       | Flag                      |
-|  5 |      |                       | Hook                      |
-|  6 |      |                       | Spoon                     |
-|  7 |      |                       | Walking stick             |
-|  8 |      |                       | Guord                     |
-|  9 |      |                       | Racket                    |
-|----+------+-----------------------+---------------------------|
-|    | Char | Person                | Action                    |
-|----+------+-----------------------+---------------------------|
-| 00 | OO   | Olive Oyl             | Eating spinach            |
-| 01 | OA   | Ossie Ardiles         | Playing football          |
-| 02 | OB   | Otto von Bismark      | Sitting in an battle ship |
-| 03 | OC   | Oliver Cromwell       | Loading musket            |
-| 04 | OD   | Otto Dix              | Painting                  |
-| 05 | OE   | Old Etoniao           | Wearing boater            |
-| 06 | OS   | Omar Sharif           | Playing backgammon        |
-| 07 | OG   | Organ Grinder         | Holding monkey            |
-| 08 | OH   | Oliver Hardy          | Swinging plank of wood    |
-| 09 | ON   | Old Nick              | In the hell               |
-|----+------+-----------------------+---------------------------|
-| 10 | AO   | Annie Oakley          | Shooting                  |
-| 11 | AA   | Andre Agassi          | Playing tennis            |
-| 12 | AB   | Alastair Burnet       | Reading news              |
-| 13 | AC   | Al Capone             | Lighting Cigratte         |
-| 14 | AD   | The artful Dodger     | Stealing                  |
-| 15 | AE   | Albert Einstein       | Chalking a blackboard     |
-| 16 | AS   | Arnold Schwarzenegger | Show muscle               |
-| 17 | AG   | Alec Guiness          | Drinking Guiness          |
-| 18 | AH   | Adolf Hitler          | Playing bubble of earth   |
-| 19 | AN   | Alfred Nobel          | Presenting the prize      |
-|----+------+-----------------------+---------------------------|
-| 20 | BO   | Bill Oddie            | Holding binoculars        |
-| 21 | BA   | Bryan Adams           | Shooting arrow            |
-| 22 | BB   | Bugs Bunny            | Eating carrot             |
-| 23 | BC   | Bill Clinton          | Playing Saxophone         |
-| 24 | BD   | Bob Dylan             | Playing harmonica         |
-| 25 | BE   | Brain Epstein         | Playing records           |
-| 26 | BS   | Britney Spears        | Playing with snake        |
-| 27 | BG   | Bob Geldof            | Knighting                 |
-| 28 | BH   | Benny Hill            | Driving milk float        |
-| 29 | BN   | Barry Norman          | Operating film projector  |
-|----+------+-----------------------+---------------------------|
-| 30 | CO   | Chris O'Donnell       | Fight with batman         |
-| 31 | CA   | Charlie's Angels      | Touching hair             |
-| 32 | CB   | Chuck Berry           | Playing guita             |
-| 33 | CC   | Charlie Chaplin       | Bending cane              |
-| 34 | CD   | Charles Darwin        | Catching bufferfly        |
-| 35 | CE   | Clint Eastwood        | Lassooing                 |
-| 36 | CS   | Claudia Schiffer      | Models walking            |
-| 37 | CG   | Che Guevara           | Holding machine gun       |
-| 38 | CH   | Charlton Heston       | Baptize                   |
-| 39 | CN   | Chuck Norris          | Karate                    |
-|----+------+-----------------------+---------------------------|
-| 40 | DO   | Dominic O'Brein       | Playing cards             |
-| 41 | DA   | David Attenborough    | Crawling in hush          |
-| 42 | DB   | David Bowie           | Putting on make-up        |
-| 43 | DC   | David Copperfield     | Performing magic          |
-| 44 | DD   | Donald Duck           | Quack                     |
-| 45 | DE   | Duke Ellington        | Playing piano             |
-| 46 | DS   | Delia Smith           | Cooking                   |
-| 47 | DG   | David Gower           | Playing cricket           |
-| 48 | DH   | Damon Hill            | Driving race car          |
-| 49 | DN   | David Niven           |                           |
-|----+------+-----------------------+---------------------------|
-| 50 | EO   | Eeyore                |                           |
-| 51 | EA   | Emperor Augustus      |                           |
-| 52 | EB   | Enid Blyton           |                           |
-| 53 | EC   | Eric Clapton          |                           |
-| 54 | ED   | Eliza Doolittle       |                           |
-| 55 | EE   | Edna Everage          |                           |
-| 56 | ES   | Ebenezer Scrooge      |                           |
-| 57 | EG   | Edvard Grieg          |                           |
-| 58 | EH   | Edmund Hillary        |                           |
-| 59 | BN   | Emperor Nero          |                           |
-|----+------+-----------------------+---------------------------|
-| 60 | SO   | Scarlett O'Hara       |                           |
-| 61 | SA   | Salvador Allende      |                           |
-| 62 | SB   | Sleeping Beauty       |                           |
-| 63 | SC   | Sean Connery          |                           |
-| 64 | SD   | Salvador Dali         |                           |
-| 65 | SE   | Sue Ellen             |                           |
-| 66 | SS   | Steven Spielberg      |                           |
-| 67 | SG   | The Spice Girls       |                           |
-| 68 | SH   | Saddam Hussein        |                           |
-| 69 | SN   | Sam Neil              |                           |
-|----+------+-----------------------+---------------------------|
-| 70 | GO   | George Orwell         |                           |
-| 71 | GA   | Georgio Armani        |                           |
-| 72 | GB   | George Bush           |                           |
-| 73 | GC   | George Clooney        |                           |
-| 74 | GD   | Gerard Depardieu      |                           |
-| 75 | GE   | Gloria Estefan        |                           |
-| 76 | GS   | Gilbert & Sullivan    |                           |
-| 77 | GG   | Germanie Greer        |                           |
-| 78 | GH   | George Harrison       |                           |
-| 79 | GN   | Greg Norman           |                           |
-|----+------+-----------------------+---------------------------|
-| 80 | HO   | Hazel O'Connor        |                           |
-| 81 | HA   | Harold Abrams         |                           |
-| 82 | HB   | Humphrey Bogart       |                           |
-| 83 | HC   | Henry Cooper          |                           |
-| 84 | HD   | Humpty Dumpty         |                           |
-| 85 | HE   | Harry Enfield         |                           |
-| 86 | HS   | Homer Simpson         |                           |
-| 87 | HG   | Hugh Grant            |                           |
-| 88 | HH   | Hulk Hogon            |                           |
-| 89 | HN   | Horatio Nelson        |                           |
-|----+------+-----------------------+---------------------------|
-| 90 | NO   | Nick Owen             |                           |
-| 91 | NA   | Neil Armstrong        |                           |
-| 92 | NB   | Norman Bates          |                           |
-| 93 | NC   | Naomi Campbell        |                           |
-| 94 | ND   | Neil Diamond          |                           |
-| 95 | NE   | Noel Edmonds          |                           |
-| 96 | NS   | Nancy Sinatra         |                           |
-| 97 | NG   | Noel Gallagher        |                           |
-| 98 | NH   | Nasser Hussein        |                           |
-| 99 | NN   | Nick Nolte            |                           |
-|----+------+-----------------------+---------------------------|
+0: Z
+1: Y
+2: R
+3: S
+4: F
+5: W
+6: L
+7: Q
+8: B
+9: J
+
+|----+------+--------+---------------|
+|  p |      |        | Objects       |
+|----+------+--------+---------------|
+|  0 |      |        | egg           |
+|  1 |      |        | pen           |
+|  2 |      |        | Swan          |
+|  3 |      |        | Handcuff      |
+|  4 |      |        | Flag          |
+|  5 |      |        | Hook          |
+|  6 |      |        | Spoon         |
+|  7 |      |        | Walking stick |
+|  8 |      |        | Guord         |
+|  9 |      |        | Racket        |
+|----+------+--------+---------------|
+|    | Char | Person | Action        |
+|----+------+--------+---------------|
+| 00 | ZZ   |        |               |
+| 01 | ZY   |        |               |
+| 02 | ZR   |        |               |
+| 03 | ZS   |        |               |
+| 04 | ZF   |        |               |
+| 05 | ZW   |        |               |
+| 06 | ZL   |        |               |
+| 07 | ZQ   |        |               |
+| 08 | ZB   |        |               |
+| 09 | ZJ   |        |               |
+|----+------+--------+---------------|
+| 10 | YZ   |        |               |
+| 11 | YY   |        |               |
+| 12 | YR   |        |               |
+| 13 | YS   |        |               |
+| 14 | YF   |        |               |
+| 15 | YW   |        |               |
+| 16 | YL   |        |               |
+| 17 | YQ   |        |               |
+| 18 | YB   |        |               |
+| 19 | YJ   |        |               |
+|----+------+--------+---------------|
+| 20 | RZ   |        |               |
+| 21 | RY   |        |               |
+| 22 | RR   |        |               |
+| 23 | RS   |        |               |
+| 24 | RF   |        |               |
+| 25 | RW   |        |               |
+| 26 | RL   |        |               |
+| 27 | RQ   |        |               |
+| 28 | RB   |        |               |
+| 29 | RJ   |        |               |
+|----+------+--------+---------------|
+| 30 | SZ   |        |               |
+| 31 | SY   |        |               |
+| 32 | SR   |        |               |
+| 33 | SS   |        |               |
+| 34 | SF   |        |               |
+| 35 | SW   |        |               |
+| 36 | SL   |        |               |
+| 37 | SQ   |        |               |
+| 38 | SB   |        |               |
+| 39 | SJ   |        |               |
+|----+------+--------+---------------|
+| 40 | FZ   |        |               |
+| 41 | FY   |        |               |
+| 42 | FR   |        |               |
+| 43 | FS   |        |               |
+| 44 | FF   |        |               |
+| 45 | FW   |        |               |
+| 46 | FL   |        |               |
+| 47 | FQ   |        |               |
+| 48 | FB   |        |               |
+| 49 | FJ   |        |               |
+|----+------+--------+---------------|
+| 50 | WZ   |        |               |
+| 51 | WY   |        |               |
+| 52 | WR   |        |               |
+| 53 | WS   |        |               |
+| 54 | WF   |        |               |
+| 55 | WW   |        |               |
+| 56 | WL   |        |               |
+| 57 | WQ   |        |               |
+| 58 | WB   |        |               |
+| 59 | WJ   |        |               |
+|----+------+--------+---------------|
+| 60 | LZ   |        |               |
+| 61 | LY   |        |               |
+| 62 | LR   |        |               |
+| 63 | LS   |        |               |
+| 64 | LF   |        |               |
+| 65 | LW   |        |               |
+| 66 | LL   |        |               |
+| 67 | LJ   |        |               |
+| 68 | LB   |        |               |
+| 69 | LJ   |        |               |
+|----+------+--------+---------------|
+| 70 | QZ   |        |               |
+| 71 | QY   |        |               |
+| 72 | QR   |        |               |
+| 73 | QS   |        |               |
+| 74 | QF   |        |               |
+| 75 | QW   |        |               |
+| 76 | QL   |        |               |
+| 77 | QQ   |        |               |
+| 78 | QB   |        |               |
+| 79 | QJ   |        |               |
+|----+------+--------+---------------|
+| 80 | BZ   |        |               |
+| 81 | BY   |        |               |
+| 82 | BR   |        |               |
+| 83 | BS   |        |               |
+| 84 | BF   |        |               |
+| 85 | BW   |        |               |
+| 86 | BL   |        |               |
+| 87 | BQ   |        |               |
+| 88 | BB   |        |               |
+| 89 | BJ   |        |               |
+|----+------+--------+---------------|
+| 90 | JZ   |        |               |
+| 91 | JY   |        |               |
+| 92 | JR   |        |               |
+| 93 | JS   |        |               |
+| 94 | JF   |        |               |
+| 95 | JW   |        |               |
+| 96 | JL   |        |               |
+| 97 | JQ   |        |               |
+| 98 | JB   |        |               |
+| 99 | JJ   |        |               |
+|----+------+--------+---------------|
