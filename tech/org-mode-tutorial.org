@@ -13,15 +13,17 @@
 |-----+-----------+-----------------------------------|
 
 ** Structrue Editing
-| M-<RET>            | Insert new heading with same level as current. If the cursor is in a plain list item, a new item is created (see Plain lists). When this command is used in the middle of a line, the line is split and the rest of the line becomes the new headline1. |
-|                    |                                                                                                                                                                                                                                                         |
-| M-S-<RET>          | Insert new TODO entry with same level as current heading.                                                                                                                                                                                               |
-| <TAB>              | in new, empty entry.In a new entry with no text yet, <TAB> will cycle through reasonable levels.                                                                                                                                                        |
-| M-<left>/<right>   | Promote/demote current heading by one level.                                                                                                                                                                                                            |
-| M-S-<left>/<right> | Promote/demote the current subtree by one level.                                                                                                                                                                                                        |
-| M-S-<up>/<down>    | Move subtree up/down (swap with previous/next subtree of same level).                                                                                                                                                                                   |
-| C-c C-w            | Refile entry or region to a different location. See Refiling notes.                                                                                                                                                                                     |
-| C-x n s/w          | Narrow buffer to current subtree / widen it again                                                                                                                                                                                                       |
+|--------------------+--------------------------------------------------------------------------------------------------------------------------------|
+| M-<RET>            | Insert new heading with same level as current. If the cursor is in a plain list item, a new item is created (see Plain lists). |
+|                    | When this command is used in the middle of a line, the line is split and the rest of the line becomes the new headline1.       |                                                                                                                               |
+| M-S-<RET>          | Insert new TODO entry with same level as current heading.                                                                      |
+| <TAB>              | in new, empty entry.In a new entry with no text yet, <TAB> will cycle through reasonable levels.                               |
+| M-<left>/<right>   | Promote/demote current heading by one level.                                                                                   |
+| M-S-<left>/<right> | Promote/demote the current subtree by one level.                                                                               |
+| M-S-<up>/<down>    | Move subtree up/down (swap with previous/next subtree of same level).                                                          |
+| C-c C-w            | Refile entry or region to a different location. See Refiling notes.                                                            |
+| C-x n s/w          | Narrow buffer to current subtree / widen it again                                                                              |
+|--------------------+--------------------------------------------------------------------------------------------------------------------------------|
 
 ** C-c C-t: Mark a line of text with TODO
    SCHEDULED: <2011-04-13 Wed>

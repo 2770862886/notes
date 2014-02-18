@@ -1,0 +1,4 @@
+* git operations
+** repo init -u ssh://liangchao.lc@10.125.224.47:29418/repo/codebase/mtk -b stable2.7_6589
+** repo sync aliyunos/package/apps/Contacts
+
