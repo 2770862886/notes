@@ -1,0 +1,5 @@
+#+STARTUP content
+
+* Read only file system
+** mount -o remount rw /system
+
