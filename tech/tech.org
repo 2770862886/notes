@@ -5,4 +5,5 @@
 ** repo init -u ssh://liangchao.lc@10.125.224.47:29418/repo/codebase/mtk -b codebase_mtk_a800
 ** repo init -u ssh://liangchao.lc@10.125.224.47:29418/repo/codebase/mtk -b codebase_dev
 ** repo sync aliyunos/packages/apps/Contacts
-
+** repo sync aliyunos/packages/apps/SecurityCenter
+** repo sync aliyunos/packages/apps/PrivacySpace
