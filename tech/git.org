@@ -1,0 +1,17 @@
+#+STARTUP: content
+
+* alias
+** git config --global alias.l "log --color --graph --decorate --pretty=oneline --abbrev-commit"
+** git config --global alias.l0 "log --color --graph --decorate --pretty=oneline --abbrev-commit -U0"
+** git config --global alias.la "log --color --graph --decorate --pretty=oneline --abbrev-commit --all"
+** git config --global alias.lb "log --color --graph --decorate --pretty=oneline --abbrev-commit --all --simplify-by-decoration"
+** git config --global alias.lg "log --color --graph --decorate"
+** git config --global alias.dl "log --date-order --color --graph --decorate --pretty=oneline --abbrev-commit"
+** git config --global alias.dla "log --date-order --color --graph --decorate --pretty=oneline --abbrev-commit --all"
+** git config --global alias.dlb "log --date-order --color --graph --decorate --pretty=oneline --abbrev-commit --all --simplify-by-decoration"
+** git config --global alias.dlg "log --date-order --color --graph --decorate"
+
+** git config --global alias.d "diff --color"
+** git config --global alias.dc "diff --color --cached"
+** git config --global alias.d0 "diff --color --unified=0"
+** git config --global alias.ci "commit --verbose"

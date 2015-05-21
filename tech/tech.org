@@ -1,9 +1,44 @@
 #+STARTUP: content
 
-* git operations
-** repo init -u ssh://liangchao.lc@10.125.224.47:29418/repo/codebase/mtk -b stable2.7_6589
-** repo init -u ssh://liangchao.lc@10.125.224.47:29418/repo/codebase/mtk -b codebase_mtk_a800
-** repo init -u ssh://liangchao.lc@10.125.224.47:29418/repo/codebase/mtk -b codebase_dev
-** repo sync aliyunos/packages/apps/Contacts
-** repo sync aliyunos/packages/apps/SecurityCenter
-** repo sync aliyunos/packages/apps/PrivacySpace
+* git projects
+** MTK
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7_6589
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7_6589_4.2.2
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7_6592_4.2
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7.2_6592_4.2
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_a800
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7_828a
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7.2_6592_4.2_xc2s_0722
+** QCOM
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b codebase_qcom_2.7.1
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b bee2_2.7.1
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8926
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8610_dev
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b stable3.0_qcom_8974
+** submodule
+*** repo sync aliyunos/packages/apps/Contacts
+*** repo sync aliyunos/packages/apps/SecurityCenter
+*** repo sync aliyunos/packages/apps/PrivacySpace
+*** repo sync packages/providers/ContactsProvider
+** Sprent
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/sprd -b stable2.7.1_hipad8079
+** YunOS
+*** MD5
++ 9a674275a5719da7d862eefc58c84bb2 (13911121618)
+  insert into tel_num_sys_black (systemid,address,length,match,kind,hit) values (10000, '9a674275a5719da7d862eefc58c84bb2',11,1,1,10);
+** Signature
+*** java -jar out/host/linux-x86/framework/signapk.jar build/target/product/security/platform.x509.pem build/target/product/security/platform.pk8 out/target/product/amoi89_wet_jb2/obj/APPS/DoulBatteryServices.apk.unsigned out/target/product/amoi89_wet_jb2/obj/APPS/DoulBatteryServices.apk.signed
+*** java -jar -Xmx2048m /home/workspace/scripts/fotazip/cmd/updateTools/signapk.jar -w /home/workspace/scripts/fotazip/cmd/updateTools/zopo/v7/release/keys/testkey.x509.pem /home/workspace/scripts/fotazip/cmd/updateTools/zopo/v7/release/keys/testkey.pk8 V2.1.0-R-20131001.2018.zip V2.1.0-R-20131001.2018-signed.zip
+** MK
+*** ./mk_aliphone.sh x2 eng adb new false YUNOS_PROGUARD=false
+*** ./mk_aliphone.sh x2 user acb new true CODEBASE_VERSION=3.0
+*** ./mk_aliphone.sh i966 eng adb new false CODEBASE_VERSION=3.0
+** scp config
+*** sudo apt-get install ssh
+*** sudo iptables -L
+** umount [device is busy]
+*** fuser -km [mount-point]
+** Manufacture Mode
+*** *#*#564548#*#*
+*** *#*#3646633#*#*
+*** *#369#

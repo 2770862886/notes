@@ -1,0 +1,15 @@
+#+STARTUP: content
+* Shell Commands
+** echo "enable 0;">/proc/alog
+* Branches
+** B50
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8974_a55_b50_2015dev
+** PMOS
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8974_tianji3_dev
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom_8974_pmos_tianji2
+** MTK6589
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b mtk6589_fota_production_dev
+*** ./mk_aliphone.sh neken_nx/n1/v7plus eng adb new true YUNOS_PROGUARD=true CODEBASE_VERSION=3.0 APR_MODE=off
+** NX
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b mtk_r1_fota_production_dev
+*** ./mk_aliphone.sh nx user acb new true YUNOS_PROGUARD=true CODEBASE_VERSION=3.0 APR_MODE=off
