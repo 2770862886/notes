@@ -1,5 +1,6 @@
 #+STARTUP: content
-
+* Shell Commands
+** echo "enable 0;">/proc/alog
 * git projects
 ** MTK
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7_6589
@@ -9,12 +10,15 @@
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_a800
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7_828a
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7.2_6592_4.2_xc2s_0722
+*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_r2
+*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_r2_6735m
 ** QCOM
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b codebase_qcom_2.7.1
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b bee2_2.7.1
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8926
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8610_dev
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b stable3.0_qcom_8974
+*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/qcom -b codebase_qcom_r2
 ** submodule
 *** repo sync aliyunos/packages/apps/Contacts
 *** repo sync aliyunos/packages/apps/SecurityCenter
@@ -42,3 +46,7 @@
 *** *#*#564548#*#*
 *** *#*#3646633#*#*
 *** *#369#
+** Ubuntu oracle-java
+*** sudo add-apt-repository ppa:webupd8team/java
+*** sudo apt-get update
+*** sudo apt-get install oracle-java7-installer
