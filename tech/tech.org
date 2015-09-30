@@ -10,15 +10,23 @@
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_a800
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7_828a
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7.2_6592_4.2_xc2s_0722
+*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_r1
 *** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_r2
 *** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_r2_6735m
+*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b bsp_mtk_lollipop_6735m
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/pbase/platform -b mtk6735m_pb3.0.5
+*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b refs/tags/android-5.1.0_r1
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/pbase/platform -b mtk6735m_pb3.0.5_telecom
 ** QCOM
+*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/qcom -b codebase_qcom_r2
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b codebase_qcom_2.7.1
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b bee2_2.7.1
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8926
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8610_dev
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b stable3.0_qcom_8974
-*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/qcom -b codebase_qcom_r2
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8939_pmos_cm810
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8974_tianji3_dev
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8916_x7_dev
 ** submodule
 *** repo sync aliyunos/packages/apps/Contacts
 *** repo sync aliyunos/packages/apps/SecurityCenter
@@ -50,3 +58,14 @@
 *** sudo add-apt-repository ppa:webupd8team/java
 *** sudo apt-get update
 *** sudo apt-get install oracle-java7-installer
+** Monkey Command
+*** monkey -p com.yunos.alicontacts -p com.android.phone -p com.android.incallui -p com.android.server.telecom --ignore-crashes --ignore-security-exceptions --ignore-timeouts --pct-trackball 0 --pct-nav 0 --pct-majornav 0 --pct-anyevent 0  -v -v -v --throttle 500 1200000000 > /mnt/sdcard/monkey_phone.log 2>&1 &
+*** monkey -p com.yunos.alicontacts -p com.android.incallui -p com.android.phone -p  --ignore-crashes --ignore-timeouts --ignore-security-exceptions --pct-trackball 0 --pct-nav 0 --pct-majornav 0 --pct-anyevent 0 -v -v -v --throttle 500 1200000000 > /mnt/sdcard/monkeysyslog.log 2>&1 &
+*** monkey --ignore-crashes --ignore-timeouts --ignore-security-exceptions --pct-trackball 0 --pct-nav 0 --pct-majornav 0 --pct-anyevent 0 -v -v -v --throttle 500 1200000000 > /mnt/sdcard/monkeysys.log 2>&1 &
+** Procstate
+*** monkey --ignore-crashes --ignore-timeouts --ignore-security-exceptions --pct-trackball 0 --pct-nav 0 --pct-majornav 0 --pct-anyevent 0 -v -v -v --throttle 500 1200000000 > /mnt/sdcard/monkeysys_all.log 2>&1 &
+*** sleep 15000 && dumpsys procstats --details --hours 4 > /sdcard/procstats.log &
+** BSP Make
+*** source build/envsetup.sh
+*** lunch full_ali6735m_35gc_l-user
+*** make -j24 2>&1 | tee build.log

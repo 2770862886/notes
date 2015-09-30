@@ -3,32 +3,21 @@
 #+TAGS: OFFICE(o) COMPUTER(c) HOME(h) PROJECT(p) READING(r)
 
 * Projects
-** [#B] 5733733:ANR occur in switch mode
-** [#C] 5778492:Waiting because no window has focuso
-** DONE [#B] 5776047:Safe call log displays in personal mode
-   CLOSED: [2015-03-18 Wed 16:27]
-   - State "DONE"       from ""           [2015-03-18 Wed 16:27]
-** DONE [#C] 5776813:InCallUI display incomplete
-   CLOSED: [2015-02-13 Fri 12:29]
-   - State "DONE"       from ""           [2015-02-13 Fri 12:29]
-   + found the root cause is CallerInfoUtils.modifyForSpecialCnapCases context is null.
-** DONE [#A] 5754803:Investigate the process of VOIP incoming call
-   CLOSED: [2015-02-11 Wed 18:38]
-   - State "DONE"       from ""           [2015-02-11 Wed 18:38]
-** DONE [#B] 5765856:Notification of Registration Failed
-   CLOSED: [2015-02-11 Wed 21:01]
-   - State "DONE"       from ""           [2015-02-11 Wed 21:01]
-** DONE [#B] 5778224:After HOME button pressed, finish incoming call.
-   CLOSED: [2015-02-11 Wed 21:01]
-   - State "DONE"       from ""           [2015-02-11 Wed 21:01]
+** InCallUI share branch
+   + procstate
+   + memleak
+   + timing
+** DONE [#A] 6735M bug fix for InCallUI simplification
+   CLOSED: [2015-09-14 一 15:09]
+   - State "DONE"       from ""           [2015-09-14 一 15:09]
+** DONE [#B] no disturb mode to look up contact info
+   CLOSED: [2015-09-14 一 15:09]
+   - State "DONE"       from ""           [2015-09-14 一 15:09]
 * Memo
 ** May 20
 *** Look for the interface of getAdnRecordsSize
     + /frameworks/opt/telephony-msim/frameworks/src/com/codeaurora/internal/telephony/MSimIccProvider.java:399:
     + IIccPhoneBookMSim iccIpb = IIccPhoneBookMSim.Stub.asInterface(ServiceManager.getService("simphonebook_msim"));
-** Apr 28
-** Apr 25
-** Apr 24
 *** iOS Training
 ** Feb 18                                                                                           :ARCHIVE:
 *** DONE Compile G9 and flash
