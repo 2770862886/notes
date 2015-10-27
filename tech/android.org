@@ -2,4 +2,29 @@
 
 * Read only file system
 ** mount -o remount rw /system
-
+* DP, PX transform
+** Description
+|        | scale | density | screen size                                       |   |
+|--------+-------+---------+---------------------------------------------------+---|
+| ldpi   |  0.75 |     120 | QVGA(320x240),WQVGA400(400x240),WQVGA432(432x240) |   |
+| mdpi   |     1 |     160 | HVGA(320x480),WSVGA(1024x600),WXGA800(1280x800)   |   |
+| hdpi   |   1.5 |     240 | WVGA(800x480),FWVGA(854x480)                      |   |
+| xhdpi  |   2.0 |     320 | WXGA720(1280x720)                                 |   |
+| xxhdpi |   3.0 |     480 |                                                   |   |
+** Other
+   + px = pixel
+   + in = inch
+   + mm = milimeter
+   + pt = point = 1/72 inch
+** Common size
+   + small: at least 426dp x 320dp (Android does not currently support screens smaller than this.)
+   + normal: at least 470dp x 320dp
+   + large: at least 640dp x 480dp
+   + xlarge: at least 960dp x 720dp -- Android 2.3 (API Level 9)
+** Resource folder
+   + res/layout-small : Devices with screens having at least a resolution of 426dp x 320dp will make use the layouts defined in this folder
+   + res/layout-normal : Devices with screens having at least a resolution of 470dp x 320dp will make use the layouts defined in this folder
+   + res/layout-large : Devices with screens having at least a resolution of 640dp x 480dp will make use the layouts defined in this folder
+   + res/layout-xlarge : Devices with screens having at least a resolution of 960dp x 720dp will make use the layouts defined in this folder
+   + res/layout-sw320dp : Devices with a smallest screen width which is greater than 320dp will make use the layouts defined in this folder
+   + res/layout-sw480dp: Devices with a smallest screen width which is greater than 480dp will make use the layouts defined in this folder

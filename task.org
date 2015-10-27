@@ -3,7 +3,13 @@
 #+TAGS: OFFICE(o) COMPUTER(c) HOME(h) PROJECT(p) READING(r)
 
 * Projects
-** InCallUI share branch
+** New Incoming UI
+   + Ongoing widget animation for speaker action, hangup
+   + Incoming widget sliding up and down to accept and reject call
+   + Merge UED resource for Onging widget
+** DONE InCallUI share branch
+   CLOSED: [2015-10-25 日 13:40]
+   - State "DONE"       from ""           [2015-10-25 日 13:40]
    + procstate
    + memleak
    + timing

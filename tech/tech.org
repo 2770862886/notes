@@ -69,3 +69,8 @@
 *** source build/envsetup.sh
 *** lunch full_ali6735m_35gc_l-user
 *** make -j24 2>&1 | tee build.log
+** VNC command
+*** vncserver start -geometry 1920x1080
+** UED svn addr
+*** http://svn.aliyun-inc.com/svn/tianyun_doc/08.UED_OS3.0/3.1/phone/calling/resources
+*** http://svn.aliyun-inc.com/svn/tianyun_doc/08.UED_OS3.0/3.1/phone/calling/keyframes
