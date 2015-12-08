@@ -28,3 +28,8 @@
    + res/layout-xlarge : Devices with screens having at least a resolution of 960dp x 720dp will make use the layouts defined in this folder
    + res/layout-sw320dp : Devices with a smallest screen width which is greater than 320dp will make use the layouts defined in this folder
    + res/layout-sw480dp: Devices with a smallest screen width which is greater than 480dp will make use the layouts defined in this folder
+* Calling Screen On Condition
+** Dialpad showing && lay on table
+** InCallUI not showing && lay on table
+** WiredHeadset, Bluetooth, Speaker
+** Hardkeyboard

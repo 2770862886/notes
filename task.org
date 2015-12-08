@@ -3,10 +3,49 @@
 #+TAGS: OFFICE(o) COMPUTER(c) HOME(h) PROJECT(p) READING(r)
 
 * Projects
+** 9+2 test
+*** start time 13:24
+*** end time 16:24
+***
 ** New Incoming UI
-   + Ongoing widget animation for speaker action, hangup
-   + Incoming widget sliding up and down to accept and reject call
-   + Merge UED resource for Onging widget
+*** New UI Config
+**** Modify ACTION_MOVE logic
+**** Dismiss OngoingWidget after click on it
+**** OngoingWidget Auto dock Animation
+**** Remove slide up alpha
+**** Remove slide down alpha
+**** Add accept call expand animation
+**** DONE Judge HardwareRender.disable
+     CLOSED: [2015-11-16 一 10:42]
+     - State "DONE"       from ""           [2015-11-16 一 10:42]
+*** [#C] NotifcationView Drag down problem
+    + Still in investigation. Check parent ViewGroup size.
+*** [#C] NotifcationView alpha value
+    + need to make start alpha value to 30%
+*** WAIT [#A] NotifcationView display again problem
+    - State "WAIT"       from ""           [2015-11-09 一 13:42] \\
+      Could not reproduce this problem
+    + need to add more check to onWidgetShow(false)
+*** DONE [#A] NotifcationView dynamic detect WiredHeadset
+    CLOSED: [2015-11-10 二 18:46]
+    - State "DONE"       from ""           [2015-11-10 二 18:46]
+    + need to add logic in StatusBarNotifier AudioMode deection
+*** DONE [#A] OngoingWidget rotation problem
+    CLOSED: [2015-11-10 二 18:46]
+    - State "DONE"       from ""           [2015-11-10 二 18:46]
+*** DONE [#B] NotifcationView click dismiss animation
+    CLOSED: [2015-11-09 一 14:38]
+    - State "DONE"       from ""           [2015-11-09 一 14:38]
+    + need to move dismiss operation to onAnimationEnd
+*** DONE [#B] OngoingWidget rotation AutoDock computation
+    CLOSED: [2015-11-08 日 16:49]
+    - State "DONE"       from ""           [2015-11-08 日 16:49]
+    + need to refactor MSG_CHECK_METRICS message
+*** DONE [#C] OngoingWidget position problem
+    CLOSED: [2015-11-09 一 10:58]
+    - State "DONE"       from ""           [2015-11-09 一 10:58]
+    + need to move dockRegionCalc to onStart()
+** InvHero crop problem
 ** DONE InCallUI share branch
    CLOSED: [2015-10-25 日 13:40]
    - State "DONE"       from ""           [2015-10-25 日 13:40]
