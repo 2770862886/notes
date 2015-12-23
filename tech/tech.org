@@ -2,6 +2,12 @@
 * Shell Commands
 ** echo "enable 0;">/proc/alog
 * git projects
+** codebase
+*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_r1
+*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_r2
+*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_r2_6735m
+*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b bsp_mtk_lollipop_6735m
+*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b mtk_m_6735m_dev
 ** MTK
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7_6589
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7_6589_4.2.2
@@ -10,14 +16,10 @@
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_a800
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7_828a
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7.2_6592_4.2_xc2s_0722
-*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_r1
-*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_r2
-*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_r2_6735m
-*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b bsp_mtk_lollipop_6735m
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/pbase/platform -b mtk6735m_pb3.0.5
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b mtk6753_xingxing2_dev
 *** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b refs/tags/android-5.1.0_r1
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/pbase/platform -b mtk6735m_pb3.0.5
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/pbase/platform -b mtk6735m_pb3.0.5_telecom
-*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b mtk_m_6735m_dev
 ** QCOM
 *** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/qcom -b codebase_qcom_r2
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b codebase_qcom_2.7.1
