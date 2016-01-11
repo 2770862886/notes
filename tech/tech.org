@@ -1,4 +1,6 @@
 #+STARTUP: content
+* WebStorm License
+** sebstorm license server http://15.idea.lanyus.com/
 * Shell Commands
 ** echo "enable 0;">/proc/alog
 * git projects
