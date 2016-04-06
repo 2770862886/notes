@@ -33,6 +33,8 @@
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8939_yunos_cm810
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8974_tianji3_dev
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8916_x7_dev
+** SPREAD
+*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/pbase/platform -b codebase_ctnr_sprd9832
 ** Publish
 *** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b rel_cb5.0.0_6735m_20151123
 ** submodule
@@ -85,3 +87,12 @@
 *** http://svn.aliyun-inc.com/svn/tianyun_doc/08.UED_OS3.0/3.1/phone/calling/keyframes
 ** Android AMT
 *** amt start
+** Git Commands
+*** git push ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/git/yunos/tianmu/apps/keyguard <your branch name or HEAD>:refs/for/dev_keyguard
+*** git push ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/git/yunos/tianmu/apps/keyguard <your branch name or HEAD>:refs/changes/<gerrit id>
+** 4.0
+*** sendlink page://keyguard.yunos.com/KeyguardService -e [start|stop|restart] -d [pin|pattern]
+*** sendlink page://keyguard.yunos.com/KeyguardService -e restart -d pattern
+*** cd xmake
+*** ./configure --with-platform=phone --with-product=l5pro --with-board=mtk && source xdirs
+*** mm

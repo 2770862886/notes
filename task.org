@@ -3,18 +3,38 @@
 #+TAGS: OFFICE(o) COMPUTER(c) HOME(h) PROJECT(p) READING(r)
 
 * Projects
-** 9+2 test
-*** start time 13:24
-*** end time 16:24
+** Keyguard
+*** debug verifyUnlock interface in the KeyguardViewMediator
+*** PhoneStatusBar click Notification, Application exitKeyguardSecurely
+*** TrustManager
 ***
 ** New Incoming UI
 *** New UI Config
-**** Modify ACTION_MOVE logic
-**** Dismiss OngoingWidget after click on it
-**** OngoingWidget Auto dock Animation
-**** Remove slide up alpha
-**** Remove slide down alpha
-**** Add accept call expand animation
+**** DONE Dismiss OngoingWidget after click on it
+     CLOSED: [2016-03-23 三 10:05]
+     :LOGBOOK:
+     - State "DONE"       from ""           [2016-03-23 三 10:05]
+     :END:
+**** DONE OngoingWidget Auto dock Animation
+     CLOSED: [2016-03-23 三 10:05]
+     :LOGBOOK:
+     - State "DONE"       from ""           [2016-03-23 三 10:05]
+     :END:
+**** DONE Remove slide up alpha
+     CLOSED: [2016-03-23 三 10:05]
+     :LOGBOOK:
+     - State "DONE"       from ""           [2016-03-23 三 10:05]
+     :END:
+**** DONE Remove slide down alpha
+     CLOSED: [2016-03-23 三 10:05]
+     :LOGBOOK:
+     - State "DONE"       from ""           [2016-03-23 三 10:05]
+     :END:
+**** DONE Add accept call expand animation
+     CLOSED: [2016-03-23 三 10:05]
+     :LOGBOOK:
+     - State "DONE"       from ""           [2016-03-23 三 10:05]
+     :END:
 **** DONE Judge HardwareRender.disable
      CLOSED: [2015-11-16 一 10:42]
      - State "DONE"       from ""           [2015-11-16 一 10:42]
