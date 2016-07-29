@@ -11,7 +11,6 @@
 |   4 | C-c C-b   | Previous heading same level.      |
 |   5 | C-c C-u   | Backward to higher level heading. |
 |-----+-----------+-----------------------------------|
-
 ** Structrue Editing
 |--------------------+--------------------------------------------------------------------------------------------------------------------------------|
 | M-<RET>            | Insert new heading with same level as current. If the cursor is in a plain list item, a new item is created (see Plain lists). |
@@ -24,7 +23,6 @@
 | C-c C-w            | Refile entry or region to a different location. See Refiling notes.                                                            |
 | C-x n s/w          | Narrow buffer to current subtree / widen it again                                                                              |
 |--------------------+--------------------------------------------------------------------------------------------------------------------------------|
-
 ** C-c C-t: Mark a line of text with TODO
    SCHEDULED: <2011-04-13 Wed>
 ** Shift-Meta-Enter: Create a new TODO item
@@ -33,9 +31,7 @@
 ** C-c C-s: To run org-schedule. The calendar pops up. I can either enter or click the desired date.
 
 ** Table Related Issue
-
 *** Hotkey
-
 |-----+----------------------+---------------------------------------------------------------------------------------------------------------------------|
 | No. | KeyStroke            | Description                                                                                                               |
 |-----+----------------------+---------------------------------------------------------------------------------------------------------------------------|
@@ -61,9 +57,7 @@
 |  13 | C-c ^                | sort the table lines in the region. the position of the point indicates the column to be used for sorting, and the region |
 |     |                      | of lines is between the nearest horizontal seperater lines, or the entire table.                                          |
 |-----+----------------------+---------------------------------------------------------------------------------------------------------------------------|
-
 *** Grouping Columns
-
 |---+----+-----+-----+-----+---------+---------|
 |   |  N | N^2 | N^3 | N^4 | sqrt(n) | sqrt(N) |
 |---+----+-----+-----+-----+---------+---------|
@@ -72,5 +66,4 @@
 | # |  2 |   4 |   8 |  16 |  1.4142 |  1.1892 |
 | # |  3 |   9 |  27 |  81 |  1.7321 |  1.3161 |
 |---+----+-----+-----+-----+---------+---------|
-
 ** Agenda Related Issue

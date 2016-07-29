@@ -4,10 +4,23 @@
 
 * Projects
 ** Keyguard
-*** debug verifyUnlock interface in the KeyguardViewMediator
-*** PhoneStatusBar click Notification, Application exitKeyguardSecurely
-*** TrustManager
-***
+*** LifeCard icon download
+*** LifeCard sort order in NotificationListView
+*** DONE debug verifyUnlock interface in the KeyguardViewMediator
+    CLOSED: [2016-06-28 二 17:15]
+    :LOGBOOK:
+    - State "DONE"       from ""           [2016-06-28 二 17:15]
+    :END:
+*** DONE PhoneStatusBar click Notification, Application exitKeyguardSecurely
+    CLOSED: [2016-06-28 二 17:15]
+    :LOGBOOK:
+    - State "DONE"       from ""           [2016-06-28 二 17:15]
+    :END:
+*** DONE TrustManager
+    CLOSED: [2016-06-28 二 17:15]
+    :LOGBOOK:
+    - State "DONE"       from ""           [2016-06-28 二 17:15]
+    :END:
 ** New Incoming UI
 *** New UI Config
 **** DONE Dismiss OngoingWidget after click on it
