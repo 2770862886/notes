@@ -8,6 +8,7 @@
 *** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_r1
 *** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_r2
 *** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_r2_6735m
+*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_r2_6753_21in1
 *** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b bsp_mtk_lollipop_6735m
 *** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b mtk_m_6735m_dev
 ** MTK
@@ -98,6 +99,7 @@
 **** sendlink page://keyguard.yunos.com/KeyguardService -e restart -d pattern
 *** cd xmake
 *** ./configure --with-platform=phone --with-product=l5pro --with-board=mtk && source xdirs
+*** ./mk_yunos.sh sc9832 userdebug run_inside_container $_host
 *** mm
 *** memleak
     + python MemLeak.py -d phone -p page://cardshell.yunos.com/cardshell -s script/cardshell_upslide_2.txt -r 100 -j
