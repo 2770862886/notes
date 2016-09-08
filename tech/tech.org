@@ -127,3 +127,6 @@
 *** PATH: /mnt/data/yunos/var/log/pid-xxxx.v8snapshot
 ** MemLeak
 *** ./MemLeak.py -d phone -p page://keyguard.yunos.com/KeyguardService -s script/keyguard_passwd_unlock.txt -r 100 -j --only_js
+*** _pid=`adb -host shell busybox ps | egrep '\bkeyguard\b' | cut -c1-6` && echo "keyguard pid:"$_pid && adb -host shell vmcmd --force-gc $_pid && sleep 2 && adb -host shell showmap $_pid
+** Unit test
+*** adb -host shell "cd /mnt/data/yunos/opt/app/keyguard.yunos.com && jasmine"
