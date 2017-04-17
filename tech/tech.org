@@ -1,6 +1,6 @@
 #+STARTUP: content
 * WebStorm License
-** sebstorm license server http://15.idea.lanyus.com/
+** webstorm license server http://15.idea.lanyus.com/
 * Shell Commands
 ** echo "enable 0;">/proc/alog
 * git projects
@@ -37,8 +37,11 @@
 ** Sprent
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/sprd -b stable2.7.1_hipad8079
 *** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/pbase/platform -b codebase_ctnr_sprd9832
-** Publish
-*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b rel_cb5.0.0_6735m_20151123
+** TIANMU
+*** Host Code Url: repo init -u ssh://gerrit3.alibaba-inc.com:29418/repo/yunos/tianmu -b codebase_host
+*** Container Code Url: repo init -u ssh://gerrit2.alibaba-inc.com:29418/repo/pbase/platform -b codebase_ctnr_sprd9832_M
+*** Ctnr: ./mk_yunos.sh sc9832_m <build_type> run_inside_container new <host_code_absolute_dir>
+*** Host: ./configure --with-platform=phone --with-product=sc9832_m --with-board=sprd --with-buildtype=<build_type>
 ** submodule
 *** repo sync aliyunos/packages/apps/Contacts
 *** repo sync aliyunos/packages/apps/SecurityCenter
@@ -100,6 +103,8 @@
 *** cd xmake
 *** ./configure --with-platform=phone --with-product=l5pro --with-board=mtk && source xdirs
 *** ./mk_yunos.sh sc9832 userdebug run_inside_container $_host
+*** Ctnr: ./mk_yunos.sh sc9832_m <build_type> run_inside_container new <host_code_absolute_dir>
+*** Host: ./configure --with-platform=phone --with-product=sc9832_m --with-board=sprd --with-buildtype=<build_type>
 *** mm
 *** memleak
     + python MemLeak.py -d phone -p page://cardshell.yunos.com/cardshell -s script/cardshell_upslide_2.txt -r 100 -j
@@ -130,3 +135,7 @@
 *** _pid=`adb -host shell busybox ps | egrep '\bkeyguard\b' | cut -c1-6` && echo "keyguard pid:"$_pid && adb -host shell vmcmd --force-gc $_pid && sleep 2 && adb -host shell showmap $_pid
 ** Unit test
 *** adb -host shell "cd /mnt/data/yunos/opt/app/keyguard.yunos.com && jasmine"
+** HTC_LINK
+*** http://docs.alibaba-inc.com/pages/viewpage.action?pageId=478715953
+*** adb -host shell sendlink page://firstexp.yunos.com/FirstExp -d OceanA20170323
+*** http://studio.alibaba.net:9000/

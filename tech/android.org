@@ -10,7 +10,7 @@
 | mdpi   |     1 |     160 | HVGA(320x480),WSVGA(1024x600),WXGA800(1280x800)   |   |
 | hdpi   |   1.5 |     240 | WVGA(800x480),FWVGA(854x480)                      |   |
 | xhdpi  |   2.0 |     320 | WXGA720(1280x720)                                 |   |
-| xxhdpi |   3.0 |     480 |                                                   |   |
+| xxhdpi |   3.0 |     480 | (1920x1080)                                       |   |
 ** Other
    + px = pixel
    + in = inch
