@@ -4,13 +4,14 @@
 ** mount -o remount rw /system
 * DP, PX transform
 ** Description
-|        | scale | density | screen size                                       |   |
-|--------+-------+---------+---------------------------------------------------+---|
-| ldpi   |  0.75 |     120 | QVGA(320x240),WQVGA400(400x240),WQVGA432(432x240) |   |
-| mdpi   |     1 |     160 | HVGA(320x480),WSVGA(1024x600),WXGA800(1280x800)   |   |
-| hdpi   |   1.5 |     240 | WVGA(800x480),FWVGA(854x480)                      |   |
-| xhdpi  |   2.0 |     320 | WXGA720(1280x720)                                 |   |
-| xxhdpi |   3.0 |     480 | (1920x1080)                                       |   |
+|         | scale | density | screen size                                       |   |
+|---------+-------+---------+---------------------------------------------------+---|
+| ldpi    |  0.75 |     120 | QVGA(320x240),WQVGA400(400x240),WQVGA432(432x240) |   |
+| mdpi    |     1 |     160 | HVGA(320x480),WSVGA(1024x600),WXGA800(1280x800)   |   |
+| hdpi    |   1.5 |     240 | WVGA(800x480),FWVGA(854x480)                      |   |
+| xhdpi   |   2.0 |     320 | WXGA720(1280x720)                                 |   |
+| xxhdpi  |   3.0 |     480 | (1920x1080)                                       |   |
+| xxxhdpi |   4.0 |     640 |                                                   |   |
 ** Other
    + px = pixel
    + in = inch

@@ -1,0 +1,14 @@
+#+STARTUP: content
+
+* JUMP
+** jump over buffer
+*** C-UP/LEFT/DOWN/RIGHT
+*** M-[NUMBER]
+** recent-jump
+*** M-[LEFT]
+*** M-[RIGHT]
+* EDIT
+** Duplicate line
+*** C-c d
+** Kill back to indentation
+*** C-M-BACKSPACE

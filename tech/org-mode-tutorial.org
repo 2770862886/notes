@@ -1,5 +1,17 @@
 #+STARTUP: content
 
+* Emacs PlugIns
+** auto-complete
+** company
+** flycheck
+** helm
+** golden-ratio
+** jedi
+** paredit
+** rainbow-delimeters
+** undo-tree
+** nyan-mode
+** yasnippet
 * Org Mode Hotkeys
 ** Cursor Motion
 |-----+-----------+-----------------------------------|
