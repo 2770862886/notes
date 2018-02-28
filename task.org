@@ -3,20 +3,9 @@
 #+SEQ_TODO TODO(t) STARTED(s) WAIT(w@/!) | DONE(d!) CANCELED(c@)
 
 * Reminder
-** TUS
-*** Fix openSource wifi related error
-** WED
-*** Analyze WifiPage crash error one occurred, and the root cause is OOM.
-** THU
-*** Analyze LinkAction CTS startPageForResult error
-** Auto
-*** Online music
-*** Online radio
-*** Frequent location
-*** Road path/Private Map
-*** Wifi
-*** Ap list
-*** AddOrEditAp
+** MON
+*** codebase_hose Analyze SettingsProvider crash error.
+***
 * Issue
 ** SettingFramework, navigate, title, direct string
 ** Descriptor.rawConfig header destroy error

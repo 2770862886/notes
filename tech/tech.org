@@ -3,54 +3,6 @@
 ** webstorm license server http://15.idea.lanyus.com/
 * Shell Commands
 ** echo "enable 0;">/proc/alog
-* git projects
-** codebase
-*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_r1
-*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_r2
-*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_r2_6735m
-*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_r2_6753_21in1
-*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b bsp_mtk_lollipop_6735m
-*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b mtk_m_6735m_dev
-** MTK
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7_6589
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7_6589_4.2.2
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7_6592_4.2
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7.2_6592_4.2
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b codebase_mtk_a800
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7_828a
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b stable2.7.2_6592_4.2_xc2s_0722
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/mtk -b mtk6753_xingxing2_dev
-*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/mtk -b refs/tags/android-5.1.0_r1
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/pbase/platform -b mtk6735m_pb3.0.5
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/pbase/platform -b mtk6735m_pb3.0.5_telecom
-** QCOM
-*** repo init -u ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/repo/codebase/qcom -b codebase_qcom_r2
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b codebase_qcom_2.7.1
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b bee2_2.7.1
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8926
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8610_dev
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b stable3.0_qcom_8974
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8939_pmos_cm810
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8939_yunos_cm810
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8974_tianji3_dev
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/qualcomm -b qcom8916_x7_dev
-** Sprent
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/codebase/sprd -b stable2.7.1_hipad8079
-*** repo init -u ssh://liangchao.lc@gerrit2.alibaba-inc.com:29418/repo/pbase/platform -b codebase_ctnr_sprd9832
-** TIANMU
-*** Host Code Url: repo init -u ssh://gerrit3.alibaba-inc.com:29418/repo/yunos/tianmu -b codebase_host
-*** Container Code Url: repo init -u ssh://gerrit2.alibaba-inc.com:29418/repo/pbase/platform -b codebase_ctnr_sprd9832_M
-*** Ctnr: ./mk_yunos.sh sc9832_m <build_type> run_inside_container new <host_code_absolute_dir>
-*** Host: ./configure --with-platform=phone --with-product=sc9832_m --with-board=sprd --with-buildtype=<build_type>
-** submodule
-*** repo sync aliyunos/packages/apps/Contacts
-*** repo sync aliyunos/packages/apps/SecurityCenter
-*** repo sync aliyunos/packages/apps/PrivacySpace
-*** repo sync packages/providers/ContactsProvider
-** YunOS
-*** MD5
-+ 9a674275a5719da7d862eefc58c84bb2 (13911121618)
-  insert into tel_num_sys_black (systemid,address,length,match,kind,hit) values (10000, '9a674275a5719da7d862eefc58c84bb2',11,1,1,10);
 ** Signature
 *** java -jar out/host/linux-x86/framework/signapk.jar build/target/product/security/platform.x509.pem build/target/product/security/platform.pk8 out/target/product/amoi89_wet_jb2/obj/APPS/DoulBatteryServices.apk.unsigned out/target/product/amoi89_wet_jb2/obj/APPS/DoulBatteryServices.apk.signed
 *** java -jar -Xmx2048m /home/workspace/scripts/fotazip/cmd/updateTools/signapk.jar -w /home/workspace/scripts/fotazip/cmd/updateTools/zopo/v7/release/keys/testkey.x509.pem /home/workspace/scripts/fotazip/cmd/updateTools/zopo/v7/release/keys/testkey.pk8 V2.1.0-R-20131001.2018.zip V2.1.0-R-20131001.2018-signed.zip
@@ -85,18 +37,11 @@
 *** make -j24 2>&1 | tee build.log
 ** VNC command
 *** vncserver start -geometry 1920x1080
-** UED svn addr
-*** http://svn.aliyun-inc.com/svn/tianyun_doc/08.UED_OS3.0/3.1/phone/calling/resources
-*** http://svn.aliyun-inc.com/svn/tianyun_doc/08.UED_OS3.0/3.1/phone/calling/keyframes
 ** Android AMT
-*** amt start
-** Git Commands
-*** git push ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/git/yunos/tianmu/apps/keyguard <your branch name or HEAD>:refs/for/dev_keyguard
-*** git push ssh://liangchao.lc@gerrit3.alibaba-inc.com:29418/git/yunos/tianmu/apps/keyguard <your branch name or HEAD>:refs/changes/<gerrit id>
+*** amt record /var/log/1.txt
+*** amt stop
+*** amt play
 ** 4.0
-*** Branches
-**** Host Code URL: repo init -u ssh://gerrit3.alibaba-inc.com:29418/repo/yunos/tianmu -b dev_host_feature
-**** Container Code URL: repo init -u ssh://gerrit2.alibaba-inc.com:29418/repo/pbase/platform -b dev_ctnr_sprd9832_feature
 *** Commands
 **** sendlink page://keyguard.yunos.com/KeyguardService -e [start|stop|restart] -d [pin|pattern]
 **** sendlink page://keyguard.yunos.com/KeyguardService -e restart -d pattern
@@ -108,6 +53,7 @@
 *** mm
 *** memleak
     + python MemLeak.py -d phone -p page://cardshell.yunos.com/cardshell -s script/cardshell_upslide_2.txt -r 100 -j
+    + python MemLeak.py -d phone -p page://settings.yunos.com/settings -s script/ime.yunos.com.txt -r 100 -j
     + python MemLeak.py -d phone -V 4 -p com.android.phone -s script/ime.yunos.com.txt -r 100 -j
     + procrank  | grep -e scim -e keyboard
       PID       Vss      Rss      Pss      Uss  cmdline
@@ -120,8 +66,8 @@
       728    55280K   11400K   10570K   10412K  /usr/lib/scim-1.0/scim-launcher
 ** V8 Profiling
 *** process.startCPUProfile("setting");
-*** process.stopCPUProfile("setting", "/opt/data/root/ime.yunos.com/start.cpuprofile");
-*** adb -host pull /opt/data/root/ime.yunos.com/start.cpuprofile .
+*** process.stopCPUProfile("setting", "/opt/data/root/settings.yunos.com/start.cpuprofile");
+*** adb -host pull /opt/data/root/settings.yunos.com/start.cpuprofile .
 *** rm -rf ./mnt/data/yunos/opt/data/root/ime.yunos.com/local/setting.json
 ** Host Debug
 *** adb -host shell weston-dumpsys
@@ -136,6 +82,11 @@
 ** Unit test
 *** adb -host shell "cd /mnt/data/yunos/opt/app/keyguard.yunos.com && jasmine"
 ** HTC_LINK
-*** http://docs.alibaba-inc.com/pages/viewpage.action?pageId=478715953
 *** adb -host shell sendlink page://firstexp.yunos.com/FirstExp -d OceanA20170323
-*** http://studio.alibaba.net:9000/
+*** sendlink page://yunbrowser.yunos.com/browser -d {\"action\":\"LOAD_URL\",\"url\":\"www.baidu.com\",\"isNewTabForeground\":true}
+*** sendlink page://yunbrowser.yunos.com/browser -d {\"action\":\"LOAD_URL\",\"url\":\"www.5tps.com/down/22322_49_1_1.html\",\"isNewTabForeground\":true}
+*** sendlink page://yunbrowser.yunos.com/browser -d {\"action\":\"LOAD_URL\",\"url\":\"www.m117.com/down-wuqu-1-66-1.html\",\"isNewTabForeground\":true}
+*** ./mk_yunos.sh aplk_nuc user cts --enable-cntr-hal=no --enable-cntr-cvg=no --with-container=no --enable-cntr-rt=no --with-toolchainname=i686-linux-gnu --enable-unified-surface=yes --enable-closed-source=no
+** CTS commands
+*** run cts -m CtsProviderTestCases -t android.provider.cts.Settings_SystemTest#testSystemSettings
+*** run cts -m CtsProviderTestCases -t android.provider.cts.SettingsTest#testSystemTable
