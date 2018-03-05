@@ -2,27 +2,13 @@
 #+TAGS: { OFFICE(o) COMPUTER(c) HOME(h) PROJECT(p) READING(r) }
 #+SEQ_TODO TODO(t) STARTED(s) WAIT(w@/!) | DONE(d!) CANCELED(c@)
 
+* Todos
+** TODO Draw class diagram of MafService
+** TODO Analysis MafService memory usage
 * Reminder
 ** MON
-*** codebase_hose Analyze SettingsProvider crash error.
-***
-* Issue
-** SettingFramework, navigate, title, direct string
-** Descriptor.rawConfig header destroy error
-* Memo
-** May 20
-*** iOS Training
-** Feb 18                                                                                           :ARCHIVE:
-*** DONE Compile G9 and flash
-    CLOSED: [2014-04-24 Thu 10:51]
-    - State "DONE"       from ""           [2014-04-24 Thu 10:51]
-* Reading
-** <Change>                                                                                         :ARCHIVE:
-* CD collection
-** Classic
-*** Goldberg Variations
-    :PROPERTIES:
-    :EXPORT_TITLE: QianYuQianXun
-    :NDisks_ALL: aaa
-    :END:
-*** Scodeo
+** Feb
+** Wed
+** Thu
+** Fri
+** Sat
