@@ -1,1 +1,4 @@
 #+STARTUP: content
+
+* VNC
+** 10.101.169.24:17

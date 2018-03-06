@@ -1,1 +1,8 @@
+## OSX cache
+.DS_Store
+
+## package
+*.zip
+
+## working
 work.org
