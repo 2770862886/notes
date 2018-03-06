@@ -6,8 +6,8 @@
 ** TODO Draw class diagram of MafService
 ** TODO Analysis MafService memory usage
 * Reminder
-** MON
-** Feb
+** Mon
+** Tue
 ** Wed
 ** Thu
 ** Fri
