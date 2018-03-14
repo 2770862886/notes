@@ -3,14 +3,16 @@
 #+SEQ_TODO TODO(t) STARTED(s) WAIT(w@/!) | DONE(d!) CANCELED(c@)
 
 * Todos
+** TODO Analysis jsuglyfy error
 ** TODO Draw class diagram of MafService
 ** TODO Analysis MafService memory usage
+** TODO Remove SettingsProvider with system property
 * Reminder
 ** Mon
-*** Bringup DailySound app
+*** Work on Watch project, remove settings provider. native code has been ready.
 ** Tue
-*** Analysis SettingsProvider stays awake
-*** Modify DailySound app UI requirement
+*** Supoort Auto code uglify problem
+*** Support Auto tester, make resource id.
 ** Wed
 ** Thu
 ** Fri
