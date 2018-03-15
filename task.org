@@ -1,4 +1,4 @@
-#+STARTUP: overview
+#+STARTUP: content
 #+TAGS: { OFFICE(o) COMPUTER(c) HOME(h) PROJECT(p) READING(r) }
 #+SEQ_TODO TODO(t) STARTED(s) WAIT(w@/!) | DONE(d!) CANCELED(c@)
 
@@ -14,6 +14,9 @@
 *** Supoort Auto code uglify problem
 *** Support Auto tester, make resource id.
 ** Wed
+*** Analysis auto SettingsProvider notify failed.
+*** Complete Remove SettingsProvider.
+*** Analysis 9832n boot error.
 ** Thu
 ** Fri
 ** Sat
