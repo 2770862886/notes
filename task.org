@@ -4,9 +4,7 @@
 
 * Todos
 ** TODO Analysis jsuglyfy error
-** TODO Draw class diagram of MafService
 ** TODO Analysis MafService memory usage
-** TODO Remove SettingsProvider with system property
 * Reminder
 ** Mon
 *** Work on Watch project, remove settings provider. native code has been ready.
