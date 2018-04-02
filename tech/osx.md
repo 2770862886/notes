@@ -23,3 +23,7 @@ sudo mdutil -a -i off
 
 # enable spotlight index
 sudo mdutil -a -i on
+
+# disable/enable System Integrity Protection
+Command+R while reboot
+crsutil enable/disable/status
