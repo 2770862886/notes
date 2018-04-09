@@ -8,7 +8,7 @@ void method()
 # Interface
 
 # relation
-## Generalization (泛化)
+## Generalization (泛化, 继承)
 plantuml: Parent <|-- Child
 ## Realization (实现)
 plantuml: Interface <|.. Implementation
@@ -17,7 +17,7 @@ plantuml: Company *-- Department
 plantuml: Class01 "1" *-- "many" Class02 : contains
 ## Aggregation (聚合)
 plantuml: Car o-- Wheel
-## Association (关联, 双向, 单向)
+## Association (关联 [双向, 单向])
 plantuml: Teacher -- Student
 plantuml: Student --> Course
 ## Dependency (依赖)

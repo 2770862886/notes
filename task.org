@@ -7,14 +7,12 @@
 ** TODO Analysis MafService memory usage
 * Reminder
 ** Mon
-*** Work on Watch project, remove settings provider. native code has been ready.
+*** Support Mafservice exit automatically.
 ** Tue
-*** Supoort Auto code uglify problem
-*** Support Auto tester, make resource id.
+*** Support MarqueeView in Abook app.
 ** Wed
-*** Analysis auto SettingsProvider notify failed.
-*** Complete Remove SettingsProvider.
-*** Analysis 9832n boot error.
 ** Thu
 ** Fri
 ** Sat
+** Sun
+***

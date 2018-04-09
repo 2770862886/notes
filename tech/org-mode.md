@@ -1,4 +1,7 @@
-#+STARTUP: content
+Org-mode
+======
+
+# Org-mode is fabulous organizational tool originally built by Casten Dominik that operators on plain text files. Org-mode is part of Emacs.
 
 * Emacs PlugIns
 ** auto-complete
