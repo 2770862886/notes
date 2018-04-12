@@ -1,110 +1,139 @@
-Emacs Using & Plugin Tips
-======
+% Emacs Using & Plugin Tips
 
-# Hotkeys #
+<link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
-## Jump over buffers ##
+## Prerequisite ##
 
-C-UP/LEFT/DOWN/RIGHT
-M-[NUMBER]
+### ag (the_silver_searcher) ###
 
-## recent-jump ##
+`brew install the_silver_searcher`
 
-M-[LEFT]
-M-[RIGHT]
+## Hotkeys ##
 
-## Duplicate line ##
+### Jump over buffers ###
 
-C-c d
+<kbd>C-\<up\>/\<left\>/\<down\>/\<right\></kbd>
+<kbd>M-\<#\></kbd>
 
-## Kill back to indentation ##
+### recent-jump ###
 
-C-M-BACKSPACE
+<kbd>M-\<left\></kbd>
+<kbd>M-\<right\></kbd>
+
+### Duplicate line ###
+
+<kbd>C-c d</kbd>
+
+### Kill back to indentation ###
+
+<kbd>C-M-\<BS\></kbd>
+
+### Toggle the region/word case ###
+
+| Action                        |         Keybinding |
+|:------------------------------|-------------------:|
+| Lower case the region or word | <kbd>C-x C-l</kbd> |
+| Upper case the region or word | <kbd>C-x C-u</kbd> |
 
 ## cscope ##
 
-C-c s s         Find symbol.
-C-c s d         Find global definition.
-C-c s g         Find global definition (alternate binding).
-C-c s G         Find global definition without prompting.
-C-c s c         Find functions calling a function.
-C-c s C         Find called functions (list functions called from a function).
-C-c s t         Find text string.
-C-c s e         Find egrep pattern.
-C-c s f         Find a file.
-C-c s i         Find files #including a file.
+| Action                                                         |         Keybinding |
+|:---------------------------------------------------------------|-------------------:|
+| Find symbol.                                                   | <kbd>C-c s s</kbd> |
+| Find global definition.                                        | <kbd>C-c s d</kbd> |
+| Find global definition (alternate binding).                    | <kbd>C-c s g</kbd> |
+| Find global definition without prompting.                      | <kbd>C-c s G</kbd> |
+| Find functions calling a function.                             | <kbd>C-c s c</kbd> |
+| Find called functions (list functions called from a function). | <kbd>C-c s C</kbd> |
+| Find text string.                                              | <kbd>C-c s t</kbd> |
+| Find egrep pattern.                                            | <kbd>C-c s e</kbd> |
+| Find a file.                                                   | <kbd>C-c s f</kbd> |
+| Find files #including a file.                                  | <kbd>C-c s i</kbd> |
+| Display *cscope* buffer.                                       | <kbd>C-c s b</kbd> |
+| Auto display *cscope* buffer toggle.                           | <kbd>C-c s B</kbd> |
+| Next symbol.                                                   | <kbd>C-c s n</kbd> |
+| Next file.                                                     | <kbd>C-c s N</kbd> |
+| Previous symbol.                                               | <kbd>C-c s p</kbd> |
+| Previous file.                                                 | <kbd>C-c s P</kbd> |
+| Pop mark.                                                      | <kbd>C-c s u</kbd> |
 
-C-c s b         Display *cscope* buffer.
-C-c s B         Auto display *cscope* buffer toggle.
-C-c s n         Next symbol.
-C-c s N         Next file.
-C-c s p         Previous symbol.
-C-c s P         Previous file.
-C-c s u         Pop mark.
+# multi-cursor #
 
-## multi-cursor ##
+| Action                                  |         Keybinding |
+|:----------------------------------------|-------------------:|
+| Mark previous like this                 |     <kbd>C-<</kbd> |
+| Mark next                               |     <kbd>C-></kbd> |
+| Mark all like this                      | <kbd>C-c C-<</kbd> |
+| *from active region to multiple cursor* |                    |
+| Set rectangular region anchor           | <kbd>C-c m r</kbd> |
+| Edit lines                              | <kbd>C-c m c</kbd> |
+| Edit ends of lines                      | <kbd>C-c m e</kbd> |
+| Edit beginnings of lines                | <kbd>C-c m a</kbd> |
 
-C-<             Mark previous like this
-C-> (C-+)       Mark next
-C-c C-<         Mark all like this
-from active region to multiple cursor:
-C-c m r         Set rectangular region anchor
-C-c m c         Edit lines
-C-c m e         Edit ends of lines
-C-c m a         Edit beginnings of lines
+# projectile #
 
-## projectile ##
+If you want to mark a folder manully as a project just create an empty .projectile file in it.  
 
-If you want to mark a folder manully as a project just create an empty .projectile file in it.
-
-C-c p C-h: for help
-C-c p ESC: buffer
-C-c p C: configure project
-C-c p D: project dired
-C-c p E: edit project locals
-C-c p F: find file in known projects
-C-c p I: ibuffer
-C-c p p: Switch project
-C-c p f: find a file in current project
-C-c p R: regenerate tags
-C-c p S: Save all the buffer related to current project
-C-c p T: find test file
-C-c p V: browse dirty projects
-C-c p a: find other file
-C-c p b: switch to buffer
-C-c p c: compile current project
-C-c p d: find dir
-C-c p e: recent file
-C-c p f: find file
-C-c p e: find file dwin
-C-c p i: invalidate cache
-C-c p j: find tag
-C-c p k: kill buffers
-C-c p l: find file in directory
-C-c p m: commander
-C-c p o: multi occur
-C-c p r: replace
-C-c p t: toggle between implementation and test
-C-c p u: run project
-C-c p v: vc
-C-c p z: cache current file
-C-c p x e: run eshell
-C-c p x s: run shell
-C-c p x t: run term
-C-c p s g: grep
-C-c p s s: ag
-C-c p 5 D: dired other frame
-C-c p 5 a: find other file other frame
-C-c p 5 b: switch to buffer other frame
-C-c p 5 d: find file dwim other frame
-C-c p 5 t: find implementation or test other frame
-C-c p 4 C-o: display buffer
-C-c p 4 D: dired other window
-C-c p 4 a: find other file other window
-C-c p 4 b: switch to buffer other window
-C-c p 4 d: find dir other window
-C-c p 4 f: find file other window
-C-c p 4 g: find file dwin other window
-C-c p 4 t: find implementation or test other window
+| Action                                         |             Keybinding |
+|:-----------------------------------------------|-----------------------:|
+| for help                                       |   <kbd>C-c p C-h</kbd> |
+| buffer                                         |   <kbd>C-c p ESC</kbd> |
+| configure project                              |     <kbd>C-c p C</kbd> |
+| project dired                                  |     <kbd>C-c p D</kbd> |
+| edit project locals                            |     <kbd>C-c p E</kbd> |
+| find file in known projects                    |     <kbd>C-c p F</kbd> |
+| ibuffer                                        |     <kbd>C-c p I</kbd> |
+| switch project                                 |     <kbd>C-c p p</kbd> |
+| find a file in current project                 |     <kbd>C-c p f</kbd> |
+| regenerate tags                                |     <kbd>C-c p R</kbd> |
+| save all the buffer related to current project |     <kbd>C-c p S</kbd> |
+| find test file                                 |     <kbd>C-c p T</kbd> |
+| browse dirty projects                          |     <kbd>C-c p V</kbd> |
+| find other file                                |     <kbd>C-c p a</kbd> |
+| switch to buffer                               |     <kbd>C-c p b</kbd> |
+| compile current project                        |     <kbd>C-c p c</kbd> |
+| find dir                                       |     <kbd>C-c p d</kbd> |
+| recent file                                    |     <kbd>C-c p e</kbd> |
+| find file                                      |     <kbd>C-c p f</kbd> |
+| find file dwin                                 |     <kbd>C-c p e</kbd> |
+| invalidate cache                               |     <kbd>C-c p i</kbd> |
+| find tag                                       |     <kbd>C-c p j</kbd> |
+| kill buffers                                   |     <kbd>C-c p k</kbd> |
+| find file in directory                         |     <kbd>C-c p l</kbd> |
+| commander                                      |     <kbd>C-c p m</kbd> |
+| multi occur                                    |     <kbd>C-c p o</kbd> |
+| replace                                        |     <kbd>C-c p r</kbd> |
+| toggle between implementation and test         |     <kbd>C-c p t</kbd> |
+| run project                                    |     <kbd>C-c p u</kbd> |
+| vc                                             |     <kbd>C-c p v</kbd> |
+| cache current file                             |     <kbd>C-c p z</kbd> |
+| run eshell                                     |   <kbd>C-c p x e</kbd> |
+| run shell                                      |   <kbd>C-c p x s</kbd> |
+| run term                                       |   <kbd>C-c p x t</kbd> |
+| grep                                           |   <kbd>C-c p s g</kbd> |
+| ag                                             |   <kbd>C-c p s s</kbd> |
+| dired other frame                              |   <kbd>C-c p 5 D</kbd> |
+| find other file other frame                    |   <kbd>C-c p 5 a</kbd> |
+| switch to buffer other frame                   |   <kbd>C-c p 5 b</kbd> |
+| find file dwim other frame                     |   <kbd>C-c p 5 d</kbd> |
+| find implementation or test other frame        |   <kbd>C-c p 5 t</kbd> |
+| display buffer                                 | <kbd>C-c p 4 C-o</kbd> |
+| dired other window                             |   <kbd>C-c p 4 D</kbd> |
+| find other file other window                   |   <kbd>C-c p 4 a</kbd> |
+| switch to buffer other window                  |   <kbd>C-c p 4 b</kbd> |
+| find dir other window                          |   <kbd>C-c p 4 d</kbd> |
+| find file other window                         |   <kbd>C-c p 4 f</kbd> |
+| find file dwin other window                    |   <kbd>C-c p 4 g</kbd> |
+| find implementation or test other window       |   <kbd>C-c p 4 t</kbd> |
 
 ## ivy ##
+
+## Scheme ##
+
+geiser + paredit-mode 是玩Racket 的好环境
+
+## Erc ##
+
+## figlet ##
+
+## cua block ##

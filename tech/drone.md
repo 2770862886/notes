@@ -1,20 +1,16 @@
-Quadrotor
-======
+% Quadrotor
 
-# Betaflight tools #
+<link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
-Betaflight Configurator
-https://github.com/betaflight/betaflight-configurator/releases
+## Betaflight tools ##
 
-Blackbox Explorer
-https://github.com/betaflight/blackbox-log-viewer-ng/tree/master/dist
+* [Betaflight Configurator](https://github.com/betaflight/betaflight-configurator/releases)
 
-BLHeli Configurator
-https://github.com/blheli-configurator/blheli-configurator/releases
+* [Blackbox Explorer](https://github.com/betaflight/blackbox-log-viewer-ng/tree/master/dist)
 
-Cleanflight Configurator
-https://github.com/cleanflight/cleanflight-configurator/releases
+* [BLHeli Configurator](https://github.com/blheli-configurator/blheli-configurator/releases)
 
-iNav Configurator
-https://github.com/iNavFlight/inav-configurator/releases
+* [Cleanflight Configurator](https://github.com/cleanflight/cleanflight-configurator/releases)
+
+* [iNav Configurator](https://github.com/iNavFlight/inav-configurator/releases)
 

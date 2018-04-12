@@ -1,4 +1,6 @@
-#+STARTUP: content
+% Android Tips
+
+<link id="linkstyle" rel='stylesheet' href='markdown.css'/>
 
 * Read only file system
 ** mount -o remount rw /system

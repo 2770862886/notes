@@ -7,9 +7,18 @@
 ** TODO Analysis MafService memory usage
 * Reminder
 ** Mon
-*** Support Mafservice exit automatically.
+*** DONE Support Mafservice exit automatically.
+    CLOSED: [2018-04-10 Tue 10:53]
+    :LOGBOOK:
+    - State "DONE"       from ""           [2018-04-10 Tue 10:53]
+    :END:
+*** DONE Support MarqueeView in Abook app.
+    CLOSED: [2018-04-10 Tue 10:53]
+    :LOGBOOK:
+    - State "DONE"       from ""           [2018-04-10 Tue 10:53]
+    :END:
 ** Tue
-*** Support MarqueeView in Abook app.
+*** TODO Fix SettingsProvider device_provision problem
 ** Wed
 ** Thu
 ** Fri
