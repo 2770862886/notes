@@ -32,8 +32,11 @@
 
 | Action                        |         Keybinding |
 |:------------------------------|-------------------:|
+| Upper case char at the point  |     <kbd>M-c</kbd> |
 | Lower case the region or word | <kbd>C-x C-l</kbd> |
 | Upper case the region or word | <kbd>C-x C-u</kbd> |
+| Lower case word at the point  |     <kbd>M-l</kbd> |
+| Upper case word at the point  |     <kbd>M-u</kbd> |
 
 ## cscope ##
 
@@ -95,7 +98,7 @@ If you want to mark a folder manully as a project just create an empty .projecti
 | find dir                                       |     <kbd>C-c p d</kbd> |
 | recent file                                    |     <kbd>C-c p e</kbd> |
 | find file                                      |     <kbd>C-c p f</kbd> |
-| find file dwin                                 |     <kbd>C-c p e</kbd> |
+| find file dwim                                 |     <kbd>C-c p g</kbd> |
 | invalidate cache                               |     <kbd>C-c p i</kbd> |
 | find tag                                       |     <kbd>C-c p j</kbd> |
 | kill buffers                                   |     <kbd>C-c p k</kbd> |
@@ -115,7 +118,8 @@ If you want to mark a folder manully as a project just create an empty .projecti
 | dired other frame                              |   <kbd>C-c p 5 D</kbd> |
 | find other file other frame                    |   <kbd>C-c p 5 a</kbd> |
 | switch to buffer other frame                   |   <kbd>C-c p 5 b</kbd> |
-| find file dwim other frame                     |   <kbd>C-c p 5 d</kbd> |
+| find dir other frame                           |   <kbd>C-c p 5 d</kbd> |
+| find file dwim other frame                     |   <kbd>C-c p 5 g</kbd> |
 | find implementation or test other frame        |   <kbd>C-c p 5 t</kbd> |
 | display buffer                                 | <kbd>C-c p 4 C-o</kbd> |
 | dired other window                             |   <kbd>C-c p 4 D</kbd> |
@@ -123,8 +127,10 @@ If you want to mark a folder manully as a project just create an empty .projecti
 | switch to buffer other window                  |   <kbd>C-c p 4 b</kbd> |
 | find dir other window                          |   <kbd>C-c p 4 d</kbd> |
 | find file other window                         |   <kbd>C-c p 4 f</kbd> |
-| find file dwin other window                    |   <kbd>C-c p 4 g</kbd> |
+| find file dwim other window                    |   <kbd>C-c p 4 g</kbd> |
 | find implementation or test other window       |   <kbd>C-c p 4 t</kbd> |
+
+dwim stands for 'Do What I Mean', usually these function try to do the right thing depends on the context.
 
 ## ivy ##
 

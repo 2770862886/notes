@@ -3,8 +3,43 @@
 #+SEQ_TODO TODO(t) STARTED(s) WAIT(w@/!) | DONE(d!) CANCELED(c@)
 
 * Todos
-** TODO Analysis jsuglyfy error
-** TODO Analysis MafService memory usage
+** TODO Recommend
+   + [X] add PlayStatus, and current playList
+   + [X] user tracker
+   + [X] set background
+   + [X] startCustomPlaylist for the list
+   + [X] check sliding
+   + [X] use caf ImageLoader
+** DONE softKeyboardMode = Window.SoftKeyboardMode.AdjustPan
+   CLOSED: [2018-05-23 Wed 15:02]
+   :LOGBOOK:
+   - State "DONE"       from ""           [2018-05-23 Wed 15:02]
+   :END:
++ yunos/ui/view/Window
+** DONE Settings - UserTracker
+   CLOSED: [2018-04-19 Thu 19:15]
+   :LOGBOOK:
+   - State "DONE"       from ""           [2018-04-19 Thu 19:15]
+   :END:
+** DONE Settings - UI fix
+   CLOSED: [2018-05-23 Wed 15:01]
+   :LOGBOOK:
+   - State "DONE"       from ""           [2018-05-23 Wed 15:01]
+   :END:
+** DONE SoundDaily - onShow(), onHide to resume, pause playing.
+   CLOSED: [2018-05-23 Wed 15:01]
+   :LOGBOOK:
+   - State "DONE"       from ""           [2018-05-23 Wed 15:01]
+   :END:
+** CANCELLED MafService - add interface [get_audio_info_by_id_a622]
+   CLOSED: [2018-05-23 Wed 15:01]
+   :LOGBOOK:
+   - State "CANCELLED"  from ""           [2018-05-23 Wed 15:01] \\
+     Only JS modification
+   :END:
+   + https://lark.alipay.com/boy/gmv4wg/qza892#v9ufuf
+** MafService - add interface [audio.program.get.by.category.attr]
+   + https://lark.alipay.com/boy/gmv4wg/qza892#mvpxdq
 * Reminder
 ** Mon
 *** DONE Support Mafservice exit automatically.
@@ -24,4 +59,3 @@
 ** Fri
 ** Sat
 ** Sun
-***

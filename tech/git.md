@@ -26,3 +26,7 @@ git config --global alias.br branch
 ## repo commands ##
 
 repo forall -c "git reset --hard && git clean -xfd"  
+
+## Fix simple ssh does not support port ##
+
+`git config --global ssh.variant ssh`
