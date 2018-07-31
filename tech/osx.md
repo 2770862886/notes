@@ -8,6 +8,8 @@
 
 <kbd>Ctrl+Command+3/4</kbd>
 
+`defaults write com.apple.screencapture location /Users/liangchao/Desktop/sreenshots`
+
 ### Speed up mouse speed ###
 
 `defaults read -g com.apple.mouse.scaling`

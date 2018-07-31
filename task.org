@@ -3,7 +3,18 @@
 #+SEQ_TODO TODO(t) STARTED(s) WAIT(w@/!) | DONE(d!) CANCELED(c@)
 
 * Todos
-** TODO Recommend
+** Implement VoicePrint
+** Implement Navigator widget
+** DONE FM corner number
+   CLOSED: [2018-07-03 Tue 12:48]
+   :LOGBOOK:
+   - State "DONE"       from              [2018-07-03 Tue 12:48]
+   :END:
+** DONE Recommend
+   CLOSED: [2018-07-02 Mon 20:30]
+   :LOGBOOK:
+   - State "DONE"       from "TODO"       [2018-07-02 Mon 20:30]
+   :END:
    + [X] add PlayStatus, and current playList
    + [X] user tracker
    + [X] set background
