@@ -117,3 +117,10 @@ Contents/Resources/GoogleSoftwareUpdateAgent.app/Contents/Resources/\
 install.py --uninstall
 sudo touch /Library/Google/GoogleSoftwareUpdate
 ```
+
+### install emacs with home brew ###
+```
+brew install emacs-mac
+ln -s /usr/local/opt/emacs-mac/Emacs.app /Application/
+ln -s /usr/local/opt/emacs-mac/bin /Applications/Emacs.app/Contents/MacOS/
+```

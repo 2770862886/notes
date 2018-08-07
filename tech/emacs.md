@@ -136,10 +136,43 @@ dwim stands for 'Do What I Mean', usually these function try to do the right thi
 
 ## Scheme ##
 
-geiser + paredit-mode 是玩Racket 的好环境
+racket-mode + paredit-mode
+
+## paredit ##
+
+1. Split & Join
+| Action              |        Keybind |
+|:--------------------|---------------:|
+| paredit-splice-sexp | <kbd>M-S</kbd> |
+| paredit-join-sexps  | <kbd>M-J</kbd> |
+
+2. Depth-Changing
+
+| Action                               |            Keybinding |
+|:-------------------------------------|----------------------:|
+| paredit-wrap-round                   |        <kbd>M-(</kbd> |
+| paredit-splice-sexp-killing-backward |   <kbd>M-\<up\></kbd> |
+| paredit-splice-sexp-killing-forward  | <kbd>M-\<down\></kbd> |
+| paredit-raise-sexp                   |        <kbd>M-r</kbd> |
+
+3. Barfage[^2] & Slurpage[^3]
+
+| Action                      |               Keybinding |
+|:----------------------------|-------------------------:|
+| paredit-forward-slurp-sexp  |           <kbd>C-)</kbd> |
+|                             |   <kbd>C-\<right\></kbd> |
+| paredit-forward-barf-sexp   |         <kbd>C-}\</kbd\> |
+|                             |    <kbd>C-\<left\></kbd> |
+| paredit-backward-slurp-sexp |           <kbd>C-(</kbd> |
+|                             |  <kbd>C-M-\<left\></kbd> |
+| paredit-backward-barf-sexp  |           <kbd>C-{</kbd> |
+|                             | <kbd>C-M-\<right\></kbd> |
 
 ## Erc ##
 
 ## figlet ##
 
 ## cua block ##
+
+[^2]: If someone barfs, they vomit.
+[^3]: If you slurp a liquid, you drink it noisily.
