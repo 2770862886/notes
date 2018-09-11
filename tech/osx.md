@@ -10,6 +10,22 @@
 
 `defaults write com.apple.screencapture location /Users/liangchao/Desktop/sreenshots`
 
+### 6 ways Force Quit ###
+
+1. 
+<kbd>Cmd + Opt + ESC</kbd>
+2. 
+<kbd>Cmd + Opt + Shift + ESC</kbd>
+3. From Dock, right click
+
+4. From Apple Menu
+
+5. Use Activity Monitor
+
+6. Using the terminal & kill command
+`killall [processname]`
+`kill -9 [pid]`
+
 ### Speed up mouse speed ###
 
 `defaults read -g com.apple.mouse.scaling`
@@ -120,6 +136,7 @@ sudo touch /Library/Google/GoogleSoftwareUpdate
 
 ### install emacs with home brew ###
 ```
+brew tap railwaycat/emacsmacport
 brew install emacs-mac
 ln -s /usr/local/opt/emacs-mac/Emacs.app /Application/
 ln -s /usr/local/opt/emacs-mac/bin /Applications/Emacs.app/Contents/MacOS/

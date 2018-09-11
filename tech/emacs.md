@@ -10,6 +10,22 @@
 
 ## Hotkeys ##
 
+### Help Commands ###
+| Description                              |         Keybinding |
+|:-----------------------------------------|-------------------:|
+| info emacs maunual, require for an topic | <kbd>C-h r i</kbd> |
+| describe function                        |   <kbd>C-h f</kbd> |
+| describe key                             |   <kbd>C-h k</kbd> |
+| describe mode                            |   <kbd>C-h m</kbd> |
+| describe symbol                          |   <kbd>C-h o</kbd> |
+| apropos-command                          |   <kbd>C-h a</kbd> |
+
+
+### mark region ###
+
+press <kbd>S-SPC</kbd> to active command mark, then move the cursor to the point
+and press <kbd>C-x C-x</kbd> to active the region between the two position.
+
 ### Jump over buffers ###
 
 <kbd>C-\<up\>/\<left\>/\<down\>/\<right\></kbd>
@@ -24,9 +40,14 @@
 
 <kbd>C-c d</kbd>
 
-### Kill back to indentation ###
+### indentation ###
 
-<kbd>C-M-\<BS\></kbd>
+| Action                   |            Keybinding |
+|:-------------------------|----------------------:|
+| kill-back-to-indentation | <kbd>C-M-\<BS\></kbd> |
+| back-to-indentation      |        <kbd>M-m</kbd> |
+| delete-indentation       |        <kbd>M-^</kbd> |
+| indent-rigidly           |    <kbd>C-x TAB</kbd> |
 
 ### Toggle the region/word case ###
 
@@ -147,7 +168,6 @@ racket-mode + paredit-mode
 | paredit-join-sexps  | <kbd>M-J</kbd> |
 
 2. Depth-Changing
-
 | Action                               |            Keybinding |
 |:-------------------------------------|----------------------:|
 | paredit-wrap-round                   |        <kbd>M-(</kbd> |
@@ -156,7 +176,6 @@ racket-mode + paredit-mode
 | paredit-raise-sexp                   |        <kbd>M-r</kbd> |
 
 3. Barfage[^2] & Slurpage[^3]
-
 | Action                      |               Keybinding |
 |:----------------------------|-------------------------:|
 | paredit-forward-slurp-sexp  |           <kbd>C-)</kbd> |
@@ -167,6 +186,24 @@ racket-mode + paredit-mode
 |                             |  <kbd>C-M-\<left\></kbd> |
 | paredit-backward-barf-sexp  |           <kbd>C-{</kbd> |
 |                             | <kbd>C-M-\<right\></kbd> |
+
+4. Insert
+| Action                          |     Keybinding |
+|:--------------------------------|---------------:|
+| paredit-comment-dwim            | <kbd>M-;</kbd> |
+| paredit-newline                 | <kbd>C-j</kbd> |
+| paredit-close-round-and-newline | <kbd>M-)</kbd> |
+
+5. Movement & Navigation
+| Action                |       Keybinding |
+|:----------------------|-----------------:|
+| paredit-forward       | <kbd>C-M-f</kbd> |
+| paredit-backward      | <kbd>C-M-b</kbd> |
+| paredit-backward-up   | <kbd>C-M-u</kbd> |
+| paredit-forward-down  | <kbd>C-M-d</kbd> |
+| paredit-backward-down | <kbd>C-M-p</kbd> |
+| paredit-forward-up    | <kbd>C-M-n</kbd> |
+
 
 ## Erc ##
 

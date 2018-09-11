@@ -1,7 +1,7 @@
 % markdown-mode in Emacs
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
-[Sextext](https://en.wikipedia.org/wiki/Setext "Structure Enhanced Text")  
+[Setext](https://en.wikipedia.org/wiki/Setext "Structure Enhanced Text")  
 [Aaron Swartz's Atx](https://en.wikipedia.org/wiki/Aaron_Swartz#atx "Atx")  
 [Guide to Markdown Mode for Emacs](https://leanpub.com/markdown-mode/read)  
 [Pandoc User's Guide](http://pandoc.org/MANUAL.html)  

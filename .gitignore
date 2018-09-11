@@ -9,3 +9,6 @@ work.org
 
 ## exported file
 *.html
+
+## temp file
+.#*
