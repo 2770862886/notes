@@ -138,6 +138,6 @@ sudo touch /Library/Google/GoogleSoftwareUpdate
 ```
 brew tap railwaycat/emacsmacport
 brew install emacs-mac
-ln -s /usr/local/opt/emacs-mac/Emacs.app /Application/
+ln -s /usr/local/opt/emacs-mac/Emacs.app /Applications/
 ln -s /usr/local/opt/emacs-mac/bin /Applications/Emacs.app/Contents/MacOS/
 ```
