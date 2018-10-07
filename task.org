@@ -6,9 +6,11 @@
 ** Study quiver usage.
 ** Study SQ3R how to read one book.
 ** Use orgmode to implement GTD.
+** Use tmux and add notes in tech.
 * Todos
 ** TODO [#C] Add capabilities for Hotspot
 ** TODO 欢迎页 手势引导
+** TODO Use caf2 re-code SettingService
 * Reminder
 ** Mon
 ** Tue

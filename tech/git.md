@@ -2,6 +2,17 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
+# git elements #
+
+## git rebase -i ##
+
+``` shell
+git rebase -i HEAD^^
+```
+
+
+`
+
 ## git alias ##
 
 git config --global alias.l "log --color --graph --decorate --pretty=oneline --abbrev-commit"  

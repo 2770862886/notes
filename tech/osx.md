@@ -60,14 +60,31 @@
 <kbd>Command+R</kbd> while reboot  
 `crsutil enable/disable/status`
 
+### coreaudiod makes high cpu ###
+
+``` shell
+sudo launchctl unload /system/library/launchdaemons/com.apple.audio.coreaudiod.plist
+sudo rm -r /Library/Preferences/Audio/
+sudo mkdir /Library/Preferences/Audio
+sudo chown -R _coreaudiod:admin /Library/Preferences/Audio
+sudo launchctl load /system/library/launchdaemons/com.apple.audio.coreaudiod.plist
+```
+
+### UserEventAgent high cpu ###
+
+``` shell
+cd /System/Library/UserEventPlugins 
+sudo mv com.apple.cts.plugin com.apple.cts.plugin.disabled 
+sudo shutdown -r now
+```
+
 ### install gnu command line tools ###
 
 Then add the following line to your .bashrc or .zshrc:
-`export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"`
-
-`brew install coreutils`
+`export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH"`
 
 ``` bash
+brew install coreutils
 brew install binutils
 brew install diffutils
 brew install ed --with-default-names
@@ -141,3 +158,40 @@ brew install emacs-mac
 ln -s /usr/local/opt/emacs-mac/Emacs.app /Applications/
 ln -s /usr/local/opt/emacs-mac/bin /Applications/Emacs.app/Contents/MacOS/
 ```
+
+### install iterm and oh-my-zsh and plugins ###
+
+Install iTerm2 from the official website. [www.iterm2.com](iTerm2)
+
+```
+brew install autojump
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```
+
+#### tmux ####
+
+```
+brew install tmux
+
+tmux new-session -s <会话名称>
+tmux new -s <会话名称> 初始命令
+
+tmux attach-session -t <会话名称>
+tmux attach -t <会话名称>
+tmux a -t <会话名称>
+
+<kbd>C-b d</kbd> 分离会话
+
+tmux new -n <窗口名>
+    |:pp-|-:|
+| <kbd>C-b c</kbd>     | 创建窗口     |
+| <kbd>C-b [0-9]</kbd> | 切换窗口     |
+| <kbd>C-b w</kbd>     | 窗口列表     |
+| <kbd>C-b ,</kbd>     | 更改窗口名称 |
+| <kbd>C-b &</kbd>     | 关闭窗口     |
+
+
+```
+
+

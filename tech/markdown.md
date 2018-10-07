@@ -7,6 +7,10 @@
 [Pandoc User's Guide](http://pandoc.org/MANUAL.html)  
 [Write Better Markdown](http://brettterpstra.com/2015/08/24/write-better-markdown/)  
 
+``` shell
+brew install pandoc
+```
+
 markdown-mode is a major mode for editing markdown-formatted text.  
 
 The commands for styling text are grouped under <kbd>C-c C-s</kbd>, and toggle commands begin with <kbd>C-c C-x</kbd>, movement and shifting commands tend to be with paired delimiters such as <kbd>M-{</kbd> and <kbd>M-}</kbd> or <kbd>C-c <</kbd> and <kbd>C-c ></kbd>, finally commands for running Markdown or doing maintenance on an open file are grouped under the <kbd>C-c C-c</kbd> prefix. The most commonly used commands are described by pressing <kbd>C-c C-h</kbd>.  
