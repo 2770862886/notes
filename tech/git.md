@@ -2,6 +2,10 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
+# git stage #
+
+![stage](images/git_stage.jpg)
+
 # git elements #
 
 ## git rebase -i ##
@@ -9,9 +13,6 @@
 ``` shell
 git rebase -i HEAD^^
 ```
-
-
-`
 
 ## git alias ##
 

@@ -2,6 +2,13 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
+## Tramp ##
+TRAMP is for transparently accessing remote file from within Emacs.  
+
+<kbd>C-x C-f</kbd>
+`ssh:user@host#port:pathTo`
+
+
 ## Prerequisite ##
 
 ### ag (the_silver_searcher) ###
@@ -153,13 +160,13 @@ If you want to mark a folder manully as a project just create an empty .projecti
 
 dwim stands for 'Do What I Mean', usually these function try to do the right thing depends on the context.
 
-## ivy ##
+# ivy #
 
-## Scheme ##
+# Scheme #
 
 racket-mode + paredit-mode
 
-## paredit ##
+# paredit #
 
 1. Split & Join
 | Action              |        Keybind |
@@ -205,11 +212,12 @@ racket-mode + paredit-mode
 | paredit-forward-up    | <kbd>C-M-n</kbd> |
 
 
-## Erc ##
+# Erc #
 
-## figlet ##
+# figlet #
 
-## cua block ##
+# cua block #
 
 [^2]: If someone barfs, they vomit.
 [^3]: If you slurp a liquid, you drink it noisily.
+
