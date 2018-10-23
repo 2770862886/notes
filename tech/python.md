@@ -355,13 +355,30 @@ def fib(max):
         a, b = b, a + b
         n = n + 1
     return
-    
+
 g = fib(10)
 
 for n in range(1, 11):
     print(next(g))
 ```
 
+``` python
+g = fib(6)
+while True:
+    try:
+        x = next(g)
+        print('g:', x)
+    except StopIteration as e:
+        print('Generator return value:', e.value)
+        break;
+
+```
+
+``` python
+def triangles():
+    
+
+```
 
 # 爬虫 #
 
