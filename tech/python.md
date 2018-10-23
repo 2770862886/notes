@@ -374,11 +374,155 @@ while True:
 
 ```
 
+* 杨辉三角
+
 ``` python
 def triangles():
-    
+    origin = []
+    while True:
+        result = origin[:]
+        if len(origin) > 1:
+            for i in range(1: len(origin)):
+                result[i] = origin[i - 1] + origin[i]
+        result.append(1)
+        yield result
+        origin = result[:]
+
+results = []
+for t in triangles():
+    print(t)
+    results.append(t)
+    n = n + 1
+    if n == 10:
+        break
 
 ```
+
+### 迭代器（Iterator） ###
+可用于for循环的数据类型有：
+1. 集合数据类型，list，tuple，dict，set，str等
+2. generator，包括生成器和带yield的generator function
+这些可以直接作用于for循环的对象成为可迭代对象：Iterable
+可以使用isinstance()函数判断一个对象是否Interable对象
+
+``` python
+from collections import Iterable
+
+isinstance([], Iterable)
+True
+
+isinstance({}, Iterable)
+True
+
+isinstance('abc', Iterable)
+True
+
+isinstance((x for x in range(10)), Iterable)
+True
+
+
+isinstance([], Iterator)
+False
+
+isinstance({}, Iterator)
+False
+
+isinstance('abc', Iterator)
+False
+
+isinstance((x for x in range(10)), Iterator)
+True
+```
+
+可以通过iter函数获取一个Iterator对象
+
+``` python
+it = iter([1, 2, 3, 4, 5])
+
+while True:
+    try:
+        x = next(it)
+        print('value is ', x)
+    except StopIteration as e:
+        print('Error occurred while Iteration')
+        break
+
+```
+
+### 函数式编程（Functional Programming） ###
+
+#### 高阶函数（High-order function） ####
+函数名也是变量，把函数作为参数传入，这样的函数称为高阶函数。
+
+* map/reduce
+[MapReduce: Simplified Data Processing on Large Clusters](https://ai.google/research/pubs/pub62)
+
+``` Pseudocode
+map(String input_key, String input_value):
+    // input_key: document name
+    // input_value: document contents
+    for each word w in input_value:
+        EmitIntermediate(w, "1");
+
+reduce(String output_key, Iterator intermediate_values):
+    // output_key: a word
+    // output_values: a list of counts
+    int result = 0;
+    for each v in intermediate_vlaues:
+        result += ParseInt(v);
+    Emit(AsString(result));
+```
+
+Python内建了map()和reduce()函数，map函数接受两个参数(一个函数，一个Iterable)，map将传入的函数一次作用到每个元素，并把元素作为新的Iterator返回。
+
+``` python
+def f(x):
+    return x * x
+r = map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+list(r)
+```
+
+再看reduce函数的用法，reduce函数把一个函数作用在一个序列[x1, x2, x3, ...]上，这个函数必须接收两个参数，  
+reduce把结果继续和序列的下一个元素做累计计算  
+
+``` python
+reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
+```
+
+1. map(function, iterable, ..)
+  Return an iterator that applies function to every item of iterable, yielding the results. If additional iterable  
+  arguments are passed, function must take that many arguments and is applied to the items form all iterables in  
+  parallel. With multiple iterables, the iterator stops when the shortest iterable is exhausted. For cases where  
+  the function inputs are already arranged into argument tuples.  
+
+2. functools.reduce(function, iterable[, initilizer])
+  Apply function of two arguments cumulatively to the items of sequence, from left to right, so as to **reduce** the  
+  sequence to a single value. For example, **reduce(lambda x, y: x+y, [1, 2, 3, 4, 5])** calculates ((((1 + 2) + 3) + 4) + 5)  
+
+* filter
+  Python 内建的filter()函数用于过滤序列。参数与map()类似，filter()也是接收一个函数和一个序列。
+
+  ``` python
+  def is_odd(n):
+      return n % 2 == 1
+  list(filter(is_odd, [1, 2, 3, 4, 5, 6, 9, 10, 15]))
+  ```
+
+* sorted
+  Python 内建的函数sorted()可以对list进行排序
+
+  ``` python
+  sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower)
+  ```
+
+#### 返回函数 ####
+* 闭包
+
+#### 匿名函数 ####
+
+#### 装饰器 ####
+
+#### 偏函数 ####
 
 # 爬虫 #
 
