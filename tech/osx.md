@@ -195,3 +195,7 @@ tmux new -n <窗口名>
 ```
 
 
+#### ffmpeg ####
+
+* 更改封装
+`ffmpeg -i test.h264 -vcodec copy -f mp4 test.mp4`
