@@ -9,6 +9,8 @@
 
 ``` shell
 brew install pandoc
+brew cask install basictex
+brew cask install wkhtmltopdf
 ```
 
 markdown-mode is a major mode for editing markdown-formatted text.  

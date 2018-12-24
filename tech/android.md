@@ -36,3 +36,33 @@
 ** InCallUI not showing && lay on table
 ** WiredHeadset, Bluetooth, Speaker
 ** Hardkeyboard
+
+# Touch Event control flow #
+
+*-----------------------------------*
+|                 A                 |
+|  *-----------------------------*  |
+|  |              B              |  |
+|  |   *---------------------*   |  |
+|  |   |          C          |   |  |
+|  |   |    *-----------*    |   |  |
+|  |   |    |     D     |    |   |  |
+|  |   |    |           |    |   |  |
+|  |   |    |           |    |   |  |
+|  |   |    |           |    |   |  |
+|  |   |    |           |    |   |  |
+|  |   |    |           |    |   |  |
+|  |   |    *-----------*    |   |  |
+|  |   |                     |   |  |
+|  |   *---------------------*   |  |
+|  |                             |  |
+|  *-----------------------------*  |
+|                                   |
+*-----------------------------------*
+
+> onInterceptTouchEvent负责对touch事件的拦截，最外层的View会首先收到onInterceptTouchEvent，如果返回值为true表示拦截成功。
+> 此时，拦截成功的View会收到onTouchEvent事件，内层的View不会再收到onInterceptTouchEvent事件。
+> 而onTouchEvent事件的返回值决定父窗口会不会收到onTouchEvent事件。
+
+A.onInterceptTouchEvent -> B.onInterceptTouchEvent -> C.onInterceptTouchEvent -> D.onInterceptTouchEvent
+D.onTouchEvent -> C.onTouchEvent -> B.onTouchEvent -> A.onTouchEvent

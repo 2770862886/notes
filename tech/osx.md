@@ -191,11 +191,11 @@ tmux new -n <窗口名>
 | <kbd>C-b ,</kbd>     | 更改窗口名称 |
 | <kbd>C-b &</kbd>     | 关闭窗口     |
 
-
 ```
 
-
 #### ffmpeg ####
-
 * 更改封装
 `ffmpeg -i test.h264 -vcodec copy -f mp4 test.mp4`
+
+#### 查看RGB值 ####
+`Digital Color Meter`

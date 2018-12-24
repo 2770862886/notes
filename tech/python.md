@@ -2,7 +2,27 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
-[PythonInEmacs](http://emacswiki.org/emacs/PythonProgammingInEmacs)
+[Python Programming In Emacs](https://www.emacswiki.org/emacs/PythonProgrammingInEmacs)
+[elpy](https://elpy.readthedocs.io/en/latest/index.html)
+
+# Environment setup #
+
+``` shell
+# Either of these
+pip install rope
+pip install jedi
+# flake8 for code checks
+pip install flake8
+# and autopep8 for automatic PEP8 formatting
+pip install autopep8
+# and yapf for code formatting
+pip install yapf
+```
+
+``` shell
+python3 -m pip install --upgrade pip
+python3 -m pip install jupyter
+```
 
 # String & Coding #
 Unicode的目的是将所有语言编码到一套编码里，避免乱码问题。Unicode的标准也在不断发展，最初的标准是用两个字节  
