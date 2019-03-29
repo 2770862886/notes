@@ -5,12 +5,39 @@
 * Inbox
 ** Study quiver usage.
 ** Study SQ3R how to read one book.
-** Use orgmode to implement GTD.
-** Use tmux and add notes in tech.
+** Study Racket and write tech notes
+** Read NLP <Frog Prince>
 * Todos
-** TODO [#C] Add capabilities for Hotspot
-** TODO 欢迎页 手势引导
-** TODO Use caf2 re-code SettingService
+** Use orgmode to implement GTD.
+** Archive :ARCHIVE:
+*** Archive
+    :PROPERTIES:
+    :ARCHIVE_TIME: 2019-03-29 Fri 08:59
+    :END:
+**** DONE [#C] Add capabilities for Hotspot
+     CLOSED: [2019-03-29 Fri 08:58]
+     :PROPERTIES:
+     :ARCHIVE_TIME: 2019-03-29 Fri 08:59
+     :END:
+     :LOGBOOK:
+     - State "DONE"       from "TODO"       [2019-03-29 Fri 08:58]
+     :END:
+**** DONE 欢迎页 手势引导
+     CLOSED: [2019-03-29 Fri 08:58]
+     :PROPERTIES:
+     :ARCHIVE_TIME: 2019-03-29 Fri 08:59
+     :END:
+     :LOGBOOK:
+     - State "DONE"       from "TODO"       [2019-03-29 Fri 08:58]
+     :END:
+**** DONE Use caf2 re-code SettingService
+     CLOSED: [2019-03-29 Fri 08:58]
+     :PROPERTIES:
+     :ARCHIVE_TIME: 2019-03-29 Fri 08:59
+     :END:
+     :LOGBOOK:
+     - State "DONE"       from "TODO"       [2019-03-29 Fri 08:58]
+     :END:
 * Reminder
 ** Mon
 ** Tue
