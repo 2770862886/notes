@@ -66,3 +66,6 @@
 
 A.onInterceptTouchEvent -> B.onInterceptTouchEvent -> C.onInterceptTouchEvent -> D.onInterceptTouchEvent
 D.onTouchEvent -> C.onTouchEvent -> B.onTouchEvent -> A.onTouchEvent
+
+* SVG
+Scalable Vector Graphics 可缩放矢量图

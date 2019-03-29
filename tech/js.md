@@ -43,3 +43,6 @@ logger.i(`the string is ${i}`);
 * exp(x) 返回e的x次幂
 * pow(x,y) 返回x的y次幂
 * log(x) 返回数的自然对数(底为e)
+
+## console ##
+console.trace();

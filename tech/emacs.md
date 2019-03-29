@@ -90,16 +90,16 @@ and press <kbd>C-x C-x</kbd> to active the region between the two position.
 
 # multi-cursor #
 
-| Action                                  |         Keybinding |
-|:----------------------------------------|-------------------:|
-| Mark previous like this                 |     <kbd>C-<</kbd> |
-| Mark next                               |     <kbd>C-></kbd> |
-| Mark all like this                      | <kbd>C-c C-<</kbd> |
-| *from active region to multiple cursor* |                    |
-| Set rectangular region anchor           | <kbd>C-c m r</kbd> |
-| Edit lines                              | <kbd>C-c m c</kbd> |
-| Edit ends of lines                      | <kbd>C-c m e</kbd> |
-| Edit beginnings of lines                | <kbd>C-c m a</kbd> |
+| Action                                  |           Keybinding |
+|:----------------------------------------|---------------------:|
+| Mark previous like this                 |     <kbd>'C-<'</kbd> |
+| Mark next                               |     <kbd>'C->'</kbd> |
+| Mark all like this                      | <kbd>'C-c C-<'</kbd> |
+| *from active region to multiple cursor* |                      |
+| Set rectangular region anchor           |   <kbd>C-c m r</kbd> |
+| Edit lines                              |   <kbd>C-c m c</kbd> |
+| Edit ends of lines                      |   <kbd>C-c m e</kbd> |
+| Edit beginnings of lines                |   <kbd>C-c m a</kbd> |
 
 # projectile #
 
@@ -211,6 +211,8 @@ racket-mode + paredit-mode
 | paredit-backward-down | <kbd>C-M-p</kbd> |
 | paredit-forward-up    | <kbd>C-M-n</kbd> |
 
+
+# irc #
 
 # Erc #
 
