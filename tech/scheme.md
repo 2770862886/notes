@@ -13,7 +13,6 @@
 * DrRacket, the programming environment; 
 * raco, a command-line tool for executing Racket commands that install packages, build libraries, and more.
 
-
 ``` racket
 #lang racket
 
@@ -133,3 +132,79 @@ Instead of duplicate the "hub?" case, this function is better written as
 "huh?"
 
 ```
+
+### Anonymous Functions with lambda ###
+
+``` racket
+(define (twice f v)
+    (f (f v)))
+
+(define (louder s)
+    (string-append s "!"))
+
+(twice louder "hello")
+
+(twice (lambda (s)
+    (string-append s "!")))
+```
+
+### Local Binding with define, let, and let* ###
+
+``` racket
+(define (converse s)
+  (define (starts? s2) ; local to converse
+    (define len2 (string-length s2))  ; local to starts?
+    (and (>= (string-length s) len2)
+         (equal? s2 (substring s 0 len2))))
+  (cond
+   [(starts? "hello") "hi!"]
+   [(starts? "goodbye") "bye!"]
+   [else "huh?"]))
+
+(converse "hello!")
+(converse "urp")
+```
+
+``` racket
+(let ([x (random 4)]
+      [0 (random 4)])
+      (cond
+      [(> x o) "X wins"]
+      [(> o x) "O wins"]
+      [else "cat's game"]))
+
+"O wins"
+```
+
+``` racket
+(let* ([x (random 4)]
+       [o (random 4)]
+       [diff (number->string (abs (- x o)))])
+       (cond
+       [(> x o) (string-append "X wins by " diff)]
+       [(> o x) (string-append "O wins by " diff)]
+       [else "cat's game"]))
+
+"O wins by 2"
+```
+
+## List, Iteration, and Recursion ##
+
+### Predefined List Loops ###
+
+### List Iteration from Scratch ###
+
+### Tail Recursion ###
+
+### Recursion versus Iteration ###
+
+## Pairs, Lists, and Racket Syntax ##
+
+### Quoting Pairs and Symbol with quote ###
+
+### Abbreviating quote with ' ###
+
+### Lists and Racket Syntax ###
+
+
+

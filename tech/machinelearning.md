@@ -170,3 +170,5 @@ end;
 ```
 
 ## vectorization ##
+
+[Machine Learning Road Map](https://github.com/clone95/Virgilio)

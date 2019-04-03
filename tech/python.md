@@ -3,6 +3,7 @@
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
 [Python Programming In Emacs](https://www.emacswiki.org/emacs/PythonProgrammingInEmacs)
+[Intermediate Python Programming introduction](https://pythonprogramming.net/introduction-intermediate-python-tutorial/)
 [elpy](https://elpy.readthedocs.io/en/latest/index.html)
 
 # Environment setup #
@@ -3304,4 +3305,9 @@ loop = asyncio.get_event_loop()
 loop.run_until_complete(init(loop))
 loop.run_forever()
 ```
+
+-------------------------------------------------------------------------------
+
+
+# Intermediate Python Programming #
 

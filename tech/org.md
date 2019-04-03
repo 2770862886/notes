@@ -4,60 +4,83 @@
 
 Org-mode is fabulous organizational tool originally built by Casten Dominik that operators on plain text files. Org-mode is part of Emacs.  
 
-## document structure ##
+# Document Structure #
 
-## tables ##
+## Outlines ##
+Org is on top of outline-mode 
 
-## hyperlinks ##
+## Headlines ##
+The name defined in `org-footnote-section` is reserved. Do not use it as a title for your own headings.
 
-## TODO items ##
+## Visibility Cycling ##
 
-## tags ##
+### Global and local cycling ###
+| Action                                                 | Command                    | Keybinding      |
+|:-------------------------------------------------------|:---------------------------|-----------------|
+| Rotate current subtree among the states                | org-cycle                  | TAB             |
+| Rotate the entire buffer among the states              | org-global-cycle           | C-u TAB         |
+|                                                        |                            | S-TAB           |
+| Switch back to startup visibility                      | org-set-startup-visibility | C-u C-u TAB     |
+| Show all, including drawers                            | outline-show-all           | C-u C-u C-u TAB |
+| Reveal context around point, showing the current entry | org-reveal                 | C-c C-r         |
+| Expose all the headings                                                       |                            |                 |
 
-## properties and columns ##
+### Initial visibility ###
 
-## dates and times ##
+### Catching invisible edits ###
 
-## capture - refile - archive ##
+# Tables #
+
+# Hyperlinks #
+
+# TODO Items #
+
+# Tags #
+
+# Properties and Columns #
+
+# Dates and Times #
+
+# Capture - Refile - Archive #
 
 | Action                      |             Keybinding |
 |:----------------------------|-----------------------:|
 | org-archive-subtree-default | <kbd>C-c C-x C-a</kbd> |
 |                             |                        |
 
-## agenda ##
+# Agenda Views #
 
-## markup ##
+# Markup for Rich Contents #
 
-## exporting ##
+# Exporting #
 
-## publishing ##
+# Publishing #
 
-## working with source code ##
+# Working with Source Code #
 
-## miscellaneous ##
+# Miscellaneous #
 
-## hacking ##
+# hacking #
 
-### hooks ###
+## Hooks ##
 
-### add-on packages ###
+## Add-on Packages ##
 
-### adding hyperlink types ###
+## Adding Hyperlink Types ##
 
-### adding export back-ends ###
+## Adding Export Back-ends ##
 
-### context-sensitive commands ###
+## Tables in Arbitary Syntax ##
 
-### tables in arbitary syntax ###
+## Dynamic Blocks ##
 
-### dynamic blocks ###
+## Special Agenda Views ##
 
-### special agenda views ###
+## Speeding Up Your Agendas ##
 
-### extracting agenda information ###
+## Extracting Agenda Information ##
 
-### using the property API ###
+## Using the Property API ##
 
-### using the mapping API ###
+## Using the Mapping API ##
 

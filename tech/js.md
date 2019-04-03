@@ -46,3 +46,37 @@ logger.i(`the string is ${i}`);
 
 ## console ##
 console.trace();
+
+## map/reduce ##
+2003 SOSP publish GFS
+2004 OSDI publish MapReduce
+2006 OSDI publish BigTable
+
+* map() 原数组中每个元素调用一个指定方法后，返回返回值组成的新数组
+
+``` javascript
+function pow(x) {
+    return x^2;
+}
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let result = arr.map(pow); // map 传入函数对象作为唯一参数
+console.log(result);  // [1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+```
+
+* reduce() 为数组中每一个元素依次执行回调函数
+
+``` javascript
+function cb(ac, cur) {
+    console.log(ac);
+    console.log(cur);
+}
+[x1, x2, x3, x4].reduce(cb, 0); 
+
+cb(0, x1);
+cb(x1, x2);
+cb(x1 + x2, x3);
+cb(x1 + x2 + x3, x4);
+```
+

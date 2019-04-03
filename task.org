@@ -1,15 +1,23 @@
-#+STARTUP: content
-#+TAGS: { OFFICE(o) COMPUTER(c) HOME(h) PROJECT(p) READING(r) }
+#+STARTUP: content hidestarts
+#+TAGS: { WORK(w) COMPUTER(c) HOME(h) PROJECT(p) READING(r) OTHER(o) }
 #+SEQ_TODO TODO(t) STARTED(s) WAIT(w@/!) | DONE(d!) CANCELED(c@)
+#+PROPERTY: CLOCK_INTO_DRAWER t
 
 * Inbox
-** Study quiver usage.
+** Study GTD procedure and theory, and make note of org-mode
+** Study quiver usage.                                                          :READING:
 ** Study SQ3R how to read one book.
 ** Study Racket and write tech notes
 ** Read NLP <Frog Prince>
+** Read Machine Learning OpenCourse
+   * AngreNG's
+** Study SurfaceView work theory
 * Todos
 ** Use orgmode to implement GTD.
 ** Archive :ARCHIVE:
+   :LOGBOOK:
+   CLOCK: [2019-03-29 Fri 16:10]--[2019-03-29 Fri 16:11] =>  0:01
+   :END:
 *** Archive
     :PROPERTIES:
     :ARCHIVE_TIME: 2019-03-29 Fri 08:59

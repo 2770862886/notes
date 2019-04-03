@@ -13,6 +13,12 @@ TRAMP is for transparently accessing remote file from within Emacs.
 
 ### ag (the_silver_searcher) ###
 
+``` shell
+sudo add-apt-repository ppa:pgolm/the-silver-searcher
+sudo apt-get update
+sudo apt-get install silversearcher-ag
+```
+
 `brew install the_silver_searcher`
 
 ## Hotkeys ##
