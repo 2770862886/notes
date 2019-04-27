@@ -5,10 +5,10 @@
 
 * Inbox
 ** Study GTD procedure and theory, and make note of org-mode
-** Study quiver usage.                                                          :READING:
-** Study SQ3R how to read one book.
+** Study quiver usage, and markdown gramma.                                     :READING:
+** Study SQ3R how to read one book.                                             :READING:
 ** Study Racket and write tech notes
-** Read NLP <Frog Prince>
+** Read NLP <Frog Prince>                                                       :READING:
 ** Read Machine Learning OpenCourse
    * AngreNG's
 ** Study SurfaceView work theory
