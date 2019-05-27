@@ -2,6 +2,17 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
+# emacs ide config #
+
+* Jump to definition
+* Auto-completion
+* On-the-fly syntax highlighting
+* Find file in project
+* Compile with one key press
+* Graphical debugger
+
+
+
 # cmake #
 
 ## synopsis ##
