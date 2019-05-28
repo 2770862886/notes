@@ -2,6 +2,24 @@
 
 <link id="linkStyle" rel="stylesheet" href="markdown.css"/>
 
+# Getting Source #
+
+[Fuchsia Source](https://fuchsia.googlesource.com/docs/+/44e394b8ce759c1f85dfa68e83af6f0fb1b0834f/getting_source.md)
+
+## Creating a new checkout ##
+
+The bootstrap procedure requires that you have Go 1.6 or newer and Git installed and on your PATH.
+
+First, select the layer of the system you wish to build. (If you're unsure, select topaz, which contains the lower layers). Then, run the following command:
+
+``` shell
+curl -s "https://fuchsia.googlesource.com/scripts/+/master/bootstrap?format=TEXT" | base64 --decode | bash -s <layer>
+```
+
+
+
+-------------------------------------------------------------------------------
+
 # Architecture #
  * Zircon 微内核，基础服务进程（设备管理器，核心设备驱动，libc，进程间通信接口fidl）
  * Garnet 设备层面的系统服务（软件安装，通信，媒体，图形，包管理，更新系统等）

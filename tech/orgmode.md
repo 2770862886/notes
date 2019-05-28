@@ -15,6 +15,7 @@ The name defined in `org-footnote-section` is reserved. Do not use it as a title
 ## Visibility Cycling ##
 
 ### Global and local cycling ###
+
 | Action                                                 | Command                    | Keybinding      |
 |:-------------------------------------------------------|:---------------------------|-----------------|
 | Rotate current subtree among the states                | org-cycle                  | TAB             |
@@ -23,11 +24,31 @@ The name defined in `org-footnote-section` is reserved. Do not use it as a title
 | Switch back to startup visibility                      | org-set-startup-visibility | C-u C-u TAB     |
 | Show all, including drawers                            | outline-show-all           | C-u C-u C-u TAB |
 | Reveal context around point, showing the current entry | org-reveal                 | C-c C-r         |
-| Expose all the headings                                                       |                            |                 |
+| Expose all the headings                                |                            |                 |
+|                                                        |                            |                 |
 
 ### Initial visibility ###
 
 ### Catching invisible edits ###
+
+## Motion ##
+
+| Action                             | Command | Keybinding |
+|:-----------------------------------|:--------|------------|
+| Next heading                       |         | C-c C-n    |
+| Previous heading                   |         | C-c C-p    |
+| Next heading same level            |         | C-c C-f    |
+| Previous heading same level        |         | C-c C-b    |
+| Backward to heighter level heading |         | C-c C-u    |
+|                                    |         |            |
+
+## Structure editing ##
+
+## Sparse trees ##
+
+## Plain lists ##
+
+## Footnotes ##
 
 # Tables #
 
@@ -61,7 +82,6 @@ The name defined in `org-footnote-section` is reserved. Do not use it as a title
 # Miscellaneous #
 
 # hacking #
-
 ## Hooks ##
 
 ## Add-on Packages ##

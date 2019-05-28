@@ -11,8 +11,6 @@
 * Compile with one key press
 * Graphical debugger
 
-
-
 # cmake #
 
 ## synopsis ##

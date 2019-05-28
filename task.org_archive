@@ -161,3 +161,42 @@ Archived entries from file /Users/liangchao/notes/task.org
    :LOGBOOK:
    - State "DONE"       from "TODO"       [2018-08-30 Thu 20:18]
    :END:
+
+** Archive :ARCHIVE:
+   :PROPERTIES:
+   :ARCHIVE_TIME: 2019-05-28 Tue 12:05
+   :ARCHIVE_FILE: ~/notes/task.org
+   :ARCHIVE_OLPATH: Todos
+   :ARCHIVE_CATEGORY: task
+   :END:
+   :LOGBOOK:
+   CLOCK: [2019-03-29 Fri 16:10]--[2019-03-29 Fri 16:11] =>  0:01
+   :END:
+*** Archive
+    :PROPERTIES:
+    :ARCHIVE_TIME: 2019-03-29 Fri 08:59
+    :END:
+**** DONE [#C] Add capabilities for Hotspot
+     CLOSED: [2019-03-29 Fri 08:58]
+     :PROPERTIES:
+     :ARCHIVE_TIME: 2019-03-29 Fri 08:59
+     :END:
+     :LOGBOOK:
+     - State "DONE"       from "TODO"       [2019-03-29 Fri 08:58]
+     :END:
+**** DONE 欢迎页 手势引导
+     CLOSED: [2019-03-29 Fri 08:58]
+     :PROPERTIES:
+     :ARCHIVE_TIME: 2019-03-29 Fri 08:59
+     :END:
+     :LOGBOOK:
+     - State "DONE"       from "TODO"       [2019-03-29 Fri 08:58]
+     :END:
+**** DONE Use caf2 re-code SettingService
+     CLOSED: [2019-03-29 Fri 08:58]
+     :PROPERTIES:
+     :ARCHIVE_TIME: 2019-03-29 Fri 08:59
+     :END:
+     :LOGBOOK:
+     - State "DONE"       from "TODO"       [2019-03-29 Fri 08:58]
+     :END:
