@@ -460,6 +460,16 @@ Sets arguments at the scenirio:
  
 # L3 Advanced Training #
 
+## Robotic Enterprise Framework ##
+
+* Main state machine
+* Exceptions handling
+* State
+  - Initstate (config file, InitAllApplications)
+  - Get Transaction Data (TransactionItem, TransactionNumber)
+  - Process Transaction
+* SetTractionStatus
+* GetAppCredential
 
 
 
@@ -541,8 +551,8 @@ Two types of development robots
 
 * Package Management Bundle
   - Libraries and Activities per Tenant
-  -
-  [Manageing Activities](https://studio.uipath.com/docs/managing-activities-packages)
+  - Mass Update Tool
+  [Managing Activities](https://studio.uipath.com/docs/managing-activities-packages)
 
 * GIT Integration & Workflow Diff
   [File Diff](https://studio.uipath.com/docs/using-file-diff#section-comparing-workflow-versions)
@@ -570,27 +580,78 @@ Two types of development robots
 ## UiPath 2019.4 Orchestrator Updates ##
 
 * Real Time Monitoring
+  Monitoring the state of your deployment by looking at jobs, queues or robots.
+
 * Libraries and Activies per Tenant
+  The **Libraries and Activities Per tenant** feature enables you to upload a reusable component (a library)
+  and use it on a single tenant only, isolated from the others.
+
 * Universal Blob Storage
+  The **Universal Blob Storage** allows you to publish a set of generic storage API methods. By using this
+  approach, the application services become agnostic of the native storage provider.
+  + Storage
+    Abstracts a key-value storage solution. The Storage Client API interface is compliant with the Object Storage
+    cloud terminology. The API user should design the data with respect to a flat model (bucket like).
+  + Storage Provider
+    The underneath implementation of the persistence system, the storage wrapped by the Storage Client API interface.
+  + Storage Bucket
+    Bucket as it is described by the Object Storage concepts. By analogy with the traditional file systems, the bucket should be read as a disk volume.
+  + Storage Content
+    The actual data being persisted into the wrapped storage solution.
+  + Storage Content Prefix
+    The mechanism to logically group the saved content under a single bucket.
+  + Storage Location
+    It fully describes the location of the content inside the storage, that's the tuple (key, prefix, bucket).
+    The key must be unique across the enclosing bucket.
+  + Storage Transaction
+    It's a best effort mechanism to address the all-or-nothing request for a set of storage commands.
 
 * Encryption Key per Tenant
+  The **Encryption Key per Tenant** feature allows for different tenants to use different encryption keys in
+  order to protect/unprotect sensitive data.
 
 * Orchestrator Mobile App
+  tracking Robots, Jobs, Machines, Schedules.
 
 * UiPath Recording
-
+  
 
 ## UiPath 2019.4 Activities ##
 
 * Intelligent OCR - Document Processing Framework
+  [IntelligentOCR](https://activities.uipath.com/docs/about-the-intelligentocr-activities-pack)
+  [Classify Document Scrope](https://activities.uipath.com/docs/classify-document-scope)
+  [Keyword Based Classifier](https://activities.uipath.com/docs/keyword-based-classifier)
+  [Train Classifiers And Extractors](https://activities.uipath.com/docs/train-classifiers-and-extractors)
+  [Data Extraction Scope](https://activities.uipath.com/docs/data-extraction-scope)
+  [Export Extraction Scope](https://activities.uipath.com/docs/export-extraction-results)
+  [FlexiCapture Classifier](https://activities.uipath.com/docs/flexicapture-classifier)
+  [FlexiCapture Extractor](https://activities.uipath.com/docs/flexicapture-extractor)
 
 * Regex Builder
+  + 'Matches' activity
+  + 'IsMatch' activity
+  + 'Replace' activity
 
 * IBM Lotus Notes
+  Usually integrated during the end of automation.
+
+* PDF New Activities
+  + Join PDF files
+  + Manage PDF password
 
 * Support for variables in 'Selectors'
 
+* JxBrowser Support
+
+* Edge Browser Support
+
 ## UiPath 2019.4 Driver ##
+
+UiPath **Remote Desktop Protocol** support (RDP) offers the ability to **automate remote applications** through
+a  Remote Desktop Connection.
+
+[execute task in RDP](https://robot.uipath.com/docs/executing-tasks-in-a-minimized-rdp-window)
 
 * Native Citrix Support
 
@@ -598,11 +659,92 @@ Two types of development robots
 
 * Better Browsing Support
 
+* Citrix XenApp and XenDesktop
+  [XenApp Automation](https://studio.uipath.com/docs/about-native-citrix-automation)
+
+
 [^2]: (Rich Text Format) A document format from Microsoft for encoding text and graphics. It was adapted from IBM's DCA format and supports ANSI, IBM PC and Macintosh character sets. The RTF format is used as a source document for Windows Help files and other Microsoft products.
 
-| keybindings  |                function |
-|:-------------|------------------------:|
-| Ctrl-k       |         create variable |
-| Ctrl-m       |  create input parameter |
-| Ctrl-Shift-m | create output parameter |
-|              |                         |
+-------------------------------------------------------------------------------
+
+# UiPath Studio Shortcuts #
+
+* File Management
+
+| keybindings      | description                                                                |
+|:-----------------|:---------------------------------------------------------------------------|
+| Ctrl + Shift + N | Create a new **Blank Process**                                             |
+| Ctrl + O         | Enables you to open a previously created workflow, either the **.xaml** or |
+|                  | **project.json** file                                                      |
+| Ctrl + L         | Opens the folder where the Log files are stored.                           |
+| Ctrl + S         | Saves the currently opened workflow.                                       |
+| Ctrl + Shift + S | Saves all the workflows that are currently open.                           |
+| Ctrl + Tab       | Moves focus between workflows opened in the **Designer** panel.            |
+|                  |                                                                            |
+
+* Comment
+
+| keybindings | description                                                                                     |
+|:------------|:------------------------------------------------------------------------------------------------|
+| Ctrl + D    | Ignores the activity that is currently selected by placing it into a **Comment Out** container. |
+| Ctrl + E    | Removes the activity from the **Comment Out** container it was placed in.                       |
+|             |                                                                                                 |
+
+* Debugging
+
+| keybindings | description                                                                    |
+|:------------|:-------------------------------------------------------------------------------|
+| F7          | Runs the currently opened workflow in debug mode.                              |
+| F8          | Checks the currently opened workflow for validation errors.                    |
+| F9          | Marks the selected activity with a breakpoint.                                 |
+| Shift + F9  | Removes all the breakpoints in the currently opened workflow.                  |
+| F11         | When debugging, enables you to step into a block of activites in the currently |
+|             | selected workflow.                                                             |
+| Shift + F11 |                                                                                |
+|             |                                                                                |
+
+* Recording
+
+| keybindings    | description                                                                           |
+|:---------------|:--------------------------------------------------------------------------------------|
+| Alt + Ctrl + W | Opens the **Web Recording** toolbar.                                                  |
+| Alt + Ctrl + B | Opens the **Basic Recording** toolbar.                                                |
+| Alt + Ctrl + C | Opens the **Citrix Recording** toolbar                                                |
+| Alt + Ctrl + D | Opens the **Desktop Recording** toolbar                                               |
+| F2             | Adds delay during a recording activity.                                               |
+| F3             | Lets you specify a custom recording region                                            |
+| F4             | Lets you choose the UI Framework to record, which can be **Default, AA,** and **UIA** |
+|                |                                                                                       |
+
+* Workflow Execution
+
+| keybindings | description                                                                 |
+|:------------|:----------------------------------------------------------------------------|
+| F5          | Runs the workflow that is currently open.                                    |
+| Pause       | Pauses the execution of the current workflow, in both normal and debug mode. |
+| F12         | Stops the execution of the current workflow, in both normal and debug mode.                                                                            |
+
+* Selected Activity
+
+| keybindings      | description                                                                        |
+|:-----------------|:-----------------------------------------------------------------------------------|
+| Ctrl + T         | Places the activity inside the **Try** section of a **Try Catch** activity         |
+| Ctrl + N         | Creates a new **Sequence Diagram** in the current project                          |
+| Ctrl + C         | Copies the selected activity or activities inside the selected item.               |
+| Ctrl + V         | Pastes the copied activity or activities inside the selcted item.                  |
+| Ctrl + K         | Creates an variable of the same type as the required type of the activity          |
+| Ctrl + M         | Creates an **In** argument of the same type as the required type of the activity   |
+| Ctrl + Shift + M | Creates an **Out** argument of the same type as the required type of the activity. |
+| Ctrl + Space     | Opens the IntelliPrompt window                                                     |
+|                  |                                                                                    |
+
+* Miscellaneous
+
+| keybindings    | description                                                                            |
+|:---------------|:---------------------------------------------------------------------------------------|
+| F1             | Enables you to access a help topic associated with the currently selected element      |
+|                |                                                                                        |
+| Ctrl + Alt + F | Sets the focus to the search box in the **Activities** panel to search for an activity |
+| Ctrl + P       | Opens the **Manage Packages** windows                                                  |
+| Esc            | Closes the **Publish, Manage Packages, File Diff** windows                             |
+|                |                                                                                        |
