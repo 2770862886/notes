@@ -199,3 +199,11 @@ tmux new -n <窗口名>
 
 #### 查看RGB值 ####
 `Digital Color Meter`
+
+#### Disable/Restore Sierra Gatekeeper Settings  ####
+System Preference 'Security & Privacy' Allow apps downloaded from: Anywhere
+
+``` shell
+sudo spctl --master-disable
+sudo spctl --master-enable
+```
