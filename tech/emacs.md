@@ -221,44 +221,44 @@ racket-mode + paredit-mode
 
 ## Basic Command ##
 
-|                          |                                                                   |
-|:-------------------------|:------------------------------------------------------------------|
-| /msg nickserv help       | register nickname                                                 |
-| /nick NAME               | change name                                                       |
-| /names [频道]            | 查看当前[频道]所有用户                                            |
-| /whois 名字              | 常看某人資料                                                      |
-| /whoami                  |                                                                   |
-| /who ip                  | 常看某IP登錄的所有用戶                                            |
-| /Who channel             | 显示此频道的人                                                    |
-| /Who *                   | 显示参加当前频道的人                                              |
-| /join #房間名            | 加入這個房間，如果房間不存在，服務器可能會創建這個房間            |
-| /part #房間名 原因       | 離開房間，并留下原因                                              |
-| /quit 退出的原因         | 退出服務器，并留下原因                                            |
-| /away 原因               | 暫時離開，并留下原因                                              |
-| /invite 昵稱 #房間名     | 邀請某人到指定房間                                                |
-| /kick #房間名 昵稱 原因  | 剔出某人，附上原因，需要權限                                      |
-| /topic #房間名' 房間主題 | 如果你是房間主持人，可以改變房間的主題                            |
-| /me 您要作的動作         | 向当前聊天室中发送一个动作 (动作使用第三人称陈述，例如 /me jumps) |
-| /msg 昵稱(或#房間)       | 有要說的話	向某人發信息                                        |
-| /query 昵稱 要說的話     | 私聊                                                              |
-| /notice 昵稱(或#房間名)  | 要說的話                                                          |
-| /list                    | 查看服務器上所有房間及主題                                        |
-| /list #ubuntu-cn         | 列出這個房間                                                      |
-| /list -MIN a -MAX b      | 查看人數大于a小于b的房間                                          |
-| /list * abc *            | 所有行abc字符串的房間                                             |
-| /flush                   | 终止当前命令的输出操作                                            |
-| /help                    | 显示所有IRC命令                                                   |
-| /join                    | 加入/建立聊天室                                                   |
-| /leave channel           | 离开某一频道                                                      |
-| /mode +(-)i              | 锁住聊天室                                                        |
-| /mode +(-)o              | 设定管理员权限                                                    |
-| /knock                   | 要求进入私人聊天室                                                |
-| /invite                  | 邀请用户进入私人聊天室                                            |
-| /privmsg                 | 悄悄话                                                            |
-| /ignore                  | 忽略                                                              |
-| /topic                   | 更换聊天室主题                                                    |
-| /kick                    | 把用户踢出聊天室                                                  |
-| /quit                    | 退出聊天室                                                        |
+| Command                    | Desc                                                              |
+|:---------------------------|:------------------------------------------------------------------|
+| /msg nickserv help         | register nickname                                                 |
+| /nick NAME                 | change name                                                       |
+| /names CHANNEL             | 查看当前[频道]所有用户                                            |
+| /whois NAME                | 常看某人資料                                                      |
+| /whoami                    |                                                                   |
+| /who ip                    | 常看某IP登錄的所有用戶                                            |
+| /Who CHANNEL               | 显示此频道的人                                                    |
+| /Who *                     | 显示参加当前频道的人                                              |
+| /join #CHANNEL             | 加入這個房間，如果房間不存在，服務器可能會創建這個房間            |
+| /part #CHANNEL REASON      | 離開房間，并留下原因                                              |
+| /quit REASON               | 退出服務器，并留下原因                                            |
+| /away REASON               | 暫時離開，并留下原因                                              |
+| /invite NICK #CHANNEL      | 邀請某人到指定房間                                                |
+| /kick #CHANNEL NICK REASON | 剔出某人，附上原因，需要權限                                      |
+| /topic #CHANNEL TOPIC      | 如果你是房間主持人，可以改變房間的主題                            |
+| /me ACTION                 | 向当前聊天室中发送一个动作 (动作使用第三人称陈述，例如 /me jumps) |
+| /msg NAME(or #CHANNEL)     | 有要說的話	向某人發信息                                        |
+| /query NICK MESSAGE        | 私聊                                                              |
+| /notice NICK(or #CHANNEL)  | 要說的話                                                          |
+| /list                      | 查看服務器上所有房間及主題                                        |
+| /list #ubuntu-cn           | 列出這個房間                                                      |
+| /list -MIN a -MAX b        | 查看人數大于a小于b的房間                                          |
+| /list * abc *              | 所有行abc字符串的房間                                             |
+| /flush                     | 终止当前命令的输出操作                                            |
+| /help                      | 显示所有IRC命令                                                   |
+| /join                      | 加入/建立聊天室                                                   |
+| /leave CHANNEL             | 离开某一频道                                                      |
+| /mode +(-)i                | 锁住聊天室                                                        |
+| /mode +(-)o                | 设定管理员权限                                                    |
+| /knock                     | 要求进入私人聊天室                                                |
+| /invite                    | 邀请用户进入私人聊天室                                            |
+| /privmsg                   | 悄悄话                                                            |
+| /ignore                    | 忽略                                                              |
+| /topic                     | 更换聊天室主题                                                    |
+| /kick                      | 把用户踢出聊天室                                                  |
+| /quit                      | 退出聊天室                                                        |
 
 =======
 # irc #
@@ -271,7 +271,28 @@ racket-mode + paredit-mode
 
 # neo-tree #
 
-
+| Action                      | Keybinding |
+|:----------------------------|-----------:|
+| scroll-up                   |        SPC |
+| scroll-down                 |      S-SPC |
+| describe-mode               |          ? |
+| stretch-toggle              |          A |
+| select-previous-sibing-node |          S |
+| select-up-node              |          U |
+| refresh                     |          g |
+| describe-mode               |          h |
+| next-line                   |          n |
+| previous-line               |          p |
+| hide                        |          q |
+| select-next-sibling-node    |          s |
+| collapse-all                |    C-c C-a |
+| change-root                 |    C-c C-c |
+| delete-root                 |    C-c C-d |
+| find-file-other-window      |    C-c C-f |
+| create-node                 |    C-c C-n |
+| copy-node                   |    C-c C-p |
+| rename-node                 |    C-c C-r |
+| dir                         |      C-c c |
 
 [^2]: If someone barfs, they vomit.
 [^3]: If you slurp a liquid, you drink it noisily.

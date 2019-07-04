@@ -72,7 +72,7 @@ function cb(ac, cur) {
     console.log(ac);
     console.log(cur);
 }
-[x1, x2, x3, x4].reduce(cb, 0); 
+[x1, x2, x3, x4].reduce(cb, 0);
 
 cb(0, x1);
 cb(x1, x2);

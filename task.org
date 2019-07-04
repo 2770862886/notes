@@ -4,7 +4,11 @@
 #+PROPERTY: CLOCK_INTO_DRAWER t
 
 * Inbox
-** Download "地球脉动" season 1, season 2
+** DONE Download "地球脉动" season 1, season 2
+   CLOSED: [2019-06-14 Fri 10:38]
+   :LOGBOOK:
+   - State "DONE"       from              [2019-06-14 Fri 10:38]
+   :END:
 ** [#A] Study GTD procedure and theory, and make note of org-mode
 ** [#B] write plantuml markdown doc in notes
 ** [#B] write emacs config for plantuml with 'plantuml-mode' & orgmode
@@ -22,12 +26,7 @@
 * Reminder
 ** Mon
 ** Tue
-** Wed
-   http://gerrit3.alibaba-inc.com:8080/#/c/494089/6/platform/phone/product/sp9820e_s01/product.mk
 ** Thu
 ** Fri
-*** [#B] CTS & UT 问题
-*** Popup样式问题
-*** Toast动画闪烁问题
 ** Sat
 ** Sun

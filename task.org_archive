@@ -200,3 +200,64 @@ Archived entries from file /Users/liangchao/notes/task.org
      :LOGBOOK:
      - State "DONE"       from "TODO"       [2019-03-29 Fri 08:58]
      :END:
+
+** Archive                                                                      :ARCHIVE:
+   :PROPERTIES:
+   :ARCHIVE_TIME: 2019-06-14 Fri 10:41
+   :ARCHIVE_FILE: ~/notes/task.org
+   :ARCHIVE_OLPATH: Reminder/Fri
+   :ARCHIVE_CATEGORY: task
+   :END:
+*** Archive
+    :PROPERTIES:
+    :ARCHIVE_TIME: 2019-06-14 Fri 10:40
+    :END:
+**** CANCELLED Toast动画闪烁问题
+     CLOSED: [2019-06-14 Fri 10:40]
+     :PROPERTIES:
+     :ARCHIVE_TIME: 2019-06-14 Fri 10:40
+     :END:
+     :LOGBOOK:
+     - State "CANCELLED"  from              [2019-06-14 Fri 10:40] \\
+       transfer to AGIL
+     :END:
+
+** Archive :ARCHIVE:
+   :PROPERTIES:
+   :ARCHIVE_TIME: 2019-06-14 Fri 10:41
+   :ARCHIVE_FILE: ~/notes/task.org
+   :ARCHIVE_OLPATH: Reminder
+   :ARCHIVE_CATEGORY: task
+   :END:
+*** Wed
+    :PROPERTIES:
+    :ARCHIVE_TIME: 2019-06-14 Fri 10:39
+    :END:
+    http://gerrit3.alibaba-inc.com:8080/#/c/494089/6/platform/phone/product/sp9820e_s01/product.mk
+
+** DONE [#B] CTS & UT 问题
+   CLOSED: [2019-06-14 Fri 10:40]
+   :PROPERTIES:
+   :ARCHIVE_TIME: 2019-06-14 Fri 10:41
+   :ARCHIVE_FILE: ~/notes/task.org
+   :ARCHIVE_OLPATH: Reminder/Fri
+   :ARCHIVE_CATEGORY: task
+   :ARCHIVE_TODO: DONE
+   :END:
+   :LOGBOOK:
+   - State "DONE"       from              [2019-06-14 Fri 10:40]
+   :END:
+
+** CANCELLED Popup样式问题
+   CLOSED: [2019-06-14 Fri 10:41]
+   :PROPERTIES:
+   :ARCHIVE_TIME: 2019-06-14 Fri 10:42
+   :ARCHIVE_FILE: ~/notes/task.org
+   :ARCHIVE_OLPATH: Reminder/Fri
+   :ARCHIVE_CATEGORY: task
+   :ARCHIVE_TODO: CANCELLED
+   :END:
+   :LOGBOOK:
+   - State "CANCELLED"  from              [2019-06-14 Fri 10:41] \\
+     transfer to DengPing
+   :END:

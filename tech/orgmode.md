@@ -104,3 +104,41 @@ The name defined in `org-footnote-section` is reserved. Do not use it as a title
 
 ## Using the Mapping API ##
 
+-------------------------------------------------------------------------------
+
+# Building a Second Brain in Org Mode #
+
+P.A.R.A. [Projects areas resourses archives]
+
++ Projects: A series of tasks linked to a goal, with a deadline
++ Area of responsiblity: A sphere of activity with a standard to be maintained over time
++ Resource: A topic or theme of ongoing interest
++ Archive: Inactive items from the other 3 categories
+
+## File Structure ##
+
++ inbox.org
++ todo.org
++ somedaymaybe.org
++ agendas.org
++ goals.org
+
++ Column View
++ Weekly review, Monthly review
+
+## Important Packages ##
+
++ org-gcal
++ org-cliplink
++ ox-clip
++ org-randomnote
+
+## Reference ##
+
++ BASB: the seminal course
++ Praxis: Tiago Forte's blog on productivity
++ BASB in Emacs + org and IASB in Emacs + Org: my original posts about
++ Gist with GTD templates: try-them-at-home templates for your own use + workflow
++ My configuration: 
+
+
