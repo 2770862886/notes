@@ -184,14 +184,13 @@ tmux a -t <会话名称>
 <kbd>C-b d</kbd> 分离会话
 
 tmux new -n <窗口名>
-    |:pp-|-:|
-| <kbd>C-b c</kbd>     | 创建窗口     |
-| <kbd>C-b [0-9]</kbd> | 切换窗口     |
-| <kbd>C-b w</kbd>     | 窗口列表     |
-| <kbd>C-b ,</kbd>     | 更改窗口名称 |
-| <kbd>C-b &</kbd>     | 关闭窗口     |
-
 ```
+|:---------------------|-------------:|
+| <kbd>C-b c</kbd>     |     创建窗口 |
+| <kbd>C-b [0-9]</kbd> |     切换窗口 |
+| <kbd>C-b w</kbd>     |     窗口列表 |
+| <kbd>C-b ,</kbd>     | 更改窗口名称 |
+| <kbd>C-b &</kbd>     |     关闭窗口 |
 
 #### ffmpeg ####
 * 更改封装
