@@ -1,4 +1,34 @@
 #+STARTUP: content
 
-* VNC
-** 10.101.169.24:17
+* GTD - Bilding a Second Brain
+** WAITING Capture - Progressive Summarization
+** P.A.R.A - Projects . Areas . Resources . Archives
+   + Projects: A series of tasks linked to a goal, with a deadline
+   + Area: A sphere of activiy with a standard to be maintained over time
+   + Resource: A topic or theme of ongoing interest
+   + Archive: Inactive items from the other 3 categories
+** Just-in-Time Project Managemtn
+** Files
+*** inbox.org: entry point, from laptop (capture templates) and mobile (Beorg, via Dropbox)
+*** todo.org: tasks, filed in Projects or Areas
+*** somedaymaybe.org: tracking SOMEDAY / MAYBE tasks
+*** agendas.org: lists of items to discuss with specific people when I see them next
+*** goals.org: tracking long-term goals, which Tasks, Projects, and Areas move towards.
+** Steps
+   1. Capture template
+      + [t] Task
+      + [p] Project
+      + [g] Goal
+      + [s] Someday
+      + [y] Maybe
+      + [d] Review: Daily Review
+      + [w] Review: Weekly Review
+      + [m] Review: Monthly Review
+      + [j] Journal
+   2. Projects
+   3. Project / Area Overview
+   4. Stuck Projects
+      + C-c a # (org-agenda-list-stuck-projects)
+      + C-c a ! Customize the variable org-stuck-projects
+   5. Regular Reviews
+* TEST

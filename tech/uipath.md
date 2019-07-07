@@ -667,6 +667,124 @@ a  Remote Desktop Connection.
 
 -------------------------------------------------------------------------------
 
+# UiPath Licensing Model #
+
+Orchestrator requires a server licensing.
+Attented Robots and Studio require a Named User or Concurrent User license.
+Unattended and NonProduction Robots require a Concurrent Runtime license.
+
+## UiPath Licensing Matrix ##
+
+<div align='center' width='100%'>![Licensing Matrix](images/UiPath_Licensing_Matrix.jpg)</div>
+
+## Orchestrator Licensing ##
+
+1. Getting Start
+
+``` 1c-enterprise
+regutil activate /email=xxx /code=xxx
+regutil get-info 
+regutil export-info /out_file=c:\orchestratorlicense.txt
+```
+
+2. Hosting Licensing
+
+3. Tenant Licensing
+
+## Robot Licensing ##
+1. Standard Robot
+2. Floating Robot
+
+## License Management ##
+1. Named User
+
+2. Concurrent User
+
+3. Concurrent Runtime
+
+
+-------------------------------------------------------------------------------
+
+## SAP Automation ##
+
+
+-------------------------------------------------------------------------------
+
+## Security Training ##
+
+### 01. UiPath Ecosystem ###
+
+### 02. Security Challenges ###
+
+### 03. Studio Security ###
+
+#### Version Control ####
+1. Studio
+   Use VCS to manipulate the version
+2. Orchestrator
+   NuGet
+
+### 04. Robot Security ###
+
+1. Orchestrator Credentials
+   + centralized database, in which credentials are encrypted using AES 256-bit and stored on
+     the SQL server database.
+   + can be accessed by all connected robots.
+   + should be configured with 'value per robot' to prevent unauthorized access.
+
+2. Windows Credential Manager
+   + works as a local machine storage
+   + can also be used as a fallback in case Orchestrator is down and the robot does not require anything from
+     Orchestrator except Credential Assets.
+
+
+3. How can the sensitive data be protected.
+   + Configuring a trusted channel: VPN connections, secure FTP sessions, HTTPS websites.
+   + Data encryption, when using untrusted channels.
+   + Usage of limited access environments, such as restricted shared folders or restricted SharePoint domains.
+
+4. Isolation Environment
+   + Development Environment
+   + the RPA Developers and their robots interact only with systems that have sandbox environment.
+   + the robots should NOT be able to connect to the UAT and production Orchestrator.
+
+   + Production Environment
+   + the robots permanently monitored for malicious tampering of package and the execution of correct version
+     of the package.
+   + access to the robots in Production restricted to trusted individuals.
+
+### 05. Orchestrator Security ###
+Orchestrator is built on three layers:
+1. the **Presentation Layer** (accessed via browser)
+2. the **Service Layer** (containing the business logic)
+3. the **Persistence Layer** (containing the database where the events and relevant information are stored)
+
+User Roles
+1. Developer
+   + default role for developers when logging on the platform.
+   + the rights can vary from one environment to another: almost full access on the development environment, 
+     view-only in UAT, limited (or non-existent) in production.
+   + it is recommended to allow enough privileges in UAT so that the monitoring and bug fixing can be efficient.
+2. Support
+   + production only role, given to the support team that will have to monitor the processes running in the
+     production environment.
+   + should not allow package uploading or robot editing, as those should only be done by the administrator.
+   + should allow starting and stopping jobs, viewing robots, schedules and logs.
+3. Business
+   + limited view rights in production (for traning purposed).
+   + target audience: businiess department; they might be the one triggering the jobs and reviewing the queue 
+     items that were processed.
+
+Audit Trail
+
+Robot Logging
+
+
+
+
+
+-------------------------------------------------------------------------------
+
 # UiPath Studio Shortcuts #
 
 * File Management
