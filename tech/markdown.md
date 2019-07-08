@@ -57,8 +57,8 @@ The commands for styling text are grouped under <kbd>C-c C-s</kbd>, and toggle c
 | Insert new list item (child level)              |  <kbd>C-u C-u C-c C-j</kbd> |
 | Move list item up                               |       <kbd>C-c \<up\></kbd> |
 | Move list item down                             |     <kbd>C-c \<down\></kbd> |
-| Outdent/promote list item                       |     <kbd>C-c \<left\></kbd> |
-| Indent/demote list item                         |     <kbd>C-c \<down\></kbd> |
+| Outdent/promote list item                       |        <kbd>C-c C-x l</kbd> |
+| Indent/demote list item                         |        <kbd>C-c C-x r</kbd> |
 | Toggle GFM checkbox                             |      <kbd>C-c C-x C-x</kbd> |
 | ***Table Editing***                             |                             |
 | Converts the active region to table             | <kbd>C-c C-c \<pipe\></kbd> |
