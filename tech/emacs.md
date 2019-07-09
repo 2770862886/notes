@@ -2,6 +2,8 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
+[Mastering Emacs](https://www.masteringemacs.org/)
+
 ## Tramp ##
 TRAMP is for transparently accessing remote file from within Emacs.  
 
@@ -260,16 +262,14 @@ racket-mode + paredit-mode
 | /kick                      | 把用户踢出聊天室                                                  |
 | /quit                      | 退出聊天室                                                        |
 
-=======
-# irc #
+cua block
+=========
 
-# erc #
+[CUA Block](http://bamanzi.is-programmer.com/posts/23611.html)
 
-# figlet #
 
-# cua block #
-
-# neo-tree #
+neo-tree
+========
 
 | Action                      | Keybinding |
 |:----------------------------|-----------:|

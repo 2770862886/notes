@@ -1,5 +1,7 @@
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
+[常用算法](https://www.atatech.org/articles/86277)
+
 # Machine Learning Topics #
 
 ## 定义 ##
