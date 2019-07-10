@@ -5,6 +5,7 @@
 [Python Programming In Emacs](https://www.emacswiki.org/emacs/PythonProgrammingInEmacs)
 [Intermediate Python Programming introduction](https://pythonprogramming.net/introduction-intermediate-python-tutorial/)
 [elpy](https://elpy.readthedocs.io/en/latest/index.html)
+[Emacs 的 Python3 开发环境配置](http://www.zmonster.me/2017/09/16/emacs-python-configuration.html)
 
 # Environment setup #
 
