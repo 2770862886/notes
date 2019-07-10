@@ -9,9 +9,6 @@ Introduction
 
 Org-mode is fabulous organizational tool originally built by Casten Dominik that operators on plain text files. Org-mode is part of Emacs.  
 
-Introduction
-============
-
 Typesetting conventions
 -----------------------
 
@@ -101,6 +98,23 @@ Footnotes
 
 Tables
 ======
+| Action                                |                        Keybinding |
+|:--------------------------------------|----------------------------------:|
+| Move cursor to next cell              |                    <kbd>TAB</kbd> |
+| Insert a column before current column |          <kbd>M-S-\<right\></kbd> |
+| Delete current column                 |           <kbd>M-S-\<left\></kbd> |
+| Insert a row before current row       |           <kbd>M-S-\<down\></kbd> |
+| Delete current row                    |             <kbd>M-S-\<up\></kbd> |
+| Move to next row or create a row      |                    <kbd>C-m</kbd> |
+| Move current row up/down              |    <kbd>M-\<up\>/M-\<down\></kbd> |
+| Move current column left/right        | <kbd>M-\<left\>/M-\<right\></kbd> |
+| Edit current cell                     |                  <kbd>C-c `</kbd> |
+| Cut cell content                      |            <kbd>C-c C-x C-w</kbd> |
+| Paste clipboard to cell               |            <kbd>C-c C-x C-y</kbd> |
+| Paste cell to next row                |           <kbd>S-\<return\></kbd> |
+| Force table reorder                   |                <kbd>C-c C-c</kbd> |
+| Sort table                            |                  <kbd>C-c ^</kbd> |
+
 
 Hyperlinks
 ==========
@@ -355,41 +369,6 @@ Taking Notes with a Relative Timer
 | Stop the time. After this, you can only start a new timer, not continue the old one. | <kbd>C-c C-x _</kbd> |
 |                                                                                      |                      |
 
-Tables
-======
-
-| Action                                |                        Keybinding |
-|:--------------------------------------|----------------------------------:|
-| Move cursor to next cell              |                    <kbd>TAB</kbd> |
-| Insert a column before current column |          <kbd>M-S-\<right\></kbd> |
-| Delete current column                 |           <kbd>M-S-\<left\></kbd> |
-| Insert a row before current row       |           <kbd>M-S-\<down\></kbd> |
-| Delete current row                    |             <kbd>M-S-\<up\></kbd> |
-| Move to next row or create a row      |                    <kbd>C-m</kbd> |
-| Move current row up/down              |    <kbd>M-\<up\>/M-\<down\></kbd> |
-| Move current column left/right        | <kbd>M-\<left\>/M-\<right\></kbd> |
-| Edit current cell                     |                  <kbd>C-c `</kbd> |
-| Cut cell content                      |            <kbd>C-c C-x C-w</kbd> |
-| Paste clipboard to cell               |            <kbd>C-c C-x C-y</kbd> |
-| Paste cell to next row                |           <kbd>S-\<return\></kbd> |
-| Force table reorder                   |                <kbd>C-c C-c</kbd> |
-| Sort table                            |                  <kbd>C-c ^</kbd> |
-
-Hyperlinks
-==========
-
-TODO Items
-==========
-
-Tags
-====
-
-Properties and Columns
-======================
-
-Dates and Times
-===============
-
 Capture - Refile - Archive
 ==========================
 
@@ -434,7 +413,7 @@ Working with Source Code
 Miscellaneous
 =============
 
-hacking
+Hacking
 =======
 
 Hooks
@@ -471,7 +450,9 @@ Using the Mapping API
 ---------------------
 
 
+
 -------------------------------------------------------------------------------
+
 
 # Building a Second Brain in Org Mode #
 
