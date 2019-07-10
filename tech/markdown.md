@@ -6,6 +6,7 @@
 [Guide to Markdown Mode for Emacs](https://leanpub.com/markdown-mode/read)  
 [Pandoc User's Guide](http://pandoc.org/MANUAL.html)  
 [Write Better Markdown](http://brettterpstra.com/2015/08/24/write-better-markdown/)  
+[John Gruber's Blog](https://daringfireball.net/projects/markdown/syntax)  
 
 ``` shell
 brew install pandoc
@@ -15,7 +16,12 @@ brew cask install wkhtmltopdf
 
 markdown-mode is a major mode for editing markdown-formatted text.  
 
-The commands for styling text are grouped under <kbd>C-c C-s</kbd>, and toggle commands begin with <kbd>C-c C-x</kbd>, movement and shifting commands tend to be with paired delimiters such as <kbd>M-{</kbd> and <kbd>M-}</kbd> or <kbd>C-c <</kbd> and <kbd>C-c ></kbd>, finally commands for running Markdown or doing maintenance on an open file are grouped under the <kbd>C-c C-c</kbd> prefix. The most commonly used commands are described by pressing <kbd>C-c C-h</kbd>.  
+The commands for styling text are grouped under <kbd>C-c C-s</kbd>,   
+and toggle commands begin with <kbd>C-c C-x</kbd>, movement and shifting  
+commands tend to be with paired delimiters such as <kbd>M-{</kbd> and <kbd>M-}</kbd> or  
+<kbd>C-c <</kbd> and <kbd>C-c ></kbd>, finally commands for running Markdown or doing  
+maintenance on an open file are grouped under the <kbd>C-c C-c</kbd> prefix.   
+The most commonly used commands are described by pressing <kbd>C-c C-h</kbd>.  
 
 ## Quick Reference ##
 
@@ -68,6 +74,10 @@ The commands for styling text are grouped under <kbd>C-c C-s</kbd>, and toggle c
 | Delete row                                      |     <kbd>C-c S-\<up\></kbd> |
 | Insert column                                   |  <kbd>C-c S-\<right\></kbd> |
 | Delete Column                                   |   <kbd>C-c S-\<left\></kbd> |
+| Move row up                                     |        <kbd>C-c C-x u</kbd> |
+| Move row down                                   |        <kbd>C-c C-x d</kbd> |
+| Move column left                                |        <kbd>C-c C-x l</kbd> |
+| Move column right                               |        <kbd>C-c C-x r</kbd> |
 | ***Horizontal Rules***                          |                             |
 | Insert default horizontal rule string           |        <kbd>C-c C-s -</kbd> |
 | ***Killing and Yanking***                       |                             |
@@ -81,7 +91,9 @@ The commands for styling text are grouped under <kbd>C-c C-s</kbd>, and toggle c
 | Backward block                                  |            <kbd>C-M-{</kbd> |
 | Forward block                                   |            <kbd>C-M-}</kbd> |
 | Mark block                                      |          <kbd>C-c M-h</kbd> |
-| Narrow to block                                 |          <kbd>C-x n b</kbd> |
+| Narrow to page                                  |          <kbd>C-x n p</kbd> |
+| Narrow to defun                                 |          <kbd>C-x n d</kbd> |
+| Narrow to region                                |          <kbd>C-x n n</kbd> |
 | Widen                                           |          <kbd>C-x n w</kbd> |
 | ***Movement by Section (Defun)***               |                             |
 | Beginning of section                            |            <kbd>C-M-a</kbd> |
@@ -135,72 +147,72 @@ The commands for styling text are grouped under <kbd>C-c C-s</kbd>, and toggle c
 
 ## GitHub Flavored Markdown (GFM) ##
 
-A [GitHub Flavored Markdown][GFM] mode, `gfm-mode`, is also
-available.  The GitHub implementation differs slightly from
-standard Markdown in that it supports things like different
-behavior for underscores inside of words, automatic linking of
-URLs, strikethrough text, and fenced code blocks with an optional
-language keyword.
-
-The GFM-specific features above apply to `README.md` files, wiki
-pages, and other Markdown-formatted files in repositories on
-GitHub.  GitHub also enables [additional features][GFM comments] for
-writing on the site (for issues, pull requests, messages, etc.)
-that are further extensions of GFM.  These features include task
-lists (checkboxes), newlines corresponding to hard line breaks,
-auto-linked references to issues and commits, wiki links, and so
-on.  To make matters more confusing, although task lists are not
-part of [GFM proper][GFM], [since 2014][] they are rendered (in a
-read-only fashion) in all Markdown documents in repositories on the
-site.  These additional extensions are supported to varying degrees
-by `markdown-mode` and `gfm-mode` as described below.
-
-* **URL autolinking:** Both `markdown-mode` and `gfm-mode` support
-  highlighting of URLs without angle brackets.
-
-* **Multiple underscores in words:** You must enable `gfm-mode` to
-  toggle support for underscores inside of words. In this mode
-  variable names such as `a_test_variable` will not trigger
-  emphasis (italics).
-
-* **Fenced code blocks:** Code blocks quoted with backquotes, with
-  optional programming language keywords, are highlighted in
-  both `markdown-mode` and `gfm-mode`.  They can be inserted with
-  <kbd>C-c C-s C</kbd>.  If there is an active region, the text in the
-  region will be placed inside the code block.  You will be
-  prompted for the name of the language, but may press enter to
-  continue without naming a language.
-
-* **Strikethrough:** Strikethrough text is supported in both
-  `markdown-mode` and `gfm-mode`.  It can be inserted (and toggled)
-  using <kbd>C-c C-s s</kbd>.
-
-* **Task lists:** GFM task lists will be rendered as checkboxes
-  (Emacs buttons) in both `markdown-mode` and `gfm-mode` when
-  `markdown-make-gfm-checkboxes-buttons` is set to a non-nil value
-  (and it is set to t by default).  These checkboxes can be
-  toggled by clicking `mouse-1`, pressing <kbd>RET</kbd> over the button,
-  or by pressing <kbd>C-c C-d</kbd> (`markdown-do`) with the point anywhere
-  in the task list item.  A normal list item can be turned to a
-  check list item by the same command, or more specifically
-  <kbd>C-c C-s [</kbd> (`markdown-insert-gfm-checkbox`).
-
-* **Wiki links:** Generic wiki links are supported in
-  `markdown-mode`, but in `gfm-mode` specifically they will be
-  treated as they are on GitHub: spaces will be replaced by hyphens
-  in filenames and the first letter of the filename will be
-  capitalized.  For example, `[[wiki link]]` will map to a file
-  named `Wiki-link` with the same extension as the current file.
-  If a file with this name does not exist in the current directory,
-  the first match in a subdirectory, if any, will be used instead.
-
-* **Newlines:** Neither `markdown-mode` nor `gfm-mode` do anything
-  specifically with respect to newline behavior.  If you use
-  `gfm-mode` mostly to write text for comments or issues on the
-  GitHub site--where newlines are significant and correspond to
-  hard line breaks--then you may want to enable `visual-line-mode`
-  for line wrapping in buffers.  You can do this with a
-  `gfm-mode-hook` as follows:
+A [GitHub Flavored Markdown][GFM] mode, `gfm-mode`, is also  
+available.  The GitHub implementation differs slightly from  
+standard Markdown in that it supports things like different  
+behavior for underscores inside of words, automatic linking of  
+URLs, strikethrough text, and fenced code blocks with an optional  
+language keyword.  
+  
+The GFM-specific features above apply to `README.md` files, wiki  
+pages, and other Markdown-formatted files in repositories on  
+GitHub.  GitHub also enables [additional features][GFM comments] for  
+writing on the site (for issues, pull requests, messages, etc.)  
+that are further extensions of GFM.  These features include task  
+lists (checkboxes), newlines corresponding to hard line breaks,  
+auto-linked references to issues and commits, wiki links, and so  
+on.  To make matters more confusing, although task lists are not  
+part of [GFM proper][GFM], [since 2014][] they are rendered (in a  
+read-only fashion) in all Markdown documents in repositories on the  
+site.  These additional extensions are supported to varying degrees  
+by `markdown-mode` and `gfm-mode` as described below.  
+  
+* **URL autolinking:** Both `markdown-mode` and `gfm-mode` support  
+  highlighting of URLs without angle brackets.  
+ 
+* **Multiple underscores in words:** You must enable `gfm-mode` to  
+  toggle support for underscores inside of words. In this mode  
+  variable names such as `a_test_variable` will not trigger  
+  emphasis (italics).  
+ 
+* **Fenced code blocks:** Code blocks quoted with backquotes, with  
+  optional programming language keywords, are highlighted in  
+  both `markdown-mode` and `gfm-mode`.  They can be inserted with  
+  <kbd>C-c C-s C</kbd>.  If there is an active region, the text in the  
+  region will be placed inside the code block.  You will be  
+  prompted for the name of the language, but may press enter to  
+  continue without naming a language.  
+ 
+* **Strikethrough:** Strikethrough text is supported in both  
+  `markdown-mode` and `gfm-mode`.  It can be inserted (and toggled)  
+  using <kbd>C-c C-s s</kbd>.  
+ 
+* **Task lists:** GFM task lists will be rendered as checkboxes  
+  (Emacs buttons) in both `markdown-mode` and `gfm-mode` when  
+  `markdown-make-gfm-checkboxes-buttons` is set to a non-nil value  
+  (and it is set to t by default).  These checkboxes can be  
+  toggled by clicking `mouse-1`, pressing <kbd>RET</kbd> over the button,  
+  or by pressing <kbd>C-c C-d</kbd> (`markdown-do`) with the point anywhere  
+  in the task list item.  A normal list item can be turned to a  
+  check list item by the same command, or more specifically  
+  <kbd>C-c C-s [</kbd> (`markdown-insert-gfm-checkbox`).  
+ 
+* **Wiki links:** Generic wiki links are supported in  
+  `markdown-mode`, but in `gfm-mode` specifically they will be  
+  treated as they are on GitHub: spaces will be replaced by hyphens  
+  in filenames and the first letter of the filename will be  
+  capitalized.  For example, `[[wiki link]]` will map to a file  
+  named `Wiki-link` with the same extension as the current file.  
+  If a file with this name does not exist in the current directory,  
+  the first match in a subdirectory, if any, will be used instead.  
+ 
+* **Newlines:** Neither `markdown-mode` nor `gfm-mode` do anything  
+  specifically with respect to newline behavior.  If you use  
+  `gfm-mode` mostly to write text for comments or issues on the  
+  GitHub site--where newlines are significant and correspond to  
+  hard line breaks--then you may want to enable `visual-line-mode`  
+  for line wrapping in buffers.  You can do this with a  
+  `gfm-mode-hook` as follows:  
 
     ```lisp
     ;; Use visual-line-mode in gfm-mode
@@ -210,8 +222,8 @@ by `markdown-mode` and `gfm-mode` as described below.
     ```
 
 * **Preview:** GFM-specific preview can be powered by setting
-  `markdown-command` to use [Docter][].  This may also be
-  configured to work with [Marked 2][] for `markdown-open-command`.
+  `markdown-command` to use [Docter][].  This may also be  
+  configured to work with [Marked 2][] for `markdown-open-command`.  
 
 [GFM]: http://github.github.com/github-flavored-markdown/
 [GFM comments]: https://help.github.com/articles/writing-on-github/

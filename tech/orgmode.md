@@ -9,6 +9,15 @@ Introduction
 
 Org-mode is fabulous organizational tool originally built by Casten Dominik that operators on plain text files. Org-mode is part of Emacs.  
 
+Introduction
+============
+
+Typesetting conventions
+-----------------------
+
+Org mainly uses three types of keywords: TODO keywords, tags and property names.
++ TODO keywords are written with all capitals, even if they are use-defined.
+
 Document Structure
 ==================
 
@@ -22,32 +31,55 @@ Visibility Cycling
 
 ### Global and local cycling ###
 
-| Action                                                 | Command                    | Keybinding      |
-|:-------------------------------------------------------|:---------------------------|-----------------|
-| Rotate current subtree among the states                | org-cycle                  | TAB             |
-| Rotate the entire buffer among the states              | org-global-cycle           | C-u TAB         |
-|                                                        |                            | S-TAB           |
-| Switch back to startup visibility                      | org-set-startup-visibility | C-u C-u TAB     |
-| Show all, including drawers                            | outline-show-all           | C-u C-u C-u TAB |
-| Reveal context around point, showing the current entry | org-reveal                 | C-c C-r         |
-| Expose all the headings                                |                            |                 |
-
+| Action                                                 | Command                     |                 Keybinding |
+|:-------------------------------------------------------|:----------------------------|---------------------------:|
+| Rotate current subtree among the states                | org-cycle                   |             <kbd>TAB</kbd> |
+| Rotate the entire buffer among the states              | org-global-cycle            |         <kbd>C-u TAB</kbd> |
+|                                                        |                             |           <kbd>S-TAB</kbd> |
+| Switch back to startup visibility                      | org-set-startup-visibility  |     <kbd>C-u C-u TAB</kbd> |
+| Show all, including drawers                            | outline-show-all            | <kbd>C-u C-u C-u TAB</kbd> |
+| Reveal context around point, showing the current entry | org-reveal                  |         <kbd>C-c C-r</kbd> |
+| Expose all the headings                                | outline-show-branches       |         <kbd>C-c C-k</kbd> |
+| Expose all direct children of the subtree              | outline-show-children       |         <kbd>C-c TAB</kbd> |
+| Show the current subtree in an indirect buffer         | org-tree-to-indirect-buffer |       <kbd>C-c C-x b</kbd> |
+| Copy the visible text in the region into the kill ring | org-copy-visible            |       <kbd>C-c C-x v</kbd> |
+|                                                        |                             |                            |
 
 ### Initial visibility ###
+
+``` org
+#+STARTUP: overview
+#+STARTUP: content
+#+STARTUP: showall
+#+STARTUP: showeverything
+```
+| Action                                              |             Keybinding |
+|:----------------------------------------------------|-----------------------:|
+| Switch back to the startup visibility of the buffer | <kbd>C-u C-u TAB</kbd> |
+|                                                     |                        |
+
 
 ### Catching invisible edits ###
 
 Motion
 ------
 
-| Action                             | Command | Keybinding |
-|:-----------------------------------|:--------|------------|
-| Next heading                       |         | C-c C-n    |
-| Previous heading                   |         | C-c C-p    |
-| Next heading same level            |         | C-c C-f    |
-| Previous heading same level        |         | C-c C-b    |
-| Backward to heighter level heading |         | C-c C-u    |
-|                                    |         |            |
+| Action                             |         Keybinding |
+|:-----------------------------------|-------------------:|
+| Next heading                       | <kbd>C-c C-n</kbd> |
+| Previous heading                   | <kbd>C-c C-p</kbd> |
+| Next heading same level            | <kbd>C-c C-f</kbd> |
+| Previous heading same level        | <kbd>C-c C-b</kbd> |
+| Backward to heighter level heading | <kbd>C-c C-u</kbd> |
+
+Structure editing
+-----------------
+
+Sparse trees
+------------
+
+Plain lists
+-----------
 
 Structure editing
 -----------------
@@ -323,8 +355,61 @@ Taking Notes with a Relative Timer
 | Stop the time. After this, you can only start a new timer, not continue the old one. | <kbd>C-c C-x _</kbd> |
 |                                                                                      |                      |
 
+Tables
+======
+
+| Action                                |                        Keybinding |
+|:--------------------------------------|----------------------------------:|
+| Move cursor to next cell              |                    <kbd>TAB</kbd> |
+| Insert a column before current column |          <kbd>M-S-\<right\></kbd> |
+| Delete current column                 |           <kbd>M-S-\<left\></kbd> |
+| Insert a row before current row       |           <kbd>M-S-\<down\></kbd> |
+| Delete current row                    |             <kbd>M-S-\<up\></kbd> |
+| Move to next row or create a row      |                    <kbd>C-m</kbd> |
+| Move current row up/down              |    <kbd>M-\<up\>/M-\<down\></kbd> |
+| Move current column left/right        | <kbd>M-\<left\>/M-\<right\></kbd> |
+| Edit current cell                     |                  <kbd>C-c `</kbd> |
+| Cut cell content                      |            <kbd>C-c C-x C-w</kbd> |
+| Paste clipboard to cell               |            <kbd>C-c C-x C-y</kbd> |
+| Paste cell to next row                |           <kbd>S-\<return\></kbd> |
+| Force table reorder                   |                <kbd>C-c C-c</kbd> |
+| Sort table                            |                  <kbd>C-c ^</kbd> |
+
+Hyperlinks
+==========
+
+TODO Items
+==========
+
+Tags
+====
+
+Properties and Columns
+======================
+
+Dates and Times
+===============
+
 Capture - Refile - Archive
 ==========================
+
+Capture
+-------
+
+Attachment
+----------
+
+RSS feeds
+---------
+
+Protocols for external access
+-----------------------------
+
+Refile and copy
+---------------
+
+Archiving
+---------
 
 | Action                      |             Keybinding |
 |:----------------------------|-----------------------:|
@@ -349,30 +434,42 @@ Working with Source Code
 Miscellaneous
 =============
 
-Hacking
+hacking
 =======
 
-## Hooks ##
+Hooks
+-----
 
-## Add-on Packages ##
+Add-on Packages
+---------------
 
-## Adding Hyperlink Types ##
+Adding Hyperlink Types
+----------------------
 
-## Adding Export Back-ends ##
+Adding Export Back-ends
+-----------------------
 
-## Tables in Arbitary Syntax ##
+Tables in Arbitary Syntax
+-------------------------
 
-## Dynamic Blocks ##
+Dynamic Blocks
+--------------
 
-## Special Agenda Views ##
+Special Agenda Views
+--------------------
 
-## Speeding Up Your Agendas ##
+Speeding Up Your Agendas
+------------------------
 
-## Extracting Agenda Information ##
+Extracting Agenda Information
+-----------------------------
 
-## Using the Property API ##
+Using the Property API
+----------------------
 
-## Using the Mapping API ##
+Using the Mapping API
+---------------------
+
 
 -------------------------------------------------------------------------------
 
@@ -410,5 +507,3 @@ P.A.R.A. [Projects areas resourses archives]
 + BASB in Emacs + org and IASB in Emacs + Org: my original posts about
 + Gist with GTD templates: try-them-at-home templates for your own use + workflow
 + My configuration: 
-
-
