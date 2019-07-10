@@ -6,7 +6,9 @@
 [Guide to Markdown Mode for Emacs](https://leanpub.com/markdown-mode/read)  
 [Pandoc User's Guide](http://pandoc.org/MANUAL.html)  
 [Write Better Markdown](http://brettterpstra.com/2015/08/24/write-better-markdown/)  
-[John Gruber's Blog](https://daringfireball.net/projects/markdown/syntax)  
+[John Gruber's Blog](https://daringfireball.net/projects/markdown/syntax)
+[markdown-mode](https://github.com/defunkt/markdown-mode)
+
 
 ``` shell
 brew install pandoc
