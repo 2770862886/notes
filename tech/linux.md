@@ -2,6 +2,9 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
+[Linux Kernel Doc](https://www.kernel.org/doc/)
+[Online manual](http://man7.org/index.html)
+
 理论
 ====
 

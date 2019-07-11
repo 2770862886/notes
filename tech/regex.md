@@ -2,18 +2,26 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
-## sed ##
+[Regex manual](http://tool.oschina.net/uploads/apidocs/jquery/regexp.html)  
+[Online Tools](https://regexr.com/)  
+[Sed manual](https://www.gnu.org/software/sed/manual/sed.html)  
+[Awk manual](https://www.gnu.org/software/gawk/manual/gawk.html)  
+
+sed
+===
 
 Stream EDitor
 
-### Typical uses ###
+Typical uses
+------------
 
 1. Text substitution
 2. Selective printing of text files
 3. In-a-place editing of text files
 4. Non-interactive editing of text files
 
-### Workflow ###
+Workflow
+--------
 
 ![](images/sed_workflow.jpg)
 
@@ -29,7 +37,8 @@ Stream EDitor
 * If no input file are provided, then SED accepts input from the standard input stream (stdin).
 * If address range is not provided by default, then SED operates on each line.
 
-### Basic Syntax ###
+Basic Syntax
+------------
 
 ```
 sed [-n] [-e] 'command(s)' files
@@ -78,11 +87,9 @@ sed -n -f commands quote.txt
 |                                    |                                                                                                     |
 | -z, --null-data                    | By default, the SED separates each line by a new-line character. If NULL-data option is provided,   |
 |                                    | it separates the lines by NULL characters.                                                          |
-|                                    |                                                                                                     |
-
 
 ``` shell
-1) A Storm of Swords, George R. R. Martin, 1216  
+1) A Storm of Swords, George R. R. Martin, 1216
 2) The Two Towers, J. R. R. Tolkien, 352  
 3) The Alchemist, Paulo Coelho, 197  
 4) The Fellowship of the Ring, J. R. R. Tolkien, 432  
@@ -90,7 +97,8 @@ sed -n -f commands quote.txt
 6) A Game of Thrones, George R. R. Martin, 864  
 ```
 
-### Loops ###
+Loops
+-----
 
 A loop in SED works similar to a goto statement. SED can jump to the line marked by the label and continue executing the remaining commands. In  
 SED, we can define a **label** as follows:
@@ -115,7 +123,8 @@ s/^/- /
 p' books.txt
 ```
 
-### Branches ###
+Branches
+--------
 
 Branches can be created using the t command. The **t** command jumps to the label only if the previous substitue command was successfully.  
 Let us take the same example as in the previous chapter, but instead of printing a single hyphen(-), now we print four hyphens. The following  
@@ -132,7 +141,8 @@ p' books.txt
 '
 ```
 
-### Pattern Buffer ###
+Pattern Buffer
+--------------
 
 * prints the last line of the given file.
 ``` shell
@@ -152,7 +162,8 @@ There are two more operators that can be used to specify address range.
   sed -n '1~2 p' books.txt
   ```
 
-### Pattern Range ###
+Pattern Range
+-------------
 
 ``` shell
 sed -n '/Paulo/ p' books.txt
@@ -162,7 +173,9 @@ sed -n '/Two/, /Pilgrimage/ p' books.txt
 sed -n '/The/, +4 p' books.txt
 ```
 
-### Basic Commands ###
+Basic Commands
+--------------
+
 * Delete Command
 
 ``` shell
@@ -276,7 +289,8 @@ Instead, it adds a newline (\n) at the end of the current pattern space and appe
 current pattern space and continues with the SED's standard flow by executing the rest of the SED commands. Given below is the  
 syntax of the **N** command.
 
-### Special Characters ###
+Special Characters
+------------------
 
 SED provides two special characters which are treated as commands. This chapter illustrates the usage of these two special characters.  
 
@@ -306,7 +320,8 @@ sed 's/[[:digit:]]/Book number &/' books.txt
 sed 's/[[:digit:]]*$/Pages = &/' books.txt
 ```
 
-### Strings ###
+Strings
+-------
 
 * Substitute Command
 
@@ -388,7 +403,8 @@ sed -n 's/Paulo/\Upaulo/p' books.txt
 sed -n 's/Paulo Coelho/\Upaulo \Ecoelho/p' books.txt
 ```
 
-### Managing Patterns ###
+Managing Patterns
+-----------------
 
 Let us discuss the **n** command which print the pattern space. It will be used in the conjuction with other commands.  
 
@@ -675,7 +691,8 @@ to as POSIX classes of regular expression.
   echo -e "One\nTwo One" | sed -n '/\`One/ p'
   ```
 
-### Use Recipes ###
+Use Recipes
+-----------
 
 * Removing Empty Lines
 
@@ -823,7 +840,9 @@ to as POSIX classes of regular expression.
   echo "ABC" | sed 'y/ABC/abc/'
   ```
 
-## awk ##
+awk
+===
+
 * Types of AWK
 1. AWK - Original AWK from AT&T Laboratory  
 2. NAWK - Newer and improved version of AWK from AT&T Laboratory  
@@ -834,7 +853,8 @@ to as POSIX classes of regular expression.
 3. Performing arithmetica operations
 4. Perfroming string operations, and many more
 
-### Workflow ###
+Workflow
+--------
 
 ![](images/awk_workflow.jpg)
 
@@ -880,7 +900,8 @@ awk -f commands.awk marks.txt
 |                         |                                                                                                        |
 | --version               | This options displays the version information of the AWK program                                       |
 
-### Basic Examples ###
+Basic Examples
+--------------
 
 * Printing Column or Field
 
@@ -915,9 +936,10 @@ awk -f commands.awk marks.txt
   awk 'length($0) > 18' marks.txt
   ```
 
-### Built-in Variables ###
+Built-in Variables
+------------------
 
-#### Standard AWK Variables ####
+### Standard AWK Variables ###
 
 * ARGC
   It implies the number of arguments provided at the command line.  
@@ -1048,7 +1070,7 @@ awk -f commands.awk marks.txt
   awk '{ print $3 "\t" $4 }' marks.txt
   ```
 
-#### GNU AWK Specific Variable ####
+### GNU AWK Specific Variable ###
 
 * ARGIND
   It represents the index in ARGV of the current file being processed.  
@@ -1102,7 +1124,8 @@ awk -f commands.awk marks.txt
   awk 'BEGIN { print TEXTDOMAIN }'
   ```
 
-### Operators ###
+Operators
+---------
 
 | S.No | Desciption                        |
 |:-----|:----------------------------------|
@@ -1118,7 +1141,8 @@ awk -f commands.awk marks.txt
 | 10   | String Operators                  |
 | 11   | Regular Expression Operators      |
 
-### Regular Expressions ###
+Regular Expressions
+-------------------
 
 * Dot
   It matches any single character exceptt the end of line character.  
@@ -1187,7 +1211,8 @@ awk -f commands.awk marks.txt
   echo -e "Apple Juice\nApple Pie\nApple Tart\nApple Cake" | awk '/Apple (Juice|Cake)/'
   ```
 
-### Arrays ###
+Arrays
+------
 
 AWK has associative arrays and one of the best thing about it is - the indexes need not to be continuous  
 set of number; you can use either string or number as an array index. Also, there is no need to declare   
@@ -1239,7 +1264,8 @@ the size of an array in advance - arrays can expand/shrink at runtime.
   }'
   ```
 
-### Control Flow ###
+Control Flow
+------------
 
 * If statement
 
@@ -1275,7 +1301,8 @@ the size of an array in advance - arrays can expand/shrink at runtime.
   }'
   ```
 
-### Loops ###
+Loops
+-----
 
 * For Loop
 
@@ -1337,7 +1364,8 @@ the size of an array in advance - arrays can expand/shrink at runtime.
   }'
   ```
 
-### Built-in Functions ###
+Built-in Functions
+------------------
 
 AWK has a number of functions built into it that are always available to the programmer.  
 This chapter describes Arithmetic, String, Time, Bit manipulation, and other miscellaneous  
@@ -1351,7 +1379,8 @@ function with suitable examples.
 | 4     | Bit Manipulation Functions |
 | 5     | Miscellaneous Functions    |
 
-### User Defined Functions ###
+User Defined Functions
+----------------------
 
 ``` awk
 # Returns minimum number
@@ -1386,7 +1415,8 @@ BEGIN {
 awk -f funtions.awk
 ```
 
-### Output Redirection ###
+Output Redirection
+------------------
 
 * Redirection Operator
   ``` shell
@@ -1423,7 +1453,8 @@ awk -f funtions.awk
   }
   ```
 
-### Pretty Printing ###
+Pretty Printing
+---------------
 
 * Escape Sequences
   Similar to any string, format can caontain embedded escape sequences.  
@@ -1496,3 +1527,52 @@ awk -f funtions.awk
   }'
   ```
 
+-------------------------------------------------------------------------------
+
+RegEx
+=====
+
+| Character    | Description |
+|:-------------|-------------|
+| \            |             |
+| ^            |             |
+| $            |             |
+| *            |             |
+| +            |             |
+| ?            |             |
+| {n}          |             |
+| {n,}         |             |
+| {n,m}        |             |
+| ?            |             |
+| .            |             |
+| (pattern)    |             |
+| (?:pattern)  |             |
+| (?=pattern)  |             |
+| (?!pattern)  |             |
+| (?<=pattern) |             |
+| (?<!pattern) |             |
+| x\|y         |             |
+| [xyz]        |             |
+| [^xyz]       |             |
+| [a-z]        |             |
+| [^a-z]       |             |
+| \\b          |             |
+| \\B          |             |
+| \\cx         |             |
+| \\d          |             |
+| \\D          |             |
+| \\f          |             |
+| \\n          |             |
+| \\r          |             |
+| \\s          |             |
+| \\S          |             |
+| \\t          |             |
+| \\v          |             |
+| \\w          |             |
+| \\W          |             |
+| \\xn         |             |
+| \\num        |             |
+| \\n          |             |
+| \\nm         |             |
+| \\nml        |             |
+| \\un         |             |
