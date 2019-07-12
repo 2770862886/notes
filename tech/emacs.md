@@ -2,7 +2,9 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
-[Mastering Emacs](https://www.masteringemacs.org/)
+[Mastering Emacs](https://www.masteringemacs.org/)  
+[abbrev mode](http://ergoemacs.org/emacs/emacs_abbrev_mode.html)  
+
 
 ## Tramp ##
 TRAMP is for transparently accessing remote file from within Emacs.  
