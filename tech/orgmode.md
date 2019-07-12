@@ -46,7 +46,6 @@ Visibility Cycling
 | Expose all direct children of the subtree              | outline-show-children       |         <kbd>C-c TAB</kbd> |
 | Show the current subtree in an indirect buffer         | org-tree-to-indirect-buffer |       <kbd>C-c C-x b</kbd> |
 | Copy the visible text in the region into the kill ring | org-copy-visible            |       <kbd>C-c C-x v</kbd> |
-|                                                        |                             |                            |
 
 ### Initial visibility ###
 
@@ -59,8 +58,6 @@ Visibility Cycling
 | Action                                              |             Keybinding |
 |:----------------------------------------------------|-----------------------:|
 | Switch back to the startup visibility of the buffer | <kbd>C-u C-u TAB</kbd> |
-|                                                     |                        |
-
 
 ### Catching invisible edits ###
 
@@ -104,6 +101,7 @@ Footnotes
 
 Tables
 ======
+
 | Action                                |                        Keybinding |
 |:--------------------------------------|----------------------------------:|
 | Move cursor to next cell              |                    <kbd>TAB</kbd> |
@@ -197,8 +195,6 @@ Creating Timestamps
 | On the beginning or enclsing bracket of a timestamp, change its type. Within a  |          <kbd>S-UP</kbd> |
 | timestamp, change the item under point.                                         |        <kbd>S-DOWN</kbd> |
 | Evaluate a time range by computing the difference between start and end.        |       <kbd>C-c C-y</kbd> |
-|                                                                                 |                          |
-
 
 * Keybinding for operation on calendar
 
@@ -215,7 +211,6 @@ Creating Timestamps
 | Scroll calendar backward by on month |            <kbd>\<</kbd> |
 | Scroll calendar forward by 3 months  |           <kbd>M-v</kbd> |
 | Scroll calendar backward by 3 months |           <kbd>C-v</kbd> |
-|                                      |                          |
 
 Deadlines and Scheduling
 ------------------------
@@ -259,8 +254,6 @@ Deadlines and Scheduling
 | that many days.                                                      |                    |
 | Sparse tree for deadlines and scheduled items before a given date.   | <kbd>C-c / b</kbd> |
 | Sparse tree for deadlines and scheduled items after a given date.    | <kbd>C-c / a</kbd> |
-|                                                                      |                    |
-
 
 ### Repeated tasks ###
 
@@ -344,7 +337,6 @@ a clock table, because it is formatted as one or several Org tables.
 | dynamic block.                                                              | or <kbd>C-c C-x C-u</kbd> |
 | Shift the current *:block* interval and update the table.                   |         <kbd>S-LEFT</kbd> |
 |                                                                             |        <kbd>S-RIGHT</kbd> |
-|                                                                             |                           |
 
 ### Resolving idle time and continuous clocking ###
 
