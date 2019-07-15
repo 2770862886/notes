@@ -14,6 +14,12 @@ Typesetting conventions
 
 Org mainly uses three types of keywords: TODO keywords, tags and property names.
 + TODO keywords are written with all capitals, even if they are use-defined.
++ Tags are case-sensitive. User-defined tags are written in lowercase; built-in tags with special  
+  meaning are written as they should appear in the document, usually with all capitals.
++ User-defined properties are capitalized; built-in properties with special meaning are written  
+  with all capitals.
++ Keywords and blocks are written in uppercase to enhance their readability, but you can use lowercase  
+  in your Org files.
 
 Document Structure
 ==================
@@ -442,11 +448,11 @@ Using the Mapping API
 ---------------------
 
 
-
 -------------------------------------------------------------------------------
 
 
-# Building a Second Brain in Org Mode #
+Building a Second Brain in Org Mode
+===================================
 
 P.A.R.A. [Projects areas resourses archives]
 
@@ -455,7 +461,8 @@ P.A.R.A. [Projects areas resourses archives]
 + Resource: A topic or theme of ongoing interest
 + Archive: Inactive items from the other 3 categories
 
-## File Structure ##
+File Structure
+--------------
 
 + inbox.org
 + todo.org
@@ -466,14 +473,16 @@ P.A.R.A. [Projects areas resourses archives]
 + Column View
 + Weekly review, Monthly review
 
-## Important Packages ##
+Important Packages
+------------------
 
 + org-gcal
 + org-cliplink
 + ox-clip
 + org-randomnote
 
-## Reference ##
+Reference
+---------
 
 + BASB: the seminal course
 + Praxis: Tiago Forte's blog on productivity
