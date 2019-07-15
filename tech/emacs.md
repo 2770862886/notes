@@ -3,17 +3,19 @@
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
 [Mastering Emacs](https://www.masteringemacs.org/)
+[EmacsWiki](https://www.emacswiki.org/)
 
-## Tramp ##
+# Tramp #
+
 TRAMP is for transparently accessing remote file from within Emacs.  
 
 <kbd>C-x C-f</kbd>
 `ssh:user@host#port:pathTo`
 
 
-## Prerequisite ##
+# Prerequisite #
 
-### ag (the_silver_searcher) ###
+## ag (the_silver_searcher) ##
 
 ``` shell
 sudo add-apt-repository ppa:pgolm/the-silver-searcher
@@ -23,9 +25,10 @@ sudo apt-get install silversearcher-ag
 
 `brew install the_silver_searcher`
 
-## Hotkeys ##
+# Hotkeys #
 
-### Help Commands ###
+## Help Commands ##
+
 | Description                              |         Keybinding |
 |:-----------------------------------------|-------------------:|
 | info emacs maunual, require for an topic | <kbd>C-h r i</kbd> |
@@ -36,26 +39,47 @@ sudo apt-get install silversearcher-ag
 | apropos-command                          |   <kbd>C-h a</kbd> |
 
 
-### mark region ###
+## mark region ##
 
 press <kbd>S-SPC</kbd> to active command mark, then move the cursor to the point
 and press <kbd>C-x C-x</kbd> to active the region between the two position.
 
-### Jump over buffers ###
+## Jump over buffers ##
 
 <kbd>C-\<up\>/\<left\>/\<down\>/\<right\></kbd>
 <kbd>M-\<#\></kbd>
 
-### recent-jump ###
+## recent-jump ##
 
 <kbd>M-\<left\></kbd>
 <kbd>M-\<right\></kbd>
 
-### Duplicate line ###
+## Duplicate line ##
 
 <kbd>C-c d</kbd>
 
-### indentation ###
+## Narrowing ##
+
+| Action                                                    |         Keybinding |
+|:----------------------------------------------------------|-------------------:|
+| Narrow down to between point and mark (narrow-to-region). | <kbd>C-x n n</kbd> |
+| Widen to make the entire buffer accessible again (widen). | <kbd>C-x n w</kbd> |
+| Narrow down to the current page (narrow-to-page).         | <kbd>C-x n p</kbd> |
+| Narrow down to the current defun (narrow-to-defun).       | <kbd>C-x n d</kbd> |
+
+## Pages ##
+
+Within some text files, text is divided into pages delimited by the formfeed character (ASCII code 12, also denoted as 'control-L'), which  
+is displayed in Emacs as the escape sequence '^L'. Insert formfeed <kbd>C-q C-l</kbd>.
+
+| Action                                                             |         Keybinding |
+|:-------------------------------------------------------------------|-------------------:|
+| Move point to previous page boundary (backward-page).              |   <kbd>C-x [</kbd> |
+| Move point to next page boundary (forward-page).                   |   <kbd>C-x ]</kbd> |
+| Put point and mark around this page (or another page) (mark-page). | <kbd>C-x C-p</kbd> |
+
+
+## Indentation ##
 
 | Action                   |            Keybinding |
 |:-------------------------|----------------------:|
@@ -64,7 +88,7 @@ and press <kbd>C-x C-x</kbd> to active the region between the two position.
 | delete-indentation       |        <kbd>M-^</kbd> |
 | indent-rigidly           |    <kbd>C-x TAB</kbd> |
 
-### Toggle the region/word case ###
+## Toggle the region/word case ##
 
 | Action                        |         Keybinding |
 |:------------------------------|-------------------:|
@@ -74,7 +98,7 @@ and press <kbd>C-x C-x</kbd> to active the region between the two position.
 | Lower case word at the point  |     <kbd>M-l</kbd> |
 | Upper case word at the point  |     <kbd>M-u</kbd> |
 
-## cscope ##
+# cscope #
 
 | Action                                                         |         Keybinding |
 |:---------------------------------------------------------------|-------------------:|
@@ -262,14 +286,16 @@ racket-mode + paredit-mode
 | /kick                      | 把用户踢出聊天室                                                  |
 | /quit                      | 退出聊天室                                                        |
 
-cua block
-=========
+# cua block #
 
 [CUA Block](http://bamanzi.is-programmer.com/posts/23611.html)
+[LeeXah CUA-mode](http://ergoemacs.org/emacs/modernization_cua-mode.html)
+
+Emacs's cua-mode, is named after the IBM's Common User Accesss standard. However, according to Wikipedia  
+IBM Common User Access the IBM CUA standard does not say cut/copy/paste are X C V keys. Quote:  
 
 
-neo-tree
-========
+# neo-tree #
 
 | Action                      | Keybinding |
 |:----------------------------|-----------:|
@@ -292,7 +318,44 @@ neo-tree
 | create-node                 |    C-c C-n |
 | copy-node                   |    C-c C-p |
 | rename-node                 |    C-c C-r |
-| dir                         |      C-c c |
+|                             |      C-c c |
+
+# company-mode #
+
+Company: Complete Anything
+
+## 安装 ##
+
+``` elisp
+(use-package company
+  :ensure t
+  :config
+  (global-company-mode t)
+  (setq company-idle-delay 0)    # 延迟，可设定为0.3
+  (setq company-minimum-prefix-length 3)      # 至少打完3个字才启动
+  (setq company-backends
+        '((company-files
+           company-keywords
+           company-capf
+           company-yasnippet
+           )
+          (company-abbrev company-dabbrev))))
+```
+
+``` elisp
+(add-hook 'emacs-lisp-mode-hook (lambda () 
+            (add-to-list (make-local-variable 'company-backends) 
+            '(company-elisp))))
+```
+
+## Company 跟 Yasnippet 按键冲突 ##
+
+``` elisp
+(advice-add 'company-complete-common :before (lambda () 
+                                (setq my-company-point (point))))
+(advice-add 'company-complete-common :after (lambda () 
+                                (when (equal my-company-point (point)) (yas-expand))))
+```
 
 [^2]: If someone barfs, they vomit.
 [^3]: If you slurp a liquid, you drink it noisily.
