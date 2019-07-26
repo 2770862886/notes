@@ -8,7 +8,7 @@
 [Write Better Markdown](http://brettterpstra.com/2015/08/24/write-better-markdown/)  
 [John Gruber's Blog](https://daringfireball.net/projects/markdown/syntax)
 [markdown-mode](https://github.com/defunkt/markdown-mode)
-
+[Markdown简明语法](https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown)
 
 ``` shell
 brew install pandoc
