@@ -3,6 +3,7 @@
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
 [Hello Worg](https://orgmode.org/worg/)
+[Bebel](https://orgmode.org/worg/org-contrib/babel/index.html)
 
 Introduction
 ============
@@ -372,6 +373,204 @@ Capture - Refile - Archive
 
 Capture
 -------
+
+### Setting up capture ###
+
+``` elisp
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+```
+
+### Using capture ###
+
+| Action                                                    |               Keybinding |
+|:----------------------------------------------------------|-------------------------:|
+| Display the capture templates menu                        |         <kbd>C-c c</kbd> |
+| Finalize and then jump to the captured item               |       <kbd>C-c C-c</kbd> |
+| Finalize and refile the note to a different place         |       <kbd>C-c C-w</kbd> |
+| Ablort the capture process and return the previous state. |       <kbd>C-c C-k</kbd> |
+| Visit the target location of a capture template.          |     <kbd>C-u C-c c</kbd> |
+| Visit the last stored capture item in its buffer.         | <kbd>C-u C-u C-c c</kbd> |
+
+### Capture templates ###
+
+#### Template elements ####
+
+* keys
+  The keys that selects the template, as a string, characters only, for example '"a"', for a template  
+  to be selected with a single key, or '"bt"' for selection with two keys. When using several keys, kyes  
+  using the same prefix key must be sequential in the list and preceded by a 2-element entry explaning the  
+  prefix key.
+
+* description
+  A short string describing the template, shown during selection.  
+
+* type
+  The type of entry, a symbol. Valid values are:  
+  |:-------------|---------------------------------------------------------------------------------------|
+  | *entry*      | An Org mode node, with headline. Will be filed as the child of the target entry or as |
+  |              | a top-level entry. The target file should be an Org file.                             |
+  | *item*       | A plain list item, placed in the first plain list at the target location.             |
+  |              | Again the target file should be an Org file.                                          |
+  | *checkitem*  | A checkbox item. This only differs from the plain list item by the default template.  |
+  | *table-line* | A new line in the first table at the target location. Where exactly the line will be  |
+  |              | inserted depends on the properties `:prepend` and `:table-line-position`              |
+  | *plain*      | Text to be inserted as it is.                                                         |
+  |:-------------|---------------------------------------------------------------------------------------|
+
+* target
+  Specification of where the captured item should be placed. In Org files, targets usually define a node.  
+  Entries will become children of this node. Other types will be added to the table or list in the body of  
+  this node. Most target specifications contain a file name. If that file name is the empty string, it defaults  
+  to **org-default-notes-file**. A file can also be given as a variable or as a function called with no argument. 
+  When an absolute path is not specified for a target, it is taken as relative to **org-direcotry**.  
+  
+  + `(file "path/to/file")`
+    Text will be placed at the beginning or end of that file.  
+  + `(id "id of existing org entry")`
+    Filing as child of this entry, or in the body of the entry.  
+  + `(file+headline "filename" "node headline")`
+    Fast configuration if the target heading is unique in the file.  
+  + `(file+olp "filename" "Level 1 heading" "Level 2" ...)`
+    For non-unique headings, the full path is safer.  
+  + `(file+regexp "filename" "regexp to find location")`
+    Use a regular expression to postion point.  
+  + `(file+olp+datetree "filename" ["Level 1 heading" ...])`
+    This target creates a heading in a date tree for today's date. If the optional outline path is given,  
+    the tree will be built under the node it is pointing to, instead of at top level. Check out the  
+    `:time-prompt` and `:tree-type` properties below for additional options.  
+  + `(file+function "filename" function-finding-location)`
+     A function to find the right location in the file.  
+  + `(clock)`
+    File to the entry that is currently being clocked.  
+  + `(function function-finding-location)`
+    Most general way: write your own function which both visits the file and moves point to the  
+    right location.  
+
+* template
+  The template for creating the capture item. If you leave this empty, an appropriate default template will  
+  be used. Otherwise this is a string with escape codes, which will be replaced depending on time and context  
+  of the capture call. The string with escapes may be loaded from a template file, using the special syntax  
+  `(file "template filename")`  
+  
+* properties
+  The rest of the entry is a property list of additional options. Recognized properties are:  
+  + `:prepend`
+    Normaly new captured information will be appended at the target location (last child, last table line, 
+    last list item, ...). Setting this property changes that.  
+  + `:immediate-finish`
+    When set, do not offer to edit the information, just file it away immediately. This makes sense if the  
+    template only needs information that can be added automatically.  
+  + `:empty-lines`
+    Set this to the number of lines to insert before and after the new item. Default 0, and the only other  
+    common value is 1.  
+  + `:clock-in`
+    Start the clock in this item.  
+  + `:clock-keep`
+    Keep the clock running when filing the captured entry.  
+  + `:clock-resume`
+    If starting the captrue interrupted a clock, restart that clock when finish with the capture.  
+    Note that: `clock-keep` has precedence over `:clock-resume`. When setting both to non-nil, the  
+    current clock will run and the previous one will not be resumed.  
+  + `:time-prompt`
+    Prompt for a date/time to be used for date/week trees and when filling the template. Without this  
+    property, capture uses the current date and time. Even if this property has not been set, you can  
+    force the same behavior by calling **org-capture** with a <kbd>C-1</kbd> prefix argument.  
+  + `:tree-type`
+    When **week** make a week tree instead of the month tree, i.e., place the heading for each day under  
+    a heading with the current **ISO** week.  
+  + `:unnarrowed`
+    Do not narrow the target buffer, simply show the full buffer. Default is to narrow it so that you only  
+    see the new material.  
+  + `:table-line-pos`
+    Specification of the location in the table where the new line should be inserted. It should be a string like  
+    'II-3' meaning that the new line should become the third line before the second horizontal separator line.  
+  + `:kill-buffer`
+    If the target file was not yet visited when capture was invoked, kill the buffer again after capture is  
+    completed.  
+  + `:no-save`
+    Do not save the target file after finishing the capture.  
+
+#### Template expansion ####
+ * `%[FILE]`
+ * `%(EXP)`
+ * `%<FORMAT>`
+ * `%t`
+   Timestamp, date only.  
+ * `%T`
+   Timestamp, with date and time.  
+ * `%u`, `%U`
+   Like `%t`, `%T` above, but inactive timestamps.  
+ * `%i`
+   Initial content, the region when capture is called while the region is active. If there is text before  
+   on the same line, such as indentation, and `%i` is not inside a `%(exp)` form, that prefix is added before  
+   every line in the inserted text.  
+ * `%a`
+   Annotation, normally the link created with **org-store-link**.
+ * `%A`
+   Like `%a`, but prompt for the description part.  
+ * `%l`
+   Link `%a`, but only insert the literal link.  
+ * `%c`
+   Current kill ring head.  
+ * `%x`
+   Content of the **X** clipboard.  
+ * `%k`
+   Title of the currently clocked task.  
+ * `%K`
+   Link to the currently clocked task.  
+ * `%n`
+   User name (taken from **user-full-name**).
+ * `%f`
+   File visited by current buffer when **org-capture** was called.  
+ * `%F`
+   Full path of the file or directory visited by current buffer.  
+ * `%:keyword`
+   Specific information for certain link types, see below.  
+ * `%^g`
+   Prompt for tags, with completion on tags in target file.  
+ * `%^G`
+   Prompt for tags, with completion all tags in all agenda files.  
+ * `%^t`
+   Like `%t`, but prompt for date. Similarly `%^T`, `%^u`, `%^U`. You may define a prompt like `$^{Birthday}t`  
+ * `%^C`
+   Interactive selection of which kill or clip to use.  
+ * `%^L`
+   Like `%^C`, but insert as link.  
+ * `%^{PROP}p`
+   Prompt the user for a value for property PROP.  
+ * `%^{PROMPT}`
+   Prompt the user for a string and replace this sequence with it. You may specify a default value and  
+   completion table with `%^{prompt|default|completion2|completion3...}`. The arrow keys access a  
+   prompt-specific history.  
+ * `%\N`
+   Insert the text entered at the Nth `%^{PROMPT}`, where N is a number, starting from 1.  
+ * `%?`
+   After completing the template, position point here.  
+
+ For specific link types, the following keywords are defined:  
+ | Link type    | Available keywords                                       |
+ |:-------------|----------------------------------------------------------|
+ | bbdb         | `%:name`, `%:company`                                    |
+ | irc          | `%:server`, `%:port`, `%:nick`                           |
+ | mh, rmail    | `%:type`, `%:subject`, `%:message-id`                    |
+ |              | `%:from`, `%:fromname`, `%fromaddress`                   |
+ |              | `%:to`,`%:toname`, `%:toaddress`                         |
+ |              | `%:date`(message date header field),                     |
+ |              | `%:date-timestamp`(date as active timestamp),            |
+ |              | `%:date-timestamp-inactive`(date as inactive timestamp), |
+ |              | `%:fromto`(either "to NAME" or "fomr NAME")              |
+ | gnus         | `%:group`, for messages also all email fields            |
+ | w3, w3m      | `%:url`                                                  |
+ | info         | `%:file`, `%:node`                                       |
+ | calendar     | `%:date`                                                 |
+ | org-protocol | `%:link`,`%:description`,`%:annotation`                  |
+
+#### Templates in contexts ####
+
+``` elisp
+(setq org-capture-templates-contexts
+    '(("p" (in-mode . "message-mode"))))
+```
 
 Attachment
 ----------

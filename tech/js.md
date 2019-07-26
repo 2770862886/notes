@@ -2,6 +2,8 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
+[Javascript-algorithms](https://github.com/trekhleb/javascript-algorithms)
+
 ## Loop ##
 * for ... in introduced in ES5 aim to enumerate keys of an array.
 * for ... of introduced in ES6 aim to make up (for ... in), to enumerate values of an array.
