@@ -194,6 +194,9 @@ dwim stands for 'Do What I Mean', usually these function try to do the right thi
 
 # ivy #
 
+# yankpad #
+[yankpad](https://github.com/Kungsgeten/yankpad)
+
 # Scheme #
 
 racket-mode + paredit-mode
