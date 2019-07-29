@@ -3,6 +3,7 @@
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
 [Mastering Emacs](https://www.masteringemacs.org/)  
+[Sacha Chua's Blog](https://sachachua.com/blog/)  
 [abbrev mode](http://ergoemacs.org/emacs/emacs_abbrev_mode.html)  
 
 # Tramp #
