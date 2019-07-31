@@ -2,25 +2,23 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
-[Hello Worg](https://orgmode.org/worg/)
-[Bebel](https://orgmode.org/worg/org-contrib/babel/index.html)
+[Hello Worg](https://orgmode.org/worg/)  
+[Org Mode - Organize Your Life In Plain Text!](http://doc.norang.ca/org-mode.html)  
+[Bebel](https://orgmode.org/worg/org-contrib/babel/index.html)  
 
 Introduction
 ============
 
 Org-mode is fabulous organizational tool originally built by Casten Dominik that operators on plain text files. Org-mode is part of Emacs.  
 
-Typesetting conventions
------------------------
+## Typesetting conventions ##
 
 Org mainly uses three types of keywords: TODO keywords, tags and property names.
+
 + TODO keywords are written with all capitals, even if they are use-defined.
-+ Tags are case-sensitive. User-defined tags are written in lowercase; built-in tags with special  
-  meaning are written as they should appear in the document, usually with all capitals.
-+ User-defined properties are capitalized; built-in properties with special meaning are written  
-  with all capitals.
-+ Keywords and blocks are written in uppercase to enhance their readability, but you can use lowercase  
-  in your Org files.
++ Tags are case-sensitive. User-defined tags are written in lowercase; built-in tags with special meaning are written as they should appear in the document, usually with all capitals.
++ User-defined properties are capitalized; built-in properties with special meaning are written with all capitals.
++ Keywords and blocks are written in uppercase to enhance their readability, but you can use lowercase in your Org files.
 
 Document Structure
 ==================
@@ -451,7 +449,7 @@ Capture
   be used. Otherwise this is a string with escape codes, which will be replaced depending on time and context  
   of the capture call. The string with escapes may be loaded from a template file, using the special syntax  
   `(file "template filename")`  
-  
+
 * properties
   The rest of the entry is a property list of additional options. Recognized properties are:  
   + `:prepend`

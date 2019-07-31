@@ -2,9 +2,10 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
-## Shortcuts ##
+System Shortcuts
+================
 
-### screen shot ###
+### screenshot ###
 
 <kbd>Ctrl+Command+3/4</kbd>
 
@@ -25,6 +26,9 @@
 6. Using the terminal & kill command
 `killall [processname]`
 `kill -9 [pid]`
+
+Common Commands
+===============
 
 ### Speed up mouse speed ###
 
@@ -168,17 +172,86 @@ brew install autojump
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 ```
-#### ffmpeg ####
+
+### ffmpeg ###
+
 * 更改封装
 `ffmpeg -i test.h264 -vcodec copy -f mp4 test.mp4`
 
-#### 查看RGB值 ####
+### 查看RGB值 ###
+
 `Digital Color Meter`
 
-#### Disable/Restore Sierra Gatekeeper Settings  ####
+### Disable/Restore Sierra Gatekeeper Settings ###
+
 System Preference 'Security & Privacy' Allow apps downloaded from: Anywhere
 
 ``` shell
 sudo spctl --master-disable
 sudo spctl --master-enable
 ```
+
+Common Applications
+===================
+
+Quiver
+------
+
+### Shortcuts ###
+
+* UI Navigation
+
+    | Action                                    | Keybinding     |
+    |:------------------------------------------|----------------|
+    | Notebooks view                            | <kbd>C-1</kbd> |
+    | Tags view                                 | <kbd>C-2</kbd> |
+    | Three Panes View                          | <kbd>M-3</kbd> |
+    | Two Panes View                            | <kbd>M-2</kbd> |
+    | Single Pane View                          | <kbd>M-1</kbd> |
+    | Toggle between three and single pane view | <kbd>M-0</kbd> |
+    | Switch to 'Editor Only' mode              | <kbd>M-4</kbd> |
+    | Switch to 'Preview Only' mode             | <kbd>M-5</kbd> |
+    | Switch to 'Side-by-Side Preview'          | <kbd>M-6</kbd> |
+
+* Cell Operations
+
+    | Action                           | Keybind              |
+    |:---------------------------------|----------------------|
+    | New Cell                         | <kbd>S-Enter</kbd>   |
+    | New Cell Above                   | <kbd>S-C-Enter</kbd> |
+    | New Cell At Course               | <kbd>S-C-Pipe</kbd>  |
+    | Split Cell                       | <kbd>A-M-Enter</kbd> |
+    | Cut Cell                         | <kbd>S-M-x</kbd>     |
+    | Copy Cell                        | <kbd>S-M-c</kbd>     |
+    | Past Cell                        | <kbd>S-M-v</kbd>     |
+    | Delete Cell                      | <kbd>S-M-k</kbd>     |
+    | Convert to Text Cell             | <kbd>A-M-1</kbd>     |
+    | Convert to Code Cell             | <kbd>A-M-2</kbd>     |
+    | Convert to Markdown Cell         | <kbd>A-M-3</kbd>     |
+    | Convert to LaTeX Cell            | <kbd>A-M-4</kbd>     |
+    | Convert to Diagram Cell          | <kbd>A-M-5</kbd>     |
+    | Move Cell Up                     | <kbd>A-M-Up</kbd>    |
+    | Move Cell Down                   | <kbd>A-M-Down</kbd>  |
+    | Move Cursor to start/end of Cell | <kbd>M-Up/Down</kbd> |
+
+* Formating Operations
+
+    | Action                 | Keybinding          |
+    |:-----------------------|---------------------|
+    | Show Fonts             | <kbd>M-T</kbd>      |
+    | Headings               | <kbd>C-S-1..6</kbd> |
+    | Paragraph              | <kbd>C-S-0</kbd>    |
+    | Increase Heading Level | <kbd>C-S-]</kbd>    |
+    | Decrease Heading Level | <kbd>C-S-[</kbd>    |
+    | Bold                   | <kbd>M-b</kbd>      |
+    | Italic                 | <kbd>M-i</kbd>      |
+    | Underline              | <kbd>M-u</kbd>      |
+    | Strikethrough          | <kbd>C-S-s</kbd>    |
+    | Hightlight             | <kbd>C-S-h</kbd>    |
+    | Inline Code            | <kbd>C-S-k</kbd>    |
+
+* Global Hotkeys
+
+    | Action           | Keybindin          |
+    |:-----------------|--------------------|
+    | Search in Quiver | <kbd>C-S-M-f</kbd> |
