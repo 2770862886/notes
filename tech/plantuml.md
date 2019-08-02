@@ -2,6 +2,75 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
+Common Command
+==============
+
+Comment
+-------
+
+Footer & Header
+---------------
+
+Scale
+-----
+
+Title & Image title
+-------------------
+
+Image note
+----------
+
+Creole
+------
+
+
+UML Diagrams
+============
+
+时序图
+------
+
+用例图
+------
+
+类图
+----
+
+活动图
+------
+
+组件图
+------
+
+状态图
+------
+
+对象图
+------
+
+
+Gantt Diagram
+=============
+
+MindMap
+=======
+
+Breakdown Structrue
+===================
+
+Salt ui interface
+=================
+
+
+Sprites
+=======
+
+Skinparam
+=========
+
+
+
+
 ## class ##
 
 ``` java

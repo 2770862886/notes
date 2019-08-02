@@ -60,3 +60,23 @@ Key subroutine: merge
 $$ T(n)= \begin{cases} \theta(1) & \text {(n=1)} \\ 2T(n/2) + \theta(n) & \text {(n>1)} \end{cases} $$
 
 Recursion tree: $T(n)=2T(n/2) + cn$
+
+Asymptotic Notation
+-------------------
+
+### $O$ notation ###
+
+
+### $\Omega$ notation ###
+
+
+### $\theta$ notation ###
+
+
+
+
+Recursion-tree method
+---------------------
+
+Master method
+-------------
