@@ -2,7 +2,10 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
-# emacs ide config #
+[Debugging with GDB](https://sourceware.org/gdb/onlinedocs/gdb/index.html)
+
+emacs config
+============
 
 * Jump to definition
 * Auto-completion
@@ -11,9 +14,11 @@
 * Compile with one key press
 * Graphical debugger
 
-# cmake #
+debug
+=====
 
-## synopsis ##
+synopsis
+--------
 
 ``` shell
 cmake [<options>] {<path-to-source> | <path-to-existing-build>}
@@ -25,7 +30,9 @@ cmake -E <command> [<options>...]
 cmake --find-package <options>...
 ```
 
-## options ##
+options
+-------
+
 |                     |                                                                              |
 |---------------------|------------------------------------------------------------------------------|
 | -S <path-to-source> | Path to root directory of the CMake project to build.                        |
