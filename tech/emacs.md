@@ -196,6 +196,11 @@ dwim stands for 'Do What I Mean', usually these function try to do the right thi
 # yankpad #
 [yankpad](https://github.com/Kungsgeten/yankpad)
 
+# use-package #
+
+[use-package](https://github.com/jwiegley/use-package)
+
+
 # ivy #
 
 * Ivy Generic Help

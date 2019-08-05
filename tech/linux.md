@@ -49,7 +49,7 @@ du /var/tool/apr
 
 du -s
 
-du du -h test
+du -h test
 
 du -ah /var/tool/apr
 
@@ -157,7 +157,6 @@ tmux new -n <窗口名>
 | List all the sessions  | <kbd>C-b s</kbd> |
 | Rename current session | <kbd>C-b $</kbd> |
 | detach current session | <kbd>C-b d</kbd> |
-
 
 * 窗口(window)管理
 
