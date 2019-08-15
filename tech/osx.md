@@ -255,3 +255,8 @@ Quiver
     | Action           | Keybindin          |
     |:-----------------|--------------------|
     | Search in Quiver | <kbd>C-S-M-f</kbd> |
+
+Anki
+----
+
+[Anki China Manual](http://www.ankichina.net/anki20.html)
