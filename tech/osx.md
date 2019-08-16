@@ -249,6 +249,11 @@ Quiver
     | Strikethrough          | <kbd>C-S-s</kbd>    |
     | Hightlight             | <kbd>C-S-h</kbd>    |
     | Inline Code            | <kbd>C-S-k</kbd>    |
+    | Insert/Edit Link       | <kbd>M-K</kbd>      |
+    | Insert/Edit Image      | <kbd>C-S-I</kbd>    |
+    | Insert TODO            | <kbd>C-S-T</kbd>    |
+    | Insert Horizontal line | <kbd>C-S-R</kbd>    |
+    |                        |                     |
 
 * Global Hotkeys
 
