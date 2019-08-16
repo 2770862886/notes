@@ -2,6 +2,7 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
+[LeetCode](https://leetcode-cn.com/problemset/all/)
 [Sqrt](https://www.cnblogs.com/huashanqingzhu/p/6635691.html)
 [Newton](http://sofasofa.io/forum_main_post.php?postid=1000182)
 [Data Community](http://sofasofa.io/index.php)
@@ -92,7 +93,7 @@ Master method
 -------------------------------------------------------------------------------
 
 | no | name    | phonetic    | capital | lower |
-|----|:--------|-------------|---------|-------|
+|:---|:--------|:------------|:--------|:------|
 | 1  | alpha   | /'ælfə/     | Α       | α     |
 | 2  | beta    | /'beɪtə/    | Β       | β     |
 | 3  | gamma   | /'gæmə/     | Γ       | γ     |
@@ -118,8 +119,8 @@ Master method
 | 23 | psi     | /psaɪ/      | Ψ       | ψ     |
 | 24 | omega   | /oʊ'meɡə/   | Ω       | ω     |
 
-* Αα alpha常用作形容词，以显示某件事物中最重要或最初的。
-* Ββ beta也能表示电脑软件的测试版，通常指的是公开测试版，提供一般使用者协助测试并回报问题。
+* Α α alpha常用作形容词，以显示某件事物中最重要或最初的。
+* Β β beta也能表示电脑软件的测试版，通常指的是公开测试版，提供一般使用者协助测试并回报问题。
 * Ι ι ℩ 有时用来表示微细的差别。
 * Δ 在初中数学里也表示一元二次方程的判别式，事实上，不少希腊字母被用在数学和物理上。
 * Ο ο Omicron(国际音标/'ɑmɪ,krɑn/)字面上的意思是“小的 O”（ὄμικρόν），以便与“大 O”（ω“ὦμέγα）区别。

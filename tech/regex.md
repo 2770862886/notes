@@ -4,8 +4,11 @@
 
 [Regex manual](http://tool.oschina.net/uploads/apidocs/jquery/regexp.html)  
 [Online Tools](https://regexr.com/)  
+[Online Tools 101](https://regex101.com/)  
 [Sed manual](https://www.gnu.org/software/sed/manual/sed.html)  
 [Awk manual](https://www.gnu.org/software/gawk/manual/gawk.html)  
+[Learn Regex the Easy way](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)  
+
 
 sed
 ===

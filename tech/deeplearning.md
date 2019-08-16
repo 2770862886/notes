@@ -1,7 +1,12 @@
+% Machine Learning, Deep Learning and Reinforcement Learning
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
-[常用算法](https://www.atatech.org/articles/86277)
-[500 Questions](https://github.com/scutan90/DeepLearning-500-questions)
+[常用算法](https://www.atatech.org/articles/86277)  
+[500 Questions](https://github.com/scutan90/DeepLearning-500-questions)  
+[Reinforcement Learning](https://github.com/dennybritz/reinforcement-learning)  
+[UCL Course on RL](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)  
+[Reinforcement Introduction](http://incompleteideas.net/book/RLbook2018.pdf)
+
 
 # Machine Learning Topics #
 
