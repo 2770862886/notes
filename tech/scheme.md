@@ -2,6 +2,8 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
+[Yet Another Scheme Tutorial](http://deathking.github.io/yast-cn/)  
+
 # What is Racket #
 
 * a programming language - a dialect of Lisp and a descendant of Scheme;

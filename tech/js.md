@@ -2,6 +2,9 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
+[V8](https://v8.dev/docs)  
+[N-API](https://nodejs.github.io/node-addon-api/index.html)  
+[Dev with V8](https://www.ibm.com/developerworks/cn/opensource/os-cn-v8engine/)  
 [Javascript-algorithms](https://github.com/trekhleb/javascript-algorithms)
 
 ## Loop ##
@@ -81,4 +84,12 @@ cb(x1, x2);
 cb(x1 + x2, x3);
 cb(x1 + x2 + x3, x4);
 ```
+
+-------------------------------------------------------------------------------
+
+Node.js
+=======
+
+[Node.js](https://www.ibm.com/developerworks/cn/opensource/os-nodejs/index.html)  
+[libuv](https://github.com/libuv/libuv)  
 

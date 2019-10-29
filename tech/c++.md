@@ -2,7 +2,11 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
-[Debugging with GDB](https://sourceware.org/gdb/onlinedocs/gdb/index.html)
+[Modern C++](https://github.com/changkun/modern-cpp-tutorial/releases)  
+[llvm](http://llvm.org/)  
+[lsp-mode config](https://www.mortens.dev/blog/emacs-and-the-language-server-protocol/)  
+[Debugging with GDB](https://sourceware.org/gdb/onlinedocs/gdb/index.html)  
+[libuv](https://github.com/luohaha/Chinese-uvbook)  
 
 emacs config
 ============

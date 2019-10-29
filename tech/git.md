@@ -2,6 +2,10 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
+[Git沉浸](http://igit.linuxtoy.org/index.html)  
+[Git Magic](http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/)  
+[Git Cheat Sheet](https://github.com/flyhigher139/Git-Cheat-Sheet)  
+
 # git stage #
 
 ![stage](images/git_stage.jpg)
