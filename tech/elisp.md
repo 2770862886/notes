@@ -123,6 +123,19 @@ Printing
 
 * Boolean Functions
 
+``` elisp
+(and t nil)
+(or t nil)
+
+(< 3 4)
+(> 3 4)
+(<= 3 4)
+(>= 3 4)
+(= 3 3)
+(= 3 3.000000000000000000001)
+(/= 3 4)
+```
+
 ### Elisp Text-Processing Overview ###
 
 ### Elisp Example ###

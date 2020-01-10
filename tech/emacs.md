@@ -692,5 +692,10 @@ Company: Complete Anything
                                 (when (equal my-company-point (point)) (yas-expand))))
 ```
 
+# calc #
+[Calc-Getting-started](https://www.gnu.org/software/emacs/manual/html_node/calc/Getting-Started.html)
+[Calc-Tutorial](https://www.gnu.org/software/emacs/manual/html_node/calc/Tutorial.html)
+[Calc-Manual](https://www.gnu.org/software/emacs/manual/html_node/calc/Getting-Started.html)
+
 [^2]: If someone barfs, they vomit.
 [^3]: If you slurp a liquid, you drink it noisily.
