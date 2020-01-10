@@ -17,6 +17,35 @@ emacs config
 * Find file in project
 * Compile with one key press
 * Graphical debugger
+y
+
+# Essential C++ #
+
+## Basics C++ Programming ##
+
+### 对象的定义与初始化 ###
+
+``` c++
+#include <string>
+
+string user_name;
+int num_tries(0);
+complex<double> purei(0, 7);
+
+```
+
+
+## Procedural Programming ##
+
+## Generic Programming ##
+
+## Object-Based Programming ##
+
+## Object-Oriented Programming ##
+
+## Programming with Templates ##
+
+## Exception Handling ##
 
 debug
 =====

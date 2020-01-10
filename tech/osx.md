@@ -62,7 +62,7 @@ Common Commands
 ### disable/enable System Integrity Protection ###
 
 <kbd>Command+R</kbd> while reboot  
-`crsutil enable/disable/status`
+`csrutil enable/disable/status`
 
 ### coreaudiod makes high cpu ###
 
