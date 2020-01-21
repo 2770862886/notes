@@ -8,6 +8,7 @@
 [Debugging with GDB](https://sourceware.org/gdb/onlinedocs/gdb/index.html)  
 [libuv](https://github.com/luohaha/Chinese-uvbook)  
 [跟我一起写Makefile](https://seisman.github.io/how-to-write-makefile/introduction.html)  
+[cmake manual](https://cmake.org/cmake/help/v3.16/)  
 
 emacs config
 ============
@@ -18,7 +19,6 @@ emacs config
 * Find file in project
 * Compile with one key press
 * Graphical debugger
-y
 
 # Essential C++ #
 

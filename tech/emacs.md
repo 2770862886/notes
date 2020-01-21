@@ -6,6 +6,11 @@
 [Sacha Chua's Blog](https://sachachua.com/blog/)  
 [abbrev mode](http://ergoemacs.org/emacs/emacs_abbrev_mode.html)  
 
+# Performance profiler #
+
+<kbd>C-x C-m</kbd> `profiler-start`
+<kbd>C-x C-m</kbd> `profiler-report`
+
 # Tramp #
 
 TRAMP is for transparently accessing remote file from within Emacs.  

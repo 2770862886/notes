@@ -264,4 +264,27 @@ Quiver
 Anki
 ----
 
-[Anki China Manual](http://www.ankichina.net/anki20.html)
+[Anki China Manual](http://www.ankichina.net/anki20.html)  
+
+
+
+OmniGraffle
+-----------
+
+[Inside OmniGraffle](https://inside.omnigraffle.com/)  
+[OminiGraffle Tutorials](https://www.youtube.com/playlist?list=PLmGr3kj95-vkNhzKsp1iheGDB59sJQq85)  
+[OmniGraffle新手指南](http://beforweb.com/node/202)  
+
+
+minicom
+-------
+
+| Action             |        Keybinding |
+|:-------------------|------------------:|
+| Open Configuration | <kbd>META-z</kbd> |
+| lineWrap on/off    |      <kbd>w</kbd> |
+| Add Carriage Ret   |      <kbd>u</kbd> |
+| Timestamp toggle   |      <kbd>n</kbd> |
+| Exit and reset     |      <kbd>x</kbd> |
+| Clear Screen       |      <kbd>c</kbd> |
+|                    |                   |
