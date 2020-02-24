@@ -173,6 +173,40 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 ```
 
+### change brew source ###
+
+``` bash
+# 替换brew.git:
+cd "$(brew --repo)"
+# 中国科大:
+git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
+# 清华大学:
+git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
+
+# 替换homebrew-core.git:
+cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+# 中国科大:
+git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
+# 清华大学:
+git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
+
+# 替换homebew-cask.git:
+# 中国科大
+cd "$(brew --repo)"/Library/Taps/homebrew/homebrew-cask
+git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
+
+# 替换homebrew-bottles:
+# 中国科大:
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
+source ~/.zshrc
+# 清华大学:
+echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.zshrc
+source ~/.zshrc
+
+# 应用生效:
+brew update
+```
+
 ### ffmpeg ###
 
 * 更改封装
@@ -201,65 +235,64 @@ Quiver
 
 * UI Navigation
 
-    | Action                                    | Keybinding     |
-    |:------------------------------------------|----------------|
-    | Notebooks view                            | <kbd>C-1</kbd> |
-    | Tags view                                 | <kbd>C-2</kbd> |
-    | Three Panes View                          | <kbd>M-3</kbd> |
-    | Two Panes View                            | <kbd>M-2</kbd> |
-    | Single Pane View                          | <kbd>M-1</kbd> |
-    | Toggle between three and single pane view | <kbd>M-0</kbd> |
-    | Switch to 'Editor Only' mode              | <kbd>M-4</kbd> |
-    | Switch to 'Preview Only' mode             | <kbd>M-5</kbd> |
-    | Switch to 'Side-by-Side Preview'          | <kbd>M-6</kbd> |
+| Action                                    | Keybinding     |
+|:------------------------------------------|----------------|
+| Notebooks view                            | <kbd>C-1</kbd> |
+| Tags view                                 | <kbd>C-2</kbd> |
+| Three Panes View                          | <kbd>M-3</kbd> |
+| Two Panes View                            | <kbd>M-2</kbd> |
+| Single Pane View                          | <kbd>M-1</kbd> |
+| Toggle between three and single pane view | <kbd>M-0</kbd> |
+| Switch to 'Editor Only' mode              | <kbd>M-4</kbd> |
+| Switch to 'Preview Only' mode             | <kbd>M-5</kbd> |
+| Switch to 'Side-by-Side Preview'          | <kbd>M-6</kbd> |
 
 * Cell Operations
 
-    | Action                           | Keybind              |
-    |:---------------------------------|----------------------|
-    | New Cell                         | <kbd>S-Enter</kbd>   |
-    | New Cell Above                   | <kbd>S-C-Enter</kbd> |
-    | New Cell At Course               | <kbd>S-C-Pipe</kbd>  |
-    | Split Cell                       | <kbd>A-M-Enter</kbd> |
-    | Cut Cell                         | <kbd>S-M-x</kbd>     |
-    | Copy Cell                        | <kbd>S-M-c</kbd>     |
-    | Past Cell                        | <kbd>S-M-v</kbd>     |
-    | Delete Cell                      | <kbd>S-M-k</kbd>     |
-    | Convert to Text Cell             | <kbd>A-M-1</kbd>     |
-    | Convert to Code Cell             | <kbd>A-M-2</kbd>     |
-    | Convert to Markdown Cell         | <kbd>A-M-3</kbd>     |
-    | Convert to LaTeX Cell            | <kbd>A-M-4</kbd>     |
-    | Convert to Diagram Cell          | <kbd>A-M-5</kbd>     |
-    | Move Cell Up                     | <kbd>A-M-Up</kbd>    |
-    | Move Cell Down                   | <kbd>A-M-Down</kbd>  |
-    | Move Cursor to start/end of Cell | <kbd>M-Up/Down</kbd> |
+| Action                           | Keybind              |
+|:---------------------------------|----------------------|
+| New Cell                         | <kbd>S-Enter</kbd>   |
+| New Cell Above                   | <kbd>S-C-Enter</kbd> |
+| New Cell At Course               | <kbd>S-C-Pipe</kbd>  |
+| Split Cell                       | <kbd>A-M-Enter</kbd> |
+| Cut Cell                         | <kbd>S-M-x</kbd>     |
+| Copy Cell                        | <kbd>S-M-c</kbd>     |
+| Past Cell                        | <kbd>S-M-v</kbd>     |
+| Delete Cell                      | <kbd>S-M-k</kbd>     |
+| Convert to Text Cell             | <kbd>A-M-1</kbd>     |
+| Convert to Code Cell             | <kbd>A-M-2</kbd>     |
+| Convert to Markdown Cell         | <kbd>A-M-3</kbd>     |
+| Convert to LaTeX Cell            | <kbd>A-M-4</kbd>     |
+| Convert to Diagram Cell          | <kbd>A-M-5</kbd>     |
+| Move Cell Up                     | <kbd>A-M-Up</kbd>    |
+| Move Cell Down                   | <kbd>A-M-Down</kbd>  |
+| Move Cursor to start/end of Cell | <kbd>M-Up/Down</kbd> |
 
 * Formating Operations
 
-    | Action                 | Keybinding          |
-    |:-----------------------|---------------------|
-    | Show Fonts             | <kbd>M-T</kbd>      |
-    | Headings               | <kbd>C-S-1..6</kbd> |
-    | Paragraph              | <kbd>C-S-0</kbd>    |
-    | Increase Heading Level | <kbd>C-S-]</kbd>    |
-    | Decrease Heading Level | <kbd>C-S-[</kbd>    |
-    | Bold                   | <kbd>M-b</kbd>      |
-    | Italic                 | <kbd>M-i</kbd>      |
-    | Underline              | <kbd>M-u</kbd>      |
-    | Strikethrough          | <kbd>C-S-s</kbd>    |
-    | Hightlight             | <kbd>C-S-h</kbd>    |
-    | Inline Code            | <kbd>C-S-k</kbd>    |
-    | Insert/Edit Link       | <kbd>M-K</kbd>      |
-    | Insert/Edit Image      | <kbd>C-S-I</kbd>    |
-    | Insert TODO            | <kbd>C-S-T</kbd>    |
-    | Insert Horizontal line | <kbd>C-S-R</kbd>    |
-    |                        |                     |
+| Action                 | Keybinding          |
+|:-----------------------|---------------------|
+| Show Fonts             | <kbd>M-T</kbd>      |
+| Headings               | <kbd>C-S-1..6</kbd> |
+| Paragraph              | <kbd>C-S-0</kbd>    |
+| Increase Heading Level | <kbd>C-S-]</kbd>    |
+| Decrease Heading Level | <kbd>C-S-[</kbd>    |
+| Bold                   | <kbd>M-b</kbd>      |
+| Italic                 | <kbd>M-i</kbd>      |
+| Underline              | <kbd>M-u</kbd>      |
+| Strikethrough          | <kbd>C-S-s</kbd>    |
+| Hightlight             | <kbd>C-S-h</kbd>    |
+| Inline Code            | <kbd>C-S-k</kbd>    |
+| Insert/Edit Link       | <kbd>M-K</kbd>      |
+| Insert/Edit Image      | <kbd>C-S-I</kbd>    |
+| Insert TODO            | <kbd>C-S-T</kbd>    |
+| Insert Horizontal line | <kbd>C-S-R</kbd>    |
 
 * Global Hotkeys
 
-    | Action           | Keybindin          |
-    |:-----------------|--------------------|
-    | Search in Quiver | <kbd>C-S-M-f</kbd> |
+| Action           | Keybindin          |
+|:-----------------|--------------------|
+| Search in Quiver | <kbd>C-S-M-f</kbd> |
 
 Anki
 ----
@@ -278,6 +311,8 @@ OmniGraffle
 
 minicom
 -------
+
+[man page of minicom](https://linux.die.net/man/1/minicom)
 
 | Action             |        Keybinding |
 |:-------------------|------------------:|

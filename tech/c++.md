@@ -3,12 +3,13 @@
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
 [Modern C++](https://github.com/changkun/modern-cpp-tutorial/releases)  
-[llvm](http://llvm.org/)  
+[The LLVM Compiler Infrastructure](http://llvm.org/)  
 [lsp-mode config](https://www.mortens.dev/blog/emacs-and-the-language-server-protocol/)  
 [Debugging with GDB](https://sourceware.org/gdb/onlinedocs/gdb/index.html)  
 [libuv](https://github.com/luohaha/Chinese-uvbook)  
 [跟我一起写Makefile](https://seisman.github.io/how-to-write-makefile/introduction.html)  
 [cmake manual](https://cmake.org/cmake/help/v3.16/)  
+[LearnCpp](https://www.learncpp.com/)  
 
 emacs config
 ============

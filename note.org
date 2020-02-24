@@ -3,7 +3,7 @@
 * 2019
 ** 2019-07 July
 *** 2019-07-31 Wednesday
-**** GTD - Bilding a Second Brain
+**** GTD - Building a Second Brain
 ***** WAITING Capture - Progressive Summarization
 ***** P.A.R.A - Projects . Areas . Resources . Archives
       + Projects: A series of tasks linked to a goal, with a deadline

@@ -2,8 +2,11 @@
 
 <link id="linkstyle" rel='stylesheet' href='css/markdown.css'/>
 
-[Emacs Lisp Reference](https://www.gnu.org/software/emacs/manual/html_node/elisp/)
-[Xah Emacs Lisp](http://ergoemacs.org/emacs/elisp.html)
+[An Introduction to Programming in Emacs Lisp](https://www.gnu.org/software/emacs/manual/html_mono/eintr.html)  
+[Emacs Lisp Reference](https://www.gnu.org/software/emacs/manual/html_node/elisp/)  
+[Elisp Cookbook](https://www.emacswiki.org/emacs/ElispCookbook)  
+[Xah Emacs Lisp](http://ergoemacs.org/emacs/elisp.html)  
+[Elisp Guide](https://github.com/chrisdone/elisp-guide)  
 
 # 基础知识 #
 

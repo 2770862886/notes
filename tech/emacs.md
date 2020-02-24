@@ -13,11 +13,24 @@
 
 # Tramp #
 
+[Tramp Manual](https://www.gnu.org/software/emacs/manual/html_node/tramp/index.html)  
+[Fixing tramp hangup](https://blog.karssen.org/2016/03/02/fixing-emacs-tramp-mode-when-using-zsh/)  
+
 TRAMP is for transparently accessing remote file from within Emacs.  
 
 <kbd>C-x C-f</kbd>
 `ssh:user@host#port:pathTo`
 
+## Use ssh config option of the access method ##
+
+``` bash
+vi .ssh/config
+
+Host xy
+    HostName news.my.domain
+    User news
+    Port 2000
+```
 
 # Prerequisite #
 
@@ -35,20 +48,38 @@ sudo apt-get install silversearcher-ag
 
 ## Help Commands ##
 
-| Description                              |         Keybinding |
-|:-----------------------------------------|-------------------:|
-| info emacs maunual, require for an topic | <kbd>C-h r i</kbd> |
-| describe function                        |   <kbd>C-h f</kbd> |
-| describe key                             |   <kbd>C-h k</kbd> |
-| describe mode                            |   <kbd>C-h m</kbd> |
-| describe symbol                          |   <kbd>C-h o</kbd> |
-| apropos-command                          |   <kbd>C-h a</kbd> |
+| Description                                  |         Keybinding |
+|:---------------------------------------------|-------------------:|
+| info emacs maunual, require for an topic     | <kbd>C-h r i</kbd> |
+| info emacs maunual, require for an menu item | <kbd>C-h i m</kbd> |
+| apropos-command                              |   <kbd>C-h a</kbd> |
+| list all keybindings                         |   <kbd>C-h b</kbd> |
+| describe function                            |   <kbd>C-h f</kbd> |
+| describe key                                 |   <kbd>C-h k</kbd> |
+| describe mode                                |   <kbd>C-h m</kbd> |
+| describe symbol                              |   <kbd>C-h o</kbd> |
+| describe variable                            |   <kbd>C-h v</kbd> |
 
+* Search for documentation topics
+  - apropos
+  - apropos-command
+  - apropos-library
+  - apropos-documentation
+
+## Evalution ##
+
+| Description                             |          Keybinding |
+|:----------------------------------------|--------------------:|
+| evaluate any Emacs Lisp expression      |      <kbd>M-:</kbd> |
+| evaluate previous s-expression          |  <kbd>C-x C-e</kbd> |
+| evaluate current top-level s-expression |    <kbd>C-M-x</kbd> |
+| evaluate current buffer                 |    <kbd>C-x e</kbd> |
+| REPL                                    | <kbd>M-x ielm</kbd> |
 
 ## mark region ##
 
-press <kbd>S-SPC</kbd> to active command mark, then move the cursor to the point
-and press <kbd>C-x C-x</kbd> to active the region between the two position.
+press <kbd>S-SPC</kbd> to active command mark, then move the cursor to the point  
+and press <kbd>C-x C-x</kbd> to active the region between the two position.  
 
 ## Jump over buffers ##
 
@@ -84,7 +115,6 @@ is displayed in Emacs as the escape sequence '^L'. Insert formfeed <kbd>C-q C-l<
 | Move point to next page boundary (forward-page).                   |   <kbd>C-x ]</kbd> |
 | Put point and mark around this page (or another page) (mark-page). | <kbd>C-x C-p</kbd> |
 
-
 ## Indentation ##
 
 | Action                   |            Keybinding |
@@ -106,7 +136,7 @@ is displayed in Emacs as the escape sequence '^L'. Insert formfeed <kbd>C-q C-l<
 
 # cscope #
 
-| Action                                                         |         Keybinding |
+| ACTION                                                         |         Keybinding |
 |:---------------------------------------------------------------|-------------------:|
 | Find symbol.                                                   | <kbd>C-c s s</kbd> |
 | Find global definition.                                        | <kbd>C-c s d</kbd> |
@@ -387,7 +417,7 @@ are separated by a pipe.
 
 # ivy #
 
-* Ivy Generic Help
+## Ivy Generic Help ##
 
 =ivy= is an Emacs incremental completion framework.
 
@@ -395,12 +425,13 @@ are separated by a pipe.
 - Multiple patterns are allowed by separating with a space,
 - Select with ~C-n~ and ~C-p~, choose with ~RET~.
 
-** Help
+### Help ###
 
 - ~C-h m~ :: Pop to this generic help buffer.
 
-** Basic Operations
-*** Key bindings for navigation
+### Basic Operations ###
+
+#### Key bindings for navigation ####
 
 - ~C-n~ (=ivy-next-line=) :: next candidate.
 - ~C-p~ (=ivy-previous-line=) :: previous candidate.
@@ -409,7 +440,7 @@ are separated by a pipe.
 - ~M-<~ (=ivy-beginning-of-buffer=) :: first candidate.
 - ~M->~ (=ivy-end-of-buffer=) :: last candidate.
 
-*** Key bindings for single selection
+#### Key bindings for single selection ####
 
 When selecting a candidate, an action is called on it. You can think
 of an action as a function that takes the selected candidate as an
@@ -438,8 +469,9 @@ input will match an existing file, which you don't want to select.
 ~C-'~ (=ivy-avy=) - select a candidate from the current page with avy
 and exit with the current action.
 
-** Advanced Operations
-*** Key bindings for multiple selection
+### Advanced Operations ###
+
+#### Key bindings for multiple selection ####
 
 For repeatedly applying multiple actions or acting on multiple
 candidates, Ivy does not close the minibuffer between commands. It
@@ -458,7 +490,7 @@ actions.
 ~C-M-o~ (=ivy-dispatching-call=) is a non-exiting version of ~M-o~
 (=ivy-dispatching-done=).
 
-*** Key bindings that alter the minibuffer input
+#### Key bindings that alter the minibuffer input ####
 
 ~M-n~ (=ivy-next-history-element=) select the next history element or
 symbol/URL at point.
@@ -481,12 +513,12 @@ minibuffer.
 resets the candidates list to the currently restricted matches. This
 is how Ivy provides narrowing in successive tiers.
 
-*** Other key bindings
+#### Other key bindings ####
 
 ~M-w~ (=ivy-kill-ring-save=) copies the selected candidates to the
 kill ring; when the region is active, copies the active region.
 
-*** Saving the current completion session to a buffer
+#### Saving the current completion session to a buffer ####
 
 ~C-c C-o~ (=ivy-occur=) saves the current candidates to a new buffer;
 the list is active in the new buffer.
@@ -500,13 +532,13 @@ Ivy takes care of making these buffer names unique. It applies
 descriptive names, for example: =*ivy-occur counsel-describe-variable
 "function$*=.
 
-*** Global key bindings
+#### Global key bindings ####
 
 =ivy-resume= recalls the state of the completion session just before
 its last exit. Useful after an accidental ~C-m~ (=ivy-done=).
 Recommended global binding: ~C-c C-r~.
 
-*** Hydra in the minibuffer
+#### Hydra in the minibuffer ####
 
 ~C-o~ (=hydra-ivy/body=) invokes Hydra menus with key shortcuts.
 
@@ -525,8 +557,6 @@ Additionally, here are the keys that are otherwise not bound:
 - ~w~ and ~s~ scroll the actions list.
 
 Minibuffer editing is disabled when Hydra is active.
-
-======= end
 
 # Counsel #
 
@@ -628,12 +658,11 @@ racket-mode + paredit-mode
 
 # cua block #
 
-[CUA Block](http://bamanzi.is-programmer.com/posts/23611.html)
-[LeeXah CUA-mode](http://ergoemacs.org/emacs/modernization_cua-mode.html)
+[CUA Block](http://bamanzi.is-programmer.com/posts/23611.html)  
+[LeeXah CUA-mode](http://ergoemacs.org/emacs/modernization_cua-mode.html)  
 
 Emacs's cua-mode, is named after the IBM's Common User Accesss standard. However, according to Wikipedia  
 IBM Common User Access the IBM CUA standard does not say cut/copy/paste are X C V keys. Quote:  
-
 
 # neo-tree #
 
@@ -683,8 +712,8 @@ Company: Complete Anything
 ```
 
 ``` elisp
-(add-hook 'emacs-lisp-mode-hook (lambda () 
-            (add-to-list (make-local-variable 'company-backends) 
+(add-hook 'emacs-lisp-mode-hook (lambda ()
+            (add-to-list (make-local-variable 'company-backends)
             '(company-elisp))))
 ```
 
@@ -698,9 +727,9 @@ Company: Complete Anything
 ```
 
 # calc #
-[Calc-Getting-started](https://www.gnu.org/software/emacs/manual/html_node/calc/Getting-Started.html)
-[Calc-Tutorial](https://www.gnu.org/software/emacs/manual/html_node/calc/Tutorial.html)
-[Calc-Manual](https://www.gnu.org/software/emacs/manual/html_node/calc/Getting-Started.html)
+[Calc-Getting-started](https://www.gnu.org/software/emacs/manual/html_node/calc/Getting-Started.html)  
+[Calc-Tutorial](https://www.gnu.org/software/emacs/manual/html_node/calc/Tutorial.html)  
+[Calc-Manual](https://www.gnu.org/software/emacs/manual/html_node/calc/Getting-Started.html)  
 
 [^2]: If someone barfs, they vomit.
 [^3]: If you slurp a liquid, you drink it noisily.
