@@ -19,7 +19,7 @@ emacs config
 * On-the-fly syntax highlighting
 * Find file in project
 * Compile with one key press
-* Graphical debugger
+* Graphical debugg8er
 
 # Essential C++ #
 

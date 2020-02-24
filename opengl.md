@@ -9,3 +9,8 @@
 [OGL](https://wiki.jikexueyuan.com/project/modern-opengl-tutorial/tutorial1.html)  
 [OpenGL ES](https://www.jianshu.com/p/99daa25b4573)  
 [EGL](https://www.cnblogs.com/yongdaimi/p/11244950.html)  
+[OpenGL Tutorial](http://www.opengl-tutorial.org/cn/)  
+[Modern OpenGL Tutorial](http://ogldev.atspace.co.uk/index.html)  
+[Modern OpenGL Tutorial CN](https://wiki.jikexueyuan.com/project/modern-opengl-tutorial/tutorial1.html)  
+[Bilibili OpenGL Tutorial](https://www.bilibili.com/video/av28667650?p=1)  
+
