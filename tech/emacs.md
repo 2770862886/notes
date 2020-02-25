@@ -59,6 +59,7 @@ sudo apt-get install silversearcher-ag
 | describe mode                                |   <kbd>C-h m</kbd> |
 | describe symbol                              |   <kbd>C-h o</kbd> |
 | describe variable                            |   <kbd>C-h v</kbd> |
+| print keybindings invoke the command         |   <kbd>C-h w</kbd> |
 
 * Search for documentation topics
   - apropos
@@ -171,6 +172,8 @@ is displayed in Emacs as the escape sequence '^L'. Insert formfeed <kbd>C-q C-l<
 
 # projectile #
 
+[Projectile Home](https://docs.projectile.mx/en/latest/)  
+
 If you want to mark a folder manully as a project just create an empty .projectile file in it.  
 
 | Action                                         |             Keybinding |
@@ -226,7 +229,7 @@ If you want to mark a folder manully as a project just create an empty .projecti
 | find file dwim other window                    |   <kbd>C-c p 4 g</kbd> |
 | find implementation or test other window       |   <kbd>C-c p 4 t</kbd> |
 
-dwim stands for 'Do What I Mean', usually these function try to do the right thing depends on the context.
+dwim stands for 'Do What I Mean', usually these function try to do the right thing depends on the context.  
 
 # yankpad #
 [yankpad](https://github.com/Kungsgeten/yankpad)
@@ -415,9 +418,24 @@ are separated by a pipe.
 [use-package](https://github.com/jwiegley/use-package)
 
 
+# yas-snippet #
+
+| Description            |         Keybinding |
+|:-----------------------|-------------------:|
+| yas-new-snippet        | <kbd>C-c C-n</kbd> |
+| yas-visit-snippet-file | <kbd>C-c C-v</kbd> |
+| yas-insert-snippet     | <kbd>C-c C-s</kbd> |
+|                        |                    |
+
 # ivy #
 
+[ivy home](http://oremacs.com/)  
+[ivy manual](http://oremacs.com/swiper/)  
+[ivy github](https://github.com/abo-abo/swiper)  
+
 ## Ivy Generic Help ##
+
+<kbd>M-x</kbd> `ivy-help`
 
 =ivy= is an Emacs incremental completion framework.
 
@@ -470,7 +488,6 @@ input will match an existing file, which you don't want to select.
 and exit with the current action.
 
 ### Advanced Operations ###
-
 #### Key bindings for multiple selection ####
 
 For repeatedly applying multiple actions or acting on multiple
@@ -558,11 +575,15 @@ Additionally, here are the keys that are otherwise not bound:
 
 Minibuffer editing is disabled when Hydra is active.
 
-# Counsel #
-
 # Swiper #
 
+
+# Counsel #
+
+
 # Semx-mode #
+
+[Smex Github](https://github.com/nonsequitur/smex)  
 
 # Scheme #
 
@@ -668,26 +689,28 @@ IBM Common User Access the IBM CUA standard does not say cut/copy/paste are X C 
 
 | Action                      | Keybinding |
 |:----------------------------|-----------:|
-| scroll-up                   |        SPC |
-| scroll-down                 |      S-SPC |
+| quick-look                  |        SPC |
 | describe-mode               |          ? |
 | stretch-toggle              |          A |
+| select-down-node            |          D |
+| hidden-file-toggle          |          H |
 | select-previous-sibing-node |          S |
 | select-up-node              |          U |
 | refresh                     |          g |
 | describe-mode               |          h |
 | next-line                   |          n |
+| open-file-in-system-app     |          o |
 | previous-line               |          p |
 | hide                        |          q |
 | select-next-sibling-node    |          s |
 | collapse-all                |    C-c C-a |
 | change-root                 |    C-c C-c |
-| delete-root                 |    C-c C-d |
+| delete-node                 |    C-c C-d |
 | find-file-other-window      |    C-c C-f |
 | create-node                 |    C-c C-n |
 | copy-node                   |    C-c C-p |
 | rename-node                 |    C-c C-r |
-|                             |      C-c c |
+| dir                         |      C-c c |
 
 # company-mode #
 
@@ -700,7 +723,7 @@ Company: Complete Anything
   :ensure t
   :config
   (global-company-mode t)
-  (setq company-idle-delay 0)    # 延迟，可设定为0.3
+  (setq company-idle-delay 0)                 # 延迟，可设定为0.3
   (setq company-minimum-prefix-length 3)      # 至少打完3个字才启动
   (setq company-backends
         '((company-files
@@ -730,6 +753,16 @@ Company: Complete Anything
 [Calc-Getting-started](https://www.gnu.org/software/emacs/manual/html_node/calc/Getting-Started.html)  
 [Calc-Tutorial](https://www.gnu.org/software/emacs/manual/html_node/calc/Tutorial.html)  
 [Calc-Manual](https://www.gnu.org/software/emacs/manual/html_node/calc/Getting-Started.html)  
+
+# c/c++ development #
+
+[CProgrammingLanguage](https://www.emacswiki.org/emacs/CProgrammingLanguage)  
+[Emacs Tags](https://www.emacswiki.org/emacs/EmacsTags)  
+[Indentation](https://www.emacswiki.org/emacs/IndentingC)  
+[C++Mode](https://www.emacswiki.org/emacs/CPlusPlusMode)  
+[C/C++ Development Environment](http://tuhdo.github.io/c-ide.html)  
+[RTags](https://github.com/Andersbakken/rtags)  
+
 
 [^2]: If someone barfs, they vomit.
 [^3]: If you slurp a liquid, you drink it noisily.

@@ -4,12 +4,12 @@
     An acronym is a word composed of the first letters of the words in a phrase, especially when this is used 
     as a name. 
 
-3. cryptic 
+3. cryptic
    adj. A cryptic remark or message contains hidden meaning or is difficult to understand. 
 
-4. depict 
+4. depict
 
-5. hyphen 
+5. hyphen
 
 | Symbol | English                                     |
 |:-------|---------------------------------------------|
