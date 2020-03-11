@@ -107,8 +107,9 @@ and press <kbd>C-x C-x</kbd> to active the region between the two position.
 
 ## Pages ##
 
-Within some text files, text is divided into pages delimited by the formfeed character (ASCII code 12, also denoted as 'control-L'), which  
-is displayed in Emacs as the escape sequence '^L'. Insert formfeed <kbd>C-q C-l</kbd>.
+Within some text files, text is divided into pages delimited by the formfeed character (ASCII code 12, 
+also denoted as 'control-L'), which is displayed in Emacs as the escape sequence '^L'. 
+Insert formfeed <kbd>C-q C-l</kbd>.
 
 | Action                                                             |         Keybinding |
 |:-------------------------------------------------------------------|-------------------:|
@@ -134,6 +135,14 @@ is displayed in Emacs as the escape sequence '^L'. Insert formfeed <kbd>C-q C-l<
 | Upper case the region or word | <kbd>C-x C-u</kbd> |
 | Lower case word at the point  |     <kbd>M-l</kbd> |
 | Upper case word at the point  |     <kbd>M-u</kbd> |
+
+## simple overlay ##
+
+| Action                         |     Keybinding |
+|:-------------------------------|---------------:|
+| symbol-overlay-put             | <kbd>M-i</kbd> |
+| symbol-overlay-switch-forward  | <kbd>M-p</kbd> |
+| symbol-overlay-switch-backward | <kbd>M-n</kbd> |
 
 # cscope #
 
@@ -412,6 +421,54 @@ are separated by a pipe.
    change the name of the default category by setting the variable
    yankpad-default-category.
 ```
+
+# bookmark #
+
+| Description                       |           Keybindins |
+|:----------------------------------|---------------------:|
+| describe-bookmark                 |     <kbd>C-h M</kbd> |
+| jump-other-frame                  |   <kbd>C-x 5 B</kbd> |
+|                                   |   <kbd>C-x j 5</kbd> |
+| list-jump                         |   <kbd>C-x j B</kbd> |
+| jump                              |   <kbd>C-x j j</kbd> |
+| file-jump                         |   <kbd>C-x j y</kbd> |
+| previous-bookmark-repeat          | <kbd>C-x p C-b</kbd> |
+| next-bookmark-repeat              | <kbd>C-x p C-f</kbd> |
+| delete-bookmark                   | <kbd>C-x p C-k</kbd> |
+| switch-to-bookmark-file           | <kbd>C-x p C-l</kbd> |
+| toggle-autonamed-bookmark         | <kbd>C-x p RET</kbd> |
+| next-bookmark-this-file           | <kbd>C-x p C-n</kbd> |
+| previous-bookmark-this-file       | <kbd>C-x p C-p</kbd> |
+| save-bookmark-this-file           | <kbd>C-x p C-s</kbd> |
+| unlight-bookmark-here             | <kbd>C-x p C-u</kbd> |
+| clone-bookmark                    |   <kbd>C-x p 2</kbd> |
+| bookmark-lighted-at-point         |   <kbd>C-x p =</kbd> |
+| describe-bookmark-lighted-here    |                      |
+| choose-navlist-from-bookmark-list |                      |
+| edit-bookmark-record              |   <kbd>C-x p E</kbd> |
+| light-bookmarks                   |   <kbd>C-x p H</kbd> |
+| insert-location                   |   <kbd>C-x p I</kbd> |
+| set-desktop-bookmark              |   <kbd>C-x p K</kbd> |
+| switch-bookmark-file-create       |   <kbd>C-x p L</kbd> |
+| bookmark-set-no-overwrite         |   <kbd>C-x p M</kbd> |
+| unlight-bookmarks                 |   <kbd>C-x p U</kbd> |
+| previous-bookmark-repeat          |   <kbd>C-x p b</kbd> |
+| delete                            |   <kbd>C-x p d</kbd> |
+| edit-bookmarks                    |   <kbd>C-x p e</kbd> |
+| next-bookmark-repeat              |   <kbd>C-x p f</kbd> |
+| jump                              |   <kbd>C-x p j</kbd> |
+| load                              |   <kbd>C-x p l</kbd> |
+| bookmark-set-confirm-overwrite    |   <kbd>C-x p m</kbd> |
+| next-bookmark-this-file           |   <kbd>C-x p n</kbd> |
+| bookmark-jump-other-window        |   <kbd>C-x p o</kbd> |
+|                                   |   <kbd>C-x p q</kbd> |
+| previous-bookmark-this-file       |   <kbd>C-x p p</kbd> |
+| edit-bookmark-name-and-location   |   <kbd>C-x p r</kbd> |
+| bookmark-save                     |   <kbd>C-x p s</kbd> |
+| unlight-bookmark-this-buffer      |   <kbd>C-x p u</kbd> |
+| bookmark-write                    |   <kbd>C-x p w</kbd> |
+| bookmark-set-file-bookmark        |   <kbd>C-x p y</kbd> |
+|                                   |                      |
 
 # use-package #
 

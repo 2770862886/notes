@@ -10,6 +10,7 @@
 [跟我一起写Makefile](https://seisman.github.io/how-to-write-makefile/introduction.html)  
 [cmake manual](https://cmake.org/cmake/help/v3.16/)  
 [LearnCpp](https://www.learncpp.com/)  
+[NodeJS Addon](http://nodejs.cn/api/addons.html)  
 
 emacs config
 ============
@@ -21,7 +22,8 @@ emacs config
 * Compile with one key press
 * Graphical debugg8er
 
-# Essential C++ #
+Essential C++
+=============
 
 ## Basics C++ Programming ##
 
@@ -35,7 +37,6 @@ int num_tries(0);
 complex<double> purei(0, 7);
 
 ```
-
 
 ## Procedural Programming ##
 

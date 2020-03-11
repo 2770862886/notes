@@ -5,27 +5,30 @@
 System Shortcuts
 ================
 
-### screenshot ###
+screenshot
+----------
 
 <kbd>Ctrl+Command+3/4</kbd>
 
 `defaults write com.apple.screencapture location /Users/liangchao/Desktop/sreenshots`
 
-### 6 ways Force Quit ###
+6 ways Force Quit
+-----------------
 
-1. 
-<kbd>Cmd + Opt + ESC</kbd>
-2. 
-<kbd>Cmd + Opt + Shift + ESC</kbd>
+1. <kbd>CMD + Opt + ESC</kbd>
+2. <kbd>CMD + Opt + Shift + ESC</kbd>
 3. From Dock, right click
-
 4. From Apple Menu
-
 5. Use Activity Monitor
-
 6. Using the terminal & kill command
 `killall [processname]`
 `kill -9 [pid]`
+
+minimize/restore window
+-----------------------
+
+1. minimize <kbd>CMD + m</kbd>
+2. restore <kbd>CMD + TAB/` + OPTION</kbd>
 
 Common Commands
 ===============
